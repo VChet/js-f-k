@@ -1,3 +1,8 @@
+---
+title: "ts-reset: улучшение дефолтного поведения TypeScript"
+date: 2025-06-02
+---
+
 **ts-reset: улучшение дефолтного поведения TypeScript**
 
 [ts-reset](https://www.totaltypescript.com/ts-reset) — утилита, которая расширяет стандартную типизацию в TypeScript, устраняя устаревшие и нестрогие участки в базовых API.
@@ -19,9 +24,9 @@ import "@total-typescript/ts-reset";
 ```ts
 // reset.d.ts
 // Makes JSON.parse return unknown
-import '@total-typescript/ts-reset/json-parse'
+import "@total-typescript/ts-reset/json-parse";
 // Makes await fetch().then(res => res.json()) return unknown
-import '@total-typescript/ts-reset/fetch'
+import "@total-typescript/ts-reset/fetch";
 ```
 
 Основные изменения:

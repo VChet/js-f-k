@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "types": ["vite/client"],
+    "strict": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "importHelpers": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
+  },
+  "include": ["env.d.ts", ".vitepress/**/*"]
+}
