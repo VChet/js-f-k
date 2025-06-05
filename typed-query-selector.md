@@ -2,6 +2,8 @@
 
 [typed-query-selector](https://www.npmjs.com/package/typed-query-selector) — улучшение типизации методов `querySelector` и `querySelectorAll` с выводом типов на основе CSS-селекторов.
 
+⚠️ Требуется TypeScript версии 4.1 или выше.
+
 Установка:
 
 ```bash
@@ -21,5 +23,3 @@ document.querySelector('div#app > form#login') // HTMLFormElement
 document.querySelectorAll('span.badge') // NodeListOf<HTMLSpanElement>
 document.querySelector('button#submit') // HTMLButtonElement
 ```
-
-❗ Требуется TypeScript версии 4.1 или выше.
