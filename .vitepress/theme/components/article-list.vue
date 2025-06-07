@@ -23,7 +23,7 @@ function getArticles() {
   const articles: Article[] = [];
   for (const [path, module] of Object.entries(files)) {
     const frontmatter = module?.frontmatter ?? module?.__pageData?.frontmatter;
-    if (!frontmatter) continue;
+    if (!frontmatter || dayjs(frontmatter.date).isAfter(dayjs())) continue;
 
     const { title, date } = frontmatter;
     articles.push({
