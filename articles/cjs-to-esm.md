@@ -1,3 +1,8 @@
+---
+title: "Переход с CommonJS на ESM: почему и как"
+date: 2025-06-09
+---
+
 **Переход с CommonJS на ESM: почему и как**
 
 Модули на основе `require()` и `module.exports` (CommonJS) — устаревающий формат.

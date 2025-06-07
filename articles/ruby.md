@@ -1,3 +1,8 @@
+---
+title: "<ruby>: пояснение прямо в тексте"
+date: 2025-06-06
+---
+
 `<ruby>`: пояснение прямо в тексте
 
 [`<ruby>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ruby) — HTML-элемент для аннотирования слов: переводы, транскрипции, пояснения.

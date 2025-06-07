@@ -1,3 +1,8 @@
+---
+title: "typed-query-selector: типизированный querySelector"
+date: 2025-06-04
+---
+
 **typed-query-selector: типизированный querySelector**
 
 [typed-query-selector](https://www.npmjs.com/package/typed-query-selector) — улучшение типизации методов `querySelector` и `querySelectorAll` с выводом типов на основе CSS-селекторов.
@@ -18,8 +23,8 @@ import "typed-query-selector";
 Результат:
 
 ```ts
-document.querySelector('div#app') // HTMLDivElement
-document.querySelector('div#app > form#login') // HTMLFormElement
-document.querySelectorAll('span.badge') // NodeListOf<HTMLSpanElement>
-document.querySelector('button#submit') // HTMLButtonElement
+document.querySelector("div#app"); // HTMLDivElement
+document.querySelector("div#app > form#login"); // HTMLFormElement
+document.querySelectorAll("span.badge"); // NodeListOf<HTMLSpanElement>
+document.querySelector("button#submit"); // HTMLButtonElement
 ```

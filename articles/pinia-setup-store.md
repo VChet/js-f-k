@@ -1,3 +1,8 @@
+---
+title: "Pinia: стоит ли использовать setup store"
+date: 2025-06-11
+---
+
 **Pinia: стоит ли использовать setup store**
 
 Документация Pinia описывает два способа создания стора: [`setup store`](https://pinia.vuejs.org/core-concepts/#Setup-Stores) и [`option-store`](https://pinia.vuejs.org/core-concepts/#Option-Stores).
@@ -5,22 +10,22 @@
 **Option-синтаксис:**
 
 ```js
-export const useCounter = defineStore('counter', {
+export const useCounter = defineStore("counter", {
   state: () => ({ count: 0 }),
   actions: {
-    increment() { this.count++ }
+    increment() { this.count++; }
   }
-})
+});
 ```
 
 **Setup-синтаксис:**
 
 ```js
-export const useCounter = defineStore('counter', () => {
-  const count = ref(0)
-  function increment() { count.value++ }
-  return { count, increment }
-})
+export const useCounter = defineStore("counter", () => {
+  const count = ref(0);
+  function increment() { count.value++; }
+  return { count, increment };
+});
 ```
 
 `Setup store` позволяет использовать `Composition API` внутри стора, но имеет ряд ограничений:
@@ -31,16 +36,16 @@ export const useCounter = defineStore('counter', () => {
 Дополнительно: приватное состояние возможно только через отдельные store-инстансы — например, так:
 
 ```js
-const usePrivateState = defineStore('store-private', () => {
-  const secret = ref('Never seen outside')
-  return { secret }
-})
+const usePrivateState = defineStore("store-private", () => {
+  const secret = ref("Never seen outside");
+  return { secret };
+});
 
-export const useStore = defineStore('store', () => {
-  const privateState = usePrivateState()
-  const censoredSecret = computed(() => '*'.repeat(privateState.secret.length))
-  return { censoredSecret }
-})
+export const useStore = defineStore("store", () => {
+  const privateState = usePrivateState();
+  const censoredSecret = computed(() => "*".repeat(privateState.secret.length));
+  return { censoredSecret };
+});
 ```
 
 Подробнее:
