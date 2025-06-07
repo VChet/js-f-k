@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "js-f/k",
+  title: "JS F/k",
   description: "HTML/TS/Vue — с примерами, по делу, без воды",
   lang: "ru-RU",
   sitemap: {
@@ -30,7 +30,7 @@ export default defineConfig({
       { icon: "telegram", link: "https://t.me/js_fck" }
     ],
     footer: {
-      copyright: "<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC-BY-NC-SA-4.0</a> © 2025 js-f/k Team"
+      copyright: "<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC-BY-NC-SA-4.0</a> © 2025 JS F/k Team"
     }
   }
 });
