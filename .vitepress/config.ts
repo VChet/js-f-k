@@ -9,6 +9,7 @@ export default defineConfig({
   sitemap: {
     hostname: "https://js-f-k.netlify.app"
   },
+  srcExclude: ["README.md", "LICENSE.md"],
   vite: {
     resolve: {
       alias: {
