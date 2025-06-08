@@ -1,14 +1,24 @@
 ---
-isHome: true
-title: Список статей
+layout: home
 ---
 
-# Блог JS F/k
+<div class="home">
+  <img src="/images/icon-512x512.png" alt="Логотип" class="home__logo">
+  <h1>Блог о фронтенде — с примерами, по делу, без воды</h1>
+  <p>
+    Привет! Мы пишем о HTML, TypeScript и Vue: только конкретные проблемы, их решения и интересные находки.
+    Без длинных вступлений разбираем реальные задачи, делимся рабочими решениями и библиотеками.
+  </p>
 
-## Статьи
+  <a href="/articles-by-date" class="button">К статьям...</a>
+</div>
 
-<article-list />
-
-<script setup>
-import ArticleList from '@components/article-list.vue'
-</script>
+<style lang="scss">
+.home {
+  text-wrap: balance;
+  &__logo {
+    max-width: 16rem;
+    margin: 0 auto 2rem;
+  }
+}
+</style>

@@ -31,6 +31,9 @@ export default defineConfig({
     socialLinks: [
       { icon: "telegram", link: "https://t.me/js_fck" }
     ],
+    nav: [
+      { text: "Статьи по датам", link: "/articles-by-date" }
+    ],
     footer: {
       copyright: "<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC-BY-NC-SA-4.0</a> © 2025 JS F/k Team"
     }
