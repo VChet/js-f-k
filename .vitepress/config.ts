@@ -6,9 +6,11 @@ export default defineConfig({
   title: "JS F/k",
   description: "HTML/TS/Vue — с примерами, по делу, без воды",
   lang: "ru-RU",
-  sitemap: {
-    hostname: "https://js-f-k.netlify.app"
-  },
+  head: [
+    ["link", { rel: "icon", href: "/images/favicon.ico", sizes: "32x32" }],
+    ["link", { rel: "apple-touch-icon", href: "/images/apple-touch-icon.png" }]
+  ],
+  sitemap: { hostname: "https://js-f-k.netlify.app" },
   cleanUrls: true,
   srcExclude: ["README.md", "LICENSE.md"],
   vite: {
