@@ -1,6 +1,7 @@
 ---
 title: "Запрет неявной мутации в Pinia"
 date: 2025-06-16
+tags: ["pinia", "typescript"]
 ---
 
 **Запрет неявной мутации в Pinia**

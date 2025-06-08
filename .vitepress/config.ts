@@ -31,10 +31,7 @@ export default defineConfig({
     plugins: [RssPlugin(RSS)]
   },
   markdown: {
-    theme: {
-      light: "catppuccin-latte",
-      dark: "catppuccin-mocha"
-    }
+    theme: { light: "catppuccin-latte", dark: "catppuccin-mocha" }
   },
   lastUpdated: true,
   themeConfig: {
@@ -43,7 +40,8 @@ export default defineConfig({
       { icon: "telegram", link: "https://t.me/js_fck" }
     ],
     nav: [
-      { text: "Статьи по датам", link: "/articles-by-date" }
+      { text: "Статьи по датам", link: "/articles-by-date" },
+      { text: "Статьи по тегам", link: "/articles-by-tag" }
     ],
     lastUpdated: {
       text: "Последнее обновление",
@@ -52,6 +50,7 @@ export default defineConfig({
         dateStyle: "long"
       }
     },
+    docFooter: { prev: false, next: false },
     footer: {
       copyright: "<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"Открыть текст лицензии CC-BY-NC-SA 4.0\">CC-BY-NC-SA 4.0</a> © 2025 JS F/k Team"
     }

@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import { createContentLoader } from "vitepress";
 
-interface Article {
+export interface Article {
   url: string
   title: string
   date: string

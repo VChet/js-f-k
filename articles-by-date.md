@@ -4,8 +4,8 @@ lastUpdated: false
 
 # Статьи по датам
 
-<article-list />
+<date-article-list />
 
 <script setup>
-import ArticleList from '@components/article-list.vue'
+import DateArticleList from '@components/date-article-list.vue'
 </script>

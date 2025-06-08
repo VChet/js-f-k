@@ -1,6 +1,7 @@
 ---
 title: "Pinia: стоит ли использовать setup store"
 date: 2025-06-11
+tags: ["pinia"]
 ---
 
 **Pinia: стоит ли использовать setup store**

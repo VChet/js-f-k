@@ -1,6 +1,7 @@
 ---
 title: "typed-query-selector: типизированный querySelector"
 date: 2025-06-04
+tags: ["npm", "typescript"]
 ---
 
 **typed-query-selector: типизированный querySelector**
