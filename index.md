@@ -1,5 +1,5 @@
 ---
-home: true
+isHome: true
 title: Список статей
 ---
 
