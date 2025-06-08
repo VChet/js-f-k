@@ -11,16 +11,3 @@
 <script setup lang="ts">
 import { data } from "../articles.data";
 </script>
-<style lang="scss">
-ul.article-list {
-  padding: 0;
-  list-style: none;
-  li {
-    margin: 0.5em 0;
-    .date {
-      font-family: monospace;
-      color: #888;
-    }
-  }
-}
-</style>

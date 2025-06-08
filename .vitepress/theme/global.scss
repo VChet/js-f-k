@@ -5,3 +5,14 @@
     text-decoration: underline;
   }
 }
+ul.article-list {
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 0.5em 0;
+    .date {
+      font-family: monospace;
+      color: #888;
+    }
+  }
+}

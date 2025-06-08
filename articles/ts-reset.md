@@ -1,6 +1,7 @@
 ---
 title: "ts-reset: улучшение дефолтного поведения TypeScript"
 date: 2025-06-02
+tags: ["npm", "typescript"]
 ---
 
 **ts-reset: улучшение дефолтного поведения TypeScript**

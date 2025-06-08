@@ -1,6 +1,7 @@
 ---
 title: "npm-check-updates: автообновление зависимостей"
 date: 2025-05-28
+tags: ["npm"]
 ---
 
 **npm-check-updates: автообновление зависимостей**

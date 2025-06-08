@@ -1,6 +1,7 @@
 ---
 title: "Переход с CommonJS на ESM: почему и как"
 date: 2025-06-09
+tags: ["build"]
 ---
 
 **Переход с CommonJS на ESM: почему и как**
