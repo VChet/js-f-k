@@ -2,7 +2,7 @@
 import DefaultTheme from "vitepress/theme";
 import type { Theme } from "vitepress";
 import "@catppuccin/vitepress/theme/mocha/sky.css";
-import "./theme-override.scss";
+import "./global.scss";
 
 export default {
   ...DefaultTheme
