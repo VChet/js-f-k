@@ -1,3 +1,7 @@
+---
+lastUpdated: false
+---
+
 # Статьи по датам
 
 <article-list />
