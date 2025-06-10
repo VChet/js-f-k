@@ -1,5 +1,14 @@
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vitepress";
+import { RssPlugin, type RSSOptions } from "vitepress-plugin-rss";
+
+const RSS: RSSOptions = {
+  title: "JS F/k",
+  description: "HTML/TS/Vue — с примерами, по делу, без воды",
+  copyright: "CC-BY-NC-SA-4.0 © 2025 JS F/k Team",
+  baseUrl: "https://js-f-k.netlify.app",
+  language: "ru-RU"
+};
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -18,7 +27,8 @@ export default defineConfig({
       alias: {
         "@components": fileURLToPath(new URL("theme/components", import.meta.url))
       }
-    }
+    },
+    plugins: [RssPlugin(RSS)]
   },
   markdown: {
     theme: {
