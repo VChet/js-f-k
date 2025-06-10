@@ -1,9 +1,9 @@
 ---
-title: "npm-check-updates — автообновление зависимостей"
+title: "npm-check-updates: автообновление зависимостей"
 date: 2025-05-28
 ---
 
-**npm-check-updates — автообновление зависимостей**
+**npm-check-updates: автообновление зависимостей**
 
 Многие до сих пор проверяют зависимости `package.json` вручную или через `npm outdated`.
 Но есть инструмент, который сделает это удобнее и проще: [npm-check-updates (ncu)](https://www.npmjs.com/package/npm-check-updates).
