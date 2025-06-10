@@ -26,6 +26,7 @@ export default defineConfig({
       dark: "catppuccin-mocha"
     }
   },
+  lastUpdated: true,
   themeConfig: {
     outline: false,
     socialLinks: [
@@ -34,6 +35,13 @@ export default defineConfig({
     nav: [
       { text: "Статьи по датам", link: "/articles-by-date" }
     ],
+    lastUpdated: {
+      text: "Последнее обновление",
+      formatOptions: {
+        forceLocale: true,
+        dateStyle: "long"
+      }
+    },
     footer: {
       copyright: "<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC-BY-NC-SA-4.0</a> © 2025 JS F/k Team"
     }
