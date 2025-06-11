@@ -10,24 +10,24 @@ tags: ["css"]
 
 ```css
 a[href*="github.com"]::before {
-  content: "";
   display: inline-block;
   width: 1em;
   height: 1em;
-  background-image: url('/assets/icons/github.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
   margin-right: 0.3em;
+  content: "";
+  background-image: url('/assets/icons/github.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 a[href*="t.me"]::before {
-  content: "";
   display: inline-block;
   width: 1em;
   height: 1em;
-  background-image: url('/assets/icons/telegram.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
   margin-right: 0.3em;
+  content: "";
+  background-image: url('/assets/icons/telegram.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 ```
 
@@ -44,14 +44,14 @@ a[href^="https://github.com"] {
     --icon: url('/assets/icons/github-pull-icon.svg');
   }
   &::before {
-    content: "";
     display: inline-block;
     width: 1em;
     height: 1em;
-    background-image: var(--icon);
-    background-size: contain;
-    background-repeat: no-repeat;
     margin-right: 0.3em;
+    content: "";
+    background-image: var(--icon);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 ```
@@ -83,24 +83,24 @@ a[href*="github.com"]::before {
 <style lang="scss" scoped>
 .links-demo {
   display: grid;
-  gap: 8px;
+  gap: 0.5rem;
   a[href^="https://github.com"] {
   --icon: url('./images/github-icon.svg');
     display: inline-flex;
-    gap: 2px;
+    gap: 0.125rem;
     align-items: center;
     &[href*="/pulls"] {
       --icon: url('./images/github-pull-icon.svg');
     }
     &::before {
-      content: "";
       display: inline-block;
       width: 1em;
       height: 1em;
-      background-image: var(--icon);
-      background-size: contain;
-      background-repeat: no-repeat;
       margin-right: 0.4em;
+      content: "";
+      background-image: var(--icon);
+      background-repeat: no-repeat;
+      background-size: contain;
       @media (prefers-color-scheme: dark) {
         filter: invert(1);
       }

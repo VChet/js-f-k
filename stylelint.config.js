@@ -11,10 +11,8 @@ export default {
   ],
   customSyntax: "postcss-scss",
   overrides: [
-    {
-      files: ["**/*.vue"],
-      customSyntax: "postcss-html"
-    }
+    { files: ["**/*.vue"], customSyntax: "postcss-html" },
+    { files: ["**/*.md"], customSyntax: "postcss-markdown" }
   ],
   ignoreFiles: [
     "dist/**/*css"
