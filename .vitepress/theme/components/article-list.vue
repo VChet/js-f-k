@@ -1,7 +1,7 @@
 <template>
   <ul class="article-list">
     <li v-for="{ url, date, title } in data" :key="url">
-      <a :href="url">
+      <a :href="url" :title="`Открыть статью: ${title}`">
         <span class="date">[{{ date }}]</span>
         {{ title }}
       </a>

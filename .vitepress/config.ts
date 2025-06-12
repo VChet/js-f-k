@@ -5,7 +5,7 @@ import { RssPlugin, type RSSOptions } from "vitepress-plugin-rss";
 const RSS: RSSOptions = {
   title: "JS F/k",
   description: "HTML/TS/Vue — с примерами, по делу, без воды",
-  copyright: "CC-BY-NC-SA-4.0 © 2025 JS F/k Team",
+  copyright: "CC-BY-NC-SA 4.0 © 2025 JS F/k Team",
   baseUrl: "https://js-f-k.netlify.app",
   language: "ru-RU"
 };
@@ -53,7 +53,7 @@ export default defineConfig({
       }
     },
     footer: {
-      copyright: "<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC-BY-NC-SA-4.0</a> © 2025 JS F/k Team"
+      copyright: "<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"Открыть текст лицензии CC-BY-NC-SA 4.0\">CC-BY-NC-SA 4.0</a> © 2025 JS F/k Team"
     }
   }
 });
