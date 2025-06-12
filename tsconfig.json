@@ -18,5 +18,5 @@
     "verbatimModuleSyntax": true,
     "skipLibCheck": true
   },
-  "include": ["env.d.ts", ".vitepress/**/*"]
+  "include": [".vitepress/**/*"]
 }
