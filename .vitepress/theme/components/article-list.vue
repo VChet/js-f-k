@@ -12,7 +12,7 @@
 import { data } from "../articles.data";
 </script>
 <style lang="scss">
-.article-list {
+ul.article-list {
   padding: 0;
   list-style: none;
   li {
