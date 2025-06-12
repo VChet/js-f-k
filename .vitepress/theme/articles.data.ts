@@ -13,6 +13,7 @@ export { data };
 
 export default createContentLoader<Article[]>("articles/*.md", {
   transform: (raw) => raw
+    .sort((a, b) => dayjs(b.frontmatter.date).diff(a.frontmatter.date))
     .reduce((acc: Article[], page) => {
       const date = dayjs(page.frontmatter.date);
       if (date.isAfter(dayjs())) { return acc; }
@@ -23,5 +24,4 @@ export default createContentLoader<Article[]>("articles/*.md", {
         tags: page.frontmatter.tags
       }];
     }, [])
-    .sort((a, b) => dayjs(b.date).unix() - dayjs(a.date).unix())
 });
