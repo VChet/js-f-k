@@ -46,6 +46,7 @@ export default defineConfig({
   lastUpdated: true,
   themeConfig: {
     outline: false,
+    aside: false,
     socialLinks: [
       { icon: "telegram", link: "https://t.me/js_fck" }
     ],
