@@ -19,7 +19,7 @@ import { composeHashColorFromString } from "../../helpers/color";
 import { data, type Article } from "../articles.data";
 
 const tags = (() => data.reduce((acc: Record<string, Article[]>, article) => {
-  for (const tag of article.tags) {
+  for (const tag of article.tags ?? []) {
     if (!acc[tag]) { acc[tag] = []; }
     acc[tag].push({
       url: article.url,
