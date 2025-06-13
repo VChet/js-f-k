@@ -4,7 +4,7 @@ date: 2025-06-23
 tags: ["typescript", "vue", "vue-use"]
 ---
 
-**Типизированные customEvents**
+# Типизированные customEvents
 
 Наверно каждый разработчик хоть раз писал свой [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)-сервис.
 Вот и мы написали свой. Но хотя бы типизированный.

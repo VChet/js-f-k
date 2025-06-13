@@ -4,7 +4,7 @@ date: 2025-06-25
 tags: ["npm"]
 ---
 
-**npkill: быстрая очистка node_modules**
+# npkill: быстрая очистка node_modules
 
 [npkill](https://www.npmjs.com/package/npkill) — это CLI-утилита, которая ищет каталоги `node_modules` и позволяет удалять их одним нажатием клавиши.
 

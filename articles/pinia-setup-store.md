@@ -4,7 +4,7 @@ date: 2025-06-11
 tags: ["pinia"]
 ---
 
-**Pinia: стоит ли использовать setup store**
+# Pinia: стоит ли использовать setup store
 
 Документация Pinia описывает два способа создания стора: [`setup store`](https://pinia.vuejs.org/core-concepts/#Setup-Stores) и [`option-store`](https://pinia.vuejs.org/core-concepts/#Option-Stores).
 
