@@ -10,9 +10,17 @@ ul.article-list {
   list-style: none;
   li {
     margin: 0.5em 0;
+    ul {
+      padding: 0;
+      list-style: none;
+    }
     .date {
       font-family: monospace;
       color: #888;
     }
+  }
+  h2 {
+    margin-top: 0;
+    border: none;
   }
 }
