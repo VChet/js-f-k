@@ -15,19 +15,17 @@
   </ul>
 </template>
 <script setup lang="ts">
+import dayjs from "dayjs";
 import { composeHashColorFromString } from "../../helpers/color";
+import { formatArticleEntry } from "../../helpers/data";
 import { data, type Article } from "../articles.data";
 
-const tags = (() => data.reduce((acc: Record<string, Article[]>, article) => {
+const tags = data.reduce((acc: Record<string, Article[]>, article) => {
+  if (dayjs(article.date).isAfter(dayjs())) { return acc; }
   for (const tag of article.tags ?? []) {
     if (!acc[tag]) { acc[tag] = []; }
-    acc[tag].push({
-      url: article.url,
-      title: article.title,
-      date: article.date,
-      tags: article.tags
-    });
+    acc[tag].push(formatArticleEntry(article));
   }
   return acc;
-}, {}))();
+}, {});
 </script>

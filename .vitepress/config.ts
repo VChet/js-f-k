@@ -1,5 +1,6 @@
 import { fileURLToPath } from "node:url";
-import { defineConfig } from "vitepress";
+import dayjs from "dayjs";
+import { defineConfig, type HeadConfig } from "vitepress";
 import { RssPlugin, type RSSOptions } from "vitepress-plugin-rss";
 
 const RSS: RSSOptions = {
@@ -19,6 +20,15 @@ export default defineConfig({
     ["link", { rel: "icon", href: "/images/favicon.ico", sizes: "32x32" }],
     ["link", { rel: "apple-touch-icon", href: "/images/apple-touch-icon.png" }]
   ],
+  transformHead({ pageData }) {
+    const head: HeadConfig[] = [];
+
+    const { date } = pageData.frontmatter;
+    const isFuture = dayjs(date).isAfter(dayjs());
+    if (isFuture) { head.push(["meta", { name: "robots", content: "noindex" }]); }
+
+    return head;
+  },
   sitemap: { hostname: "https://js-f-k.netlify.app" },
   cleanUrls: true,
   srcExclude: ["README.md", "LICENSE.md"],
