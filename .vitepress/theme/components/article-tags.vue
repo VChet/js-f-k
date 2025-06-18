@@ -11,7 +11,7 @@
     </li>
   </ul>
 </template>
-<script setup>
+<script setup lang="ts">
 import { computed } from "vue";
 import { useData } from "vitepress";
 import { composeHashColorFromString } from "../../helpers/color";

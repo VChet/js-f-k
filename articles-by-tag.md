@@ -6,6 +6,6 @@ lastUpdated: false
 
 <tag-article-list />
 
-<script setup>
+<script setup lang="ts">
 import TagArticleList from '@components/tag-article-list.vue'
 </script>

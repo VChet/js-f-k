@@ -6,6 +6,6 @@ lastUpdated: false
 
 <date-article-list />
 
-<script setup>
+<script setup lang="ts">
 import DateArticleList from '@components/date-article-list.vue'
 </script>

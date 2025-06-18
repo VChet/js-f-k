@@ -5,7 +5,7 @@
     </template>
   </layout>
 </template>
-<script setup>
+<script setup lang="ts">
 import DefaultTheme from "vitepress/theme";
 import ArticleTags from "@components/article-tags.vue";
 
