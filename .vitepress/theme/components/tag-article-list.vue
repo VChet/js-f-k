@@ -16,9 +16,9 @@
 </template>
 <script setup lang="ts">
 import dayjs from "dayjs";
+import { data, type Article } from "../../data/articles.data";
 import { composeHashColorFromString } from "../../helpers/color";
 import { formatArticleEntry } from "../../helpers/data";
-import { data, type Article } from "../articles.data";
 
 const tags = data.reduce((acc: Record<string, Article[]>, article) => {
   if (dayjs(article.date).isAfter(dayjs())) { return acc; }

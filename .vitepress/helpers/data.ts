@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import type { Article } from "../theme/articles.data";
+import type { Article } from "../data/articles.data";
 
 export function formatArticleEntry(article: Article): Article {
   return {

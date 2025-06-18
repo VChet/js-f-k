@@ -10,8 +10,8 @@
 </template>
 <script setup lang="ts">
 import dayjs from "dayjs";
+import { data, type Article } from "../../data/articles.data";
 import { formatArticleEntry } from "../../helpers/data";
-import { data, type Article } from "../articles.data";
 
 const articles = data.reduce((acc: Article[], article) => {
   if (dayjs(article.date).isAfter(dayjs())) { return acc; }
