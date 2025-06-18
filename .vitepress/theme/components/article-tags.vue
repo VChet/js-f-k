@@ -16,8 +16,8 @@ import { computed } from "vue";
 import { useData } from "vitepress";
 import { composeHashColorFromString } from "../../helpers/color";
 
-const { page } = useData();
-const tags = computed(() => page.value.frontmatter?.tags ?? []);
+const { frontmatter } = useData();
+const tags = computed(() => frontmatter.value?.tags ?? []);
 </script>
 <style lang="scss">
 .article-tags {
