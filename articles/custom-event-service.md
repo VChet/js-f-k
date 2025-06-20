@@ -1,5 +1,6 @@
 ---
 title: "Типизированные customEvents"
+description: "Как реализовать типизированный CustomEvent-сервис на Vue с автодополнением, строгими типами и поддержкой useEventListener из VueUse."
 date: 2025-06-23
 tags: ["typescript", "vue", "vue-use"]
 ---

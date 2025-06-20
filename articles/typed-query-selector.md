@@ -1,5 +1,6 @@
 ---
 title: "Типизация querySelector"
+description: "Улучшенная типизация querySelector и querySelectorAll с typed-query-selector для точного вывода типов элементов на основе CSS-селекторов в TypeScript."
 date: 2025-06-04
 tags: ["npm", "typescript"]
 ---
