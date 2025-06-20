@@ -38,7 +38,14 @@ export default defineConfig({
         "@components": fileURLToPath(new URL("theme/components", import.meta.url))
       }
     },
-    plugins: [RssPlugin(RSS)]
+    plugins: [RssPlugin(RSS)],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler"
+        }
+      }
+    }
   },
   markdown: {
     theme: { light: "catppuccin-latte", dark: "catppuccin-mocha" }
