@@ -69,6 +69,35 @@ export default defineConfig({
   themeConfig: {
     outline: false,
     aside: false,
+    search: {
+      provider: "local",
+      options: {
+        disableQueryPersistence: true,
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: "Поиск",
+                buttonAriaLabel: "Поиск"
+              },
+              modal: {
+                displayDetails: "Отображение подробного списка",
+                resetButtonTitle: "Очистить поле поиска",
+                backButtonTitle: "Закрыть поиск",
+                noResultsText: "Нет результатов для",
+                footer: {
+                  selectText: "выбор",
+                  navigateText: "перемещение",
+                  navigateUpKeyAriaLabel: "стрелка вверх",
+                  navigateDownKeyAriaLabel: "стрелка вниз",
+                  closeText: "закрыть"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     socialLinks: [
       { icon: "telegram", link: "https://t.me/js_fck", ariaLabel: "Telegram" }
     ],
