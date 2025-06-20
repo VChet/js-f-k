@@ -48,7 +48,7 @@ export default defineConfig({
     outline: false,
     aside: false,
     socialLinks: [
-      { icon: "telegram", link: "https://t.me/js_fck" }
+      { icon: "telegram", link: "https://t.me/js_fck", ariaLabel: "Telegram" }
     ],
     nav: [
       { text: "Статьи по датам", link: "/articles-by-date" },
