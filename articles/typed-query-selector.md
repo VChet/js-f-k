@@ -1,10 +1,10 @@
 ---
-title: "typed-query-selector: типизированный querySelector"
+title: "Типизация querySelector"
 date: 2025-06-04
 tags: ["npm", "typescript"]
 ---
 
-# typed-query-selector: типизированный querySelector
+# Типизация `querySelector`
 
 [typed-query-selector](https://www.npmjs.com/package/typed-query-selector) — улучшение типизации методов `querySelector` и `querySelectorAll` с выводом типов на основе CSS-селекторов.
 

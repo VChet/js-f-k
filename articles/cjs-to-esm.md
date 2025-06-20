@@ -1,10 +1,10 @@
 ---
-title: "Переход с CommonJS на ESM: почему и как"
+title: "Переход с CommonJS на ESM"
 date: 2025-06-09
 tags: ["build"]
 ---
 
-# Переход с CommonJS на ESM: почему и как
+# Переход с CommonJS на ESM
 
 Модули на основе `require()` и `module.exports` (CommonJS) — устаревающий формат.
 Современный стек (включая Node.js) постепенно переходит на [ESM (ECMAScript Modules)](https://nodejs.org/api/esm.html),
