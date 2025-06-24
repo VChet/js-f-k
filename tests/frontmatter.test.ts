@@ -21,6 +21,7 @@ describe("frontmatter validator", () => {
       expect(frontmatter.description).toBeTypeOf("string");
       expect(frontmatter.tags).toSatisfy(Array.isArray).and.not.toHaveLength(0);
 
+      if ("hero" in frontmatter) { expect(frontmatter.hero).toBeTypeOf("string"); }
       if ("publish" in frontmatter) {
         expect(frontmatter.publish).toBe(false);
         expect(frontmatter.date).toBeUndefined();
