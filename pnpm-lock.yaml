@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@catppuccin/vitepress':
-        specifier: ^0.1.2
-        version: 0.1.2(typescript@5.8.3)
       dayjs:
         specifier: ^1.11.13
         version: 1.11.13
@@ -231,11 +228,6 @@ packages:
 
   '@bufbuild/protobuf@2.5.2':
     resolution: {integrity: sha512-foZ7qr0IsUBjzWIq+SuBLfdQCpJ1j8cTuNNT4owngTHoN5KsJb8L9t65fzz7SCeSWzescoOil/0ldqiL041ABg==}
-
-  '@catppuccin/vitepress@0.1.2':
-    resolution: {integrity: sha512-dqhgo6U6GWbgh3McAgwemUC8Y2Aj48rRcQx/9iuPzBPAgo7NA3yi7ZcR0wolAENMmoOMAHBV+rz/5DfiGxtZLA==}
-    peerDependencies:
-      typescript: ^5.0.0
 
   '@clack/core@0.5.0':
     resolution: {integrity: sha512-p3y0FIOwaYRUPRcMO7+dlmLh8PSRcrjuTndsiA0WAFbWES0mLZlrjVoBRZ9DzkPFJZG6KGkJmoEAY0ZcVWTkow==}
@@ -3278,10 +3270,6 @@ snapshots:
       '@babel/helper-validator-identifier': 7.27.1
 
   '@bufbuild/protobuf@2.5.2': {}
-
-  '@catppuccin/vitepress@0.1.2(typescript@5.8.3)':
-    dependencies:
-      typescript: 5.8.3
 
   '@clack/core@0.5.0':
     dependencies:

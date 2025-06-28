@@ -17,7 +17,6 @@
     "test": "vitest --run"
   },
   "dependencies": {
-    "@catppuccin/vitepress": "^0.1.2",
     "dayjs": "^1.11.13",
     "vite": "^7.0.0",
     "vitepress": "^1.6.3",

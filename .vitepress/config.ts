@@ -66,9 +66,7 @@ export default defineConfig({
       }
     }
   },
-  markdown: {
-    theme: { light: "catppuccin-latte", dark: "catppuccin-mocha" }
-  },
+  markdown: { theme: { light: "github-light", dark: "github-dark" } },
   lastUpdated: true,
   themeConfig: {
     outline: false,
