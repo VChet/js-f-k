@@ -7,8 +7,7 @@ tags: ["typescript", "vue", "vue-use"]
 
 # Типизированные customEvents
 
-Наверно каждый разработчик хоть раз писал свой [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)-сервис.
-Вот и мы написали свой. Но хотя бы типизированный.
+Наверно каждый разработчик хоть раз писал свой [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)-сервис. Вот и мы написали свой. Но хотя бы типизированный.
 
 Мы используем `window.dispatchEvent()` и `useEventListener()` из **VueUse**, но оборачиваем их, чтобы:
 
