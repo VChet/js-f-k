@@ -12,17 +12,23 @@
 </template>
 <script setup lang="ts">
 import { computed } from "vue";
+import dayjs from "dayjs";
 import { useData } from "vitepress";
 import { data } from "../../data/articles.data";
 
 const { frontmatter } = useData();
+const ARTICLES_LIMIT = 4;
 const relatedArticles = computed(() => {
   const { title, tags } = frontmatter.value;
   if (!tags) { return []; }
 
-  return data
-    .filter((article) => article.title !== title && article.tags.some((tag) => tags.includes(tag)))
-    .slice(0, 4);
+  const result = [];
+  for (const article of data) {
+    if (dayjs(article.date).isAfter(dayjs()) || article.title === title) { continue; }
+    if (article.tags.some((tag) => tags.includes(tag))) { result.push(article); }
+    if (result.length === ARTICLES_LIMIT) break;
+  }
+  return result;
 });
 </script>
 <style lang="scss">
