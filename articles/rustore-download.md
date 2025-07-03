@@ -17,7 +17,7 @@ tags: ["service"]
 
 Получаем в ответе подробные данные о приложении и нужный нам **id** в `body.appId`.
 
-### Получения ссылки для скачивания APK
+### Получение ссылки для скачивания APK
 
 `POST https://backapi.rustore.ru/applicationData/download-link`
 
