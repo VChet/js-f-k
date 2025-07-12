@@ -2,7 +2,7 @@
 title: "Spellcheck для любого текста"
 description: "Как настроить проверку орфографии в коде с помощью cspell — поддержка русского и английского, словари, маски и интеграция в проект."
 date: 2025-06-20
-tags: ["npm", "linters"]
+tags: ["linters", "npm"]
 ---
 
 # Spellcheck для любого текста
@@ -14,7 +14,7 @@ tags: ["npm", "linters"]
 Пример базовой настройки:
 
 ```bash
-npm install -D cspell @cspell/dict-ru_ru
+npm install --save-dev cspell @cspell/dict-ru_ru
 ```
 
 ```json

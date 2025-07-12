@@ -12,7 +12,7 @@ tags: ["npm", "typescript"]
 Установка:
 
 ```bash
-npm i --save-dev ts-reset
+npm install --save-dev ts-reset
 ```
 
 ```ts

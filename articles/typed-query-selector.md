@@ -14,7 +14,7 @@ tags: ["npm", "typescript"]
 Установка:
 
 ```bash
-npm i --save-dev typed-query-selector
+npm install --save-dev typed-query-selector
 ```
 
 ```ts

@@ -22,7 +22,7 @@ tags: ["npm"]
 Установка:
 
 ```bash
-npm install -g npm-check-updates
+npm install --global npm-check-updates
 ```
 
 ```bash
