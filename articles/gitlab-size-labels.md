@@ -2,7 +2,7 @@
 title: "Автоматические size-метки для Merge Request в GitLab CI"
 description: "Как автоматически выставлять метки size/M и size/XL в Merge Request в GitLab CI на основе количества изменений."
 date: 2025-07-22
-tags: ["ci/cd"]
+tags: ["ci/cd", "git"]
 ---
 
 # Автоматические size-метки для Merge Request в GitLab CI
