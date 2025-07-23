@@ -31,7 +31,7 @@ export default defineConfig({
   transformPageData(pageData, { siteConfig }) {
     pageData.frontmatter.head ??= [];
 
-    const { title, description, date, tags } = pageData.frontmatter;
+    const { title, description, date } = pageData.frontmatter;
     const pageTitle = title ?? siteConfig.site.title;
     const pageDescription = description ?? siteConfig.site.description;
     const pageHref = composeHref(pageData.relativePath).replace("/index.md", "").replace(".md", "");
@@ -44,7 +44,6 @@ export default defineConfig({
     pageData.frontmatter.head.push(["meta", { name: "twitter:title", content: pageTitle }]);
     pageData.frontmatter.head.push(["meta", { name: "twitter:description", content: pageDescription }]);
     // Optional
-    if (tags) { pageData.frontmatter.head.push(["meta", { name: "keywords", content: tags.join(", ") }]); }
     const isFuture = dayjs(date).isAfter(dayjs());
     if (isFuture) { pageData.frontmatter.head.push(["meta", { name: "robots", content: "noindex" }]); }
   },
