@@ -15,6 +15,7 @@ const RSS: RSSOptions = {
   baseUrl: composeHref(),
   language: "ru-RU"
 };
+const TELEGRAM_CHANNEL = "js_fck";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -26,12 +27,13 @@ export default defineConfig({
     ["link", { rel: "apple-touch-icon", href: "/images/apple-touch-icon.png" }],
     ["meta", { name: "og:site_name", content: "JS F/k" }],
     ["meta", { name: "og:type", content: "website" }],
-    ["meta", { name: "twitter:card", content: "summary" }]
+    ["meta", { name: "og:logo", content: "/images/icon-512x512.png" }],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }]
   ],
   transformPageData(pageData, { siteConfig }) {
     pageData.frontmatter.head ??= [];
 
-    const { title, description, date } = pageData.frontmatter;
+    const { title, description, date, hero } = pageData.frontmatter;
     const pageTitle = title ?? siteConfig.site.title;
     const pageDescription = description ?? siteConfig.site.description;
     const pageHref = composeHref(pageData.relativePath).replace("/index.md", "").replace(".md", "");
@@ -43,7 +45,12 @@ export default defineConfig({
     pageData.frontmatter.head.push(["meta", { name: "og:url", content: pageHref }]);
     pageData.frontmatter.head.push(["meta", { name: "twitter:title", content: pageTitle }]);
     pageData.frontmatter.head.push(["meta", { name: "twitter:description", content: pageDescription }]);
+    pageData.frontmatter.head.push(["meta", { name: "twitter:url", content: pageHref }]);
     // Optional
+    if (hero) {
+      pageData.frontmatter.head.push(["meta", { name: "og:image", content: composeHref(hero) }]);
+      pageData.frontmatter.head.push(["meta", { name: "twitter:image", content: composeHref(hero) }]);
+    }
     const isFuture = dayjs(date).isAfter(dayjs());
     if (isFuture) { pageData.frontmatter.head.push(["meta", { name: "robots", content: "noindex" }]); }
   },
@@ -100,7 +107,7 @@ export default defineConfig({
       }
     },
     socialLinks: [
-      { icon: "telegram", link: "https://t.me/js_fck", ariaLabel: "Telegram" }
+      { icon: "telegram", link: `https://t.me/${TELEGRAM_CHANNEL}`, ariaLabel: "Telegram" }
     ],
     nav: [
       { text: "Статьи по датам", link: "/articles-by-date" },
