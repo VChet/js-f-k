@@ -13,10 +13,10 @@
   </section>
 </template>
 <script setup lang="ts">
-import { useData } from "vitepress";
+import { useFrontmatter } from "../../composables/useFrontmatter";
 import { authorsData, type AuthorData } from "../../data/authors";
 
-const { frontmatter } = useData();
+const frontmatter = useFrontmatter();
 function getAuthorsData(): AuthorData[] {
   const { author } = frontmatter.value;
   if (!author) { return []; }

@@ -13,11 +13,11 @@
 </template>
 <script setup lang="ts">
 import { computed } from "vue";
-import { useData } from "vitepress";
+import { useFrontmatter } from "../../composables/useFrontmatter";
 import { composeHashColorFromString } from "../../helpers/color";
 
-const { frontmatter } = useData();
-const tags = computed(() => frontmatter.value?.tags ?? []);
+const frontmatter = useFrontmatter();
+const tags = computed(() => frontmatter.value.tags ?? []);
 </script>
 <style lang="scss">
 .article-tags {

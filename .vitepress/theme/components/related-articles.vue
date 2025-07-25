@@ -13,10 +13,10 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import dayjs from "dayjs";
-import { useData } from "vitepress";
+import { useFrontmatter } from "../../composables/useFrontmatter";
 import { data } from "../../data/articles.data";
 
-const { frontmatter } = useData();
+const frontmatter = useFrontmatter();
 const ARTICLES_LIMIT = 4;
 const relatedArticles = computed(() => {
   const { title, tags } = frontmatter.value;
