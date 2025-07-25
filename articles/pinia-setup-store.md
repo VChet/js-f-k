@@ -2,6 +2,7 @@
 title: "Pinia: стоит ли использовать setup store"
 description: "Разбираемся, стоит ли использовать setup store в Pinia: плюсы, ограничения и почему option store пока остаётся надёжным выбором для большинства проектов."
 date: 2025-06-11
+author: "vchet"
 tags: ["pinia"]
 ---
 

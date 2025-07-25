@@ -3,6 +3,7 @@ title: "Альтернатива Postman и Insomnia"
 description: "Postman и Insomnia стали перегруженными и обросли платными функциями. Новая альтернатива — Yaak. Лёгкий REST-клиент с базовым набором функций."
 hero: "/hero/yaak.png"
 date: 2025-07-08
+author: "vchet"
 tags: ["app"]
 ---
 

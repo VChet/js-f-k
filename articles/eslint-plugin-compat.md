@@ -3,6 +3,7 @@ title: "ESLint плагины: compat"
 description: "ESLint-плагин, который проверяет совместимость вашего кода с целевыми браузерами. Простое подключение, поддержка polyfill'ов, настройка через browserslist."
 hero: "/hero/eslint-plugin-compat.gif"
 date: 2025-07-24
+author: "vchet"
 tags: ["linters", "npm"]
 ---
 

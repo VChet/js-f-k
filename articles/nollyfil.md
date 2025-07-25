@@ -2,6 +2,7 @@
 title: "Очистка node_modules от устаревших полифилов"
 description: "Как найти и удалить устаревшие полифилы из node_modules с помощью nolyfill, чтобы ускорить установку, сборку и запуск JavaScript-проекта."
 date: 2025-06-18
+author: "vchet"
 tags: ["npm"]
 ---
 

@@ -2,6 +2,7 @@
 title: "Скачиваем приложение с RuStore без регистрации"
 description: "Скачать APK из RuStore без регистрации через официальный API: как получить информацию о приложении и скачать APK с RuStore."
 date: 2025-07-03
+author: "vchet"
 tags: ["service"]
 ---
 
