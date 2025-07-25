@@ -15,15 +15,15 @@
   </layout>
 </template>
 <script setup lang="ts">
-import { useData } from "vitepress";
 import DefaultTheme from "vitepress/theme";
+import { useFrontmatter } from "../composables/useFrontmatter";
 import ArticleTags from "@components/article-tags.vue";
 import AuthorCard from "@components/author-card.vue";
 import RelatedArticles from "@components/related-articles.vue";
 
 const { Layout } = DefaultTheme;
 
-const { frontmatter } = useData();
+const frontmatter = useFrontmatter();
 </script>
 <style lang="scss">
 .hero-image {
