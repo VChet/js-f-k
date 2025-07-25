@@ -33,7 +33,7 @@ export default defineConfig({
   transformPageData(pageData, { siteConfig }) {
     pageData.frontmatter.head ??= [];
 
-    const { title, description, date, hero } = pageData.frontmatter;
+    const { title, description, hero, author, date } = pageData.frontmatter;
     const pageTitle = title ?? siteConfig.site.title;
     const pageDescription = description ?? siteConfig.site.description;
     const pageHref = composeHref(pageData.relativePath).replace("/index.md", "").replace(".md", "");
@@ -50,6 +50,10 @@ export default defineConfig({
     if (hero) {
       pageData.frontmatter.head.push(["meta", { name: "og:image", content: composeHref(hero) }]);
       pageData.frontmatter.head.push(["meta", { name: "twitter:image", content: composeHref(hero) }]);
+    }
+    if (author) {
+      const authors = Array.isArray(author) ? author : [author];
+      pageData.frontmatter.head.push(["meta", { name: "author", content: authors.join(", ") }]);
     }
     const isFuture = dayjs(date).isAfter(dayjs());
     if (isFuture) { pageData.frontmatter.head.push(["meta", { name: "robots", content: "noindex" }]); }
