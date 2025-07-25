@@ -2,6 +2,7 @@
 title: "Как я написал свой Stylelint-плагин"
 description: "Как создать собственный Stylelint-плагин: от базового API до поддержки autofix. Обрабатываем CSS-токены и избавляемся от ручной замены значений с помощью PostCSS."
 date: 2025-07-15
+author: "vchet"
 tags: ["linters"]
 ---
 

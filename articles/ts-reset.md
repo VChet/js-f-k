@@ -2,6 +2,7 @@
 title: "Улучшение дефолтного поведения TypeScript"
 description: "Утилита ts-reset улучшает стандартную типизацию TypeScript, делая API строже и безопаснее без изменения существующего корректного кода."
 date: 2025-06-02
+author: "vchet"
 tags: ["npm", "typescript"]
 ---
 

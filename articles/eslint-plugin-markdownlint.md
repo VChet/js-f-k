@@ -2,6 +2,7 @@
 title: "ESLint плагины: markdownlint"
 description: "Плагин для ESLint, который проверяет Markdown-файлы по правилам markdownlint. Удобен при работе с документацией, README и статьями. Поддерживает конфигурацию, свои правила и autofix."
 date: 2025-07-29
+author: "vchet"
 tags: ["linters", "npm"]
 ---
 

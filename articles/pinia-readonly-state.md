@@ -2,6 +2,7 @@
 title: "Pinia: запрет неявной мутации state"
 description: "Как запретить неявную мутацию состояния в Pinia с помощью TypeScript, чтобы изменения были явными и контролируемыми, улучшая стабильность приложения."
 date: 2025-06-16
+author: ["vchet", "rudnovd"]
 tags: ["pinia", "typescript"]
 ---
 

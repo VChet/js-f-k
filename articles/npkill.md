@@ -3,6 +3,7 @@ title: "Быстрая очистка node_modules"
 description: "Как с помощью npkill находить и удалять папки node_modules одним нажатием — освобождая гигабайты дискового пространства за пару минут."
 hero: "/hero/npkill.gif"
 date: 2025-06-25
+author: "vchet"
 tags: ["npm"]
 ---
 
