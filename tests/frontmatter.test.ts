@@ -3,6 +3,7 @@ import { basename, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { describe, expect, it } from "vitest";
+import { authorsData } from "../.vitepress/data/authors";
 
 describe("frontmatter validator", () => {
   function getMarkdownFiles(dir: string): string[] {
@@ -12,6 +13,11 @@ describe("frontmatter validator", () => {
   }
   const ARTICLES_DIR = fileURLToPath(new URL("../articles", import.meta.url));
 
+  function isValidAuthor(value: unknown): boolean {
+    const isAuthorExists = (payload: unknown): boolean => typeof payload === "string" && authorsData.has(payload);
+    return Array.isArray(value) ? value.every(isAuthorExists) : isAuthorExists(value);
+  }
+
   for (const filePath of getMarkdownFiles(ARTICLES_DIR)) {
     const raw = readFileSync(filePath, "utf8");
     const { data: frontmatter } = matter(raw);
@@ -19,6 +25,7 @@ describe("frontmatter validator", () => {
     it(basename(filePath), () => {
       expect(frontmatter.title).toBeTypeOf("string");
       expect(frontmatter.description).toBeTypeOf("string");
+      expect(isValidAuthor(frontmatter.author)).toBeTruthy();
       expect(frontmatter.tags).toSatisfy(Array.isArray).and.not.toHaveLength(0);
 
       if ("hero" in frontmatter) { expect(frontmatter.hero).toMatch(/^\/hero\/.+\.(png|jpe?g|webp|svg|gif)$/); }
