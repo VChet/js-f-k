@@ -77,7 +77,6 @@ export default defineConfig({
     }
   },
   markdown: { theme: { light: "github-light", dark: "github-dark" } },
-  lastUpdated: true,
   themeConfig: {
     outline: false,
     aside: false,
@@ -117,13 +116,6 @@ export default defineConfig({
       { text: "Статьи по датам", link: "/articles-by-date" },
       { text: "Статьи по тегам", link: "/articles-by-tag" }
     ],
-    lastUpdated: {
-      text: "Последнее обновление",
-      formatOptions: {
-        forceLocale: true,
-        dateStyle: "long"
-      }
-    },
     langMenuLabel: "Изменить язык",
     returnToTopLabel: "Вернуться к началу",
     darkModeSwitchLabel: "Оформление",

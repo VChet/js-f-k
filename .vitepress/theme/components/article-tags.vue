@@ -24,6 +24,7 @@ const tags = computed(() => frontmatter.value.tags ?? []);
   display: flex;
   gap: .5rem;
   padding: 0;
+  margin-block: 1rem 0.75rem;
   list-style: none;
 }
 </style>
