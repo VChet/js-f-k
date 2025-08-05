@@ -16,6 +16,14 @@ const RSS: RSSOptions = {
   language: "ru-RU"
 };
 const TELEGRAM_CHANNEL = "js_fck";
+const COPYRIGHT = `
+  <a
+    href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Открыть текст лицензии CC-BY-NC-SA 4.0"
+  >CC-BY-NC-SA 4.0</a> © 2025 JS F/k Team
+`.trim();
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -130,9 +138,7 @@ export default defineConfig({
     lightModeSwitchTitle: "Переключить на светлую тему",
     darkModeSwitchTitle: "Переключить на тёмную тему",
     docFooter: { prev: false, next: false },
-    footer: {
-      copyright: "<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"Открыть текст лицензии CC-BY-NC-SA 4.0\">CC-BY-NC-SA 4.0</a> © 2025 JS F/k Team"
-    },
+    footer: { copyright: COPYRIGHT },
     notFound: {
       title: "СТРАНИЦА НЕ НАЙДЕНА",
       quote: "Возможно, вы перешли по неправильной ссылке. А может, мы опять что-то сломали ¯\\_(ツ)_/¯",
