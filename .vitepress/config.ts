@@ -62,7 +62,6 @@ export default defineConfig({
         "@components": fileURLToPath(new URL("theme/components", import.meta.url))
       }
     },
-    css: { preprocessorOptions: { scss: { api: "modern-compiler" } } },
     server: { port: 7200 }
   },
   markdown: { theme: { light: "github-light", dark: "github-dark" } },
