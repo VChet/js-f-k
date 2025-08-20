@@ -3,6 +3,7 @@ import { fileURLToPath } from "node:url";
 import dayjs from "dayjs";
 import { defineConfig } from "vitepress";
 import { RssPlugin, type RSSOptions } from "vitepress-plugin-rss";
+import type { Frontmatter } from "./composables/useFrontmatter";
 
 function composeHref(path = "") {
   return new URL(normalize(path), "https://js-f-k.netlify.app").href;
@@ -41,7 +42,7 @@ export default defineConfig({
   transformPageData(pageData, { siteConfig }) {
     pageData.frontmatter.head ??= [];
 
-    const { title, description, hero, author, date } = pageData.frontmatter;
+    const { title, description, hero, author, date } = pageData.frontmatter as Frontmatter;
     const pageTitle = title ?? siteConfig.site.title;
     const pageDescription = description ?? siteConfig.site.description;
     const pageHref = composeHref(pageData.relativePath).replace("/index.md", "").replace(".md", "");

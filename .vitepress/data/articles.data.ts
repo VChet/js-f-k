@@ -1,14 +1,15 @@
 import dayjs from "dayjs";
 import { createContentLoader } from "vitepress";
+import type { Frontmatter } from "../composables/useFrontmatter";
 
 export interface Article {
   url: string
-  title: string
-  date: string
-  tags: string[]
-}
+  title: Frontmatter["title"]
+  date: Frontmatter["date"]
+  tags: Frontmatter["tags"]
+};
 
-const data = [] as Article[];
+const data: Article[] = [];
 export { data };
 
 export default createContentLoader<Article[]>("articles/*.md", {
