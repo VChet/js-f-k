@@ -3,7 +3,7 @@
     <li v-for="tag in tags" :key="tag">
       <a
         :href="`/articles-by-tag#${tag}`"
-        :title="`Перейти к тегу: ${tag}`"
+        :title="locales.tagTitle.replace('{}', tag)"
         :style="{ color: composeHashColorFromString(tag) }"
       >
         #{{ tag }}
@@ -14,8 +14,10 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useFrontmatter } from "../../composables/useFrontmatter";
+import { useLocales } from "../../composables/useLocales";
 import { composeHashColorFromString } from "../../helpers/color";
 
+const locales = useLocales();
 const frontmatter = useFrontmatter();
 const tags = computed(() => frontmatter.value.tags ?? []);
 </script>

@@ -1,11 +1,12 @@
-import { formatDate } from "./date";
+import dayjs from "dayjs";
 import type { Article } from "../data/articles.data";
 
 export function formatArticleEntry(article: Article): Article {
   return {
     url: article.url,
+    lang: article.lang,
     title: article.title,
-    date: formatDate(article.date, "DD.MM.YYYY"),
+    date: dayjs(article.date).format("DD.MM.YYYY"),
     tags: article.tags
   };
 }

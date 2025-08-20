@@ -8,18 +8,22 @@ import { computed } from "vue";
 import dayjs from "dayjs";
 import { useData } from "vitepress";
 import { useFrontmatter } from "../../composables/useFrontmatter";
-import { formatDate } from "../../helpers/date";
+import { useLocales } from "../../composables/useLocales";
 
-const content = useData();
+import("dayjs/locale/ru");
+
+const locales = useLocales();
+const { page, lang } = useData();
 const frontmatter = useFrontmatter();
 
 const DATE_FORMAT = "DD MMMM YYYY";
 const dateString = computed<string>(() => {
   const { date } = frontmatter.value;
-  const { lastUpdated } = content.page.value;
-  let string = formatDate(date, DATE_FORMAT);
+  const { lastUpdated } = page.value;
+  let string = dayjs(date).locale(lang.value).format(DATE_FORMAT);
   if (lastUpdated && dayjs(date).isBefore(dayjs(lastUpdated))) {
-    string += ` | Обновлено ${formatDate(lastUpdated, DATE_FORMAT)}`;
+    const localizedDate = dayjs(lastUpdated).locale(lang.value).format(DATE_FORMAT);
+    string += ` | ${locales.value.lastUpdated.replace("{}", localizedDate)}`;
   }
   return string;
 });
