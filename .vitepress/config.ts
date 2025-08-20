@@ -127,6 +127,7 @@ export default defineConfig({
       { text: "Статьи по тегам", link: "/articles-by-tag" }
     ],
     langMenuLabel: "Изменить язык",
+    skipToContentLabel: "Перейти к содержанию",
     returnToTopLabel: "Вернуться к началу",
     darkModeSwitchLabel: "Оформление",
     lightModeSwitchTitle: "Переключить на светлую тему",
