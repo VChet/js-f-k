@@ -29,4 +29,7 @@ const frontmatter = useFrontmatter();
 .layout-hero {
   margin-bottom: 2.5rem;
 }
+.VPDocFooter {
+  display: none;
+}
 </style>
