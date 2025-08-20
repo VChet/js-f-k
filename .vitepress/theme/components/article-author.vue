@@ -7,7 +7,7 @@
       target="_blank"
       class="article-author__entry"
     >
-      <img :src="avatar" :alt="`Аватар ${name}`" class="article-author__entry-avatar">
+      <img :src="avatar" :alt="locales.avatarAlt.replace('{}', name)" class="article-author__entry-avatar">
       <div>{{ name }}</div>
     </a>
   </div>
@@ -15,8 +15,10 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useFrontmatter } from "../../composables/useFrontmatter";
+import { useLocales } from "../../composables/useLocales";
 import { authorsData, type AuthorData } from "../../data/authors";
 
+const locales = useLocales();
 const frontmatter = useFrontmatter();
 const authors = computed<AuthorData[]>(() => {
   const { author } = frontmatter.value;

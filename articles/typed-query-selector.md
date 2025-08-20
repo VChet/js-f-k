@@ -12,7 +12,7 @@ tags: ["npm", "typescript"]
 
 ⚠️ Требуется TypeScript версии 4.1 или выше.
 
-Установка:
+## Установка
 
 ```bash
 npm install --save-dev typed-query-selector
@@ -23,7 +23,7 @@ npm install --save-dev typed-query-selector
 import "typed-query-selector";
 ```
 
-Результат:
+## Результат
 
 ```ts
 document.querySelector("div#app"); // HTMLDivElement

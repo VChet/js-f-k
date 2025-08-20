@@ -3,6 +3,8 @@ import { fileURLToPath } from "node:url";
 import dayjs from "dayjs";
 import { defineConfig } from "vitepress";
 import { RssPlugin, type RSSOptions } from "vitepress-plugin-rss";
+import locales from "./locales";
+import searchLocales from "./locales/search";
 import type { Frontmatter } from "./composables/useFrontmatter";
 
 function composeHref(path = "") {
@@ -17,20 +19,10 @@ const RSS: RSSOptions = {
   language: "ru-RU"
 };
 const TELEGRAM_CHANNEL = "js_fck";
-const COPYRIGHT = `
-  <a
-    href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-    target="_blank"
-    rel="noopener noreferrer"
-    title="Открыть текст лицензии CC-BY-NC-SA 4.0"
-  >CC-BY-NC-SA 4.0</a> © 2025 JS F/k Team
-`.trim();
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "JS F/k",
-  description: "HTML/TS/Vue — с примерами, по делу, без воды",
-  lang: "ru-RU",
+  locales,
   head: [
     ["link", { rel: "icon", href: "/images/favicon.ico", sizes: "32x32" }],
     ["link", { rel: "apple-touch-icon", href: "/images/apple-touch-icon.png" }],
@@ -94,51 +86,12 @@ export default defineConfig({
       provider: "local",
       options: {
         disableQueryPersistence: true,
-        locales: {
-          root: {
-            translations: {
-              button: {
-                buttonText: "Поиск",
-                buttonAriaLabel: "Поиск"
-              },
-              modal: {
-                displayDetails: "Отображение подробного списка",
-                resetButtonTitle: "Очистить поле поиска",
-                backButtonTitle: "Закрыть поиск",
-                noResultsText: "Нет результатов для",
-                footer: {
-                  selectText: "выбор",
-                  navigateText: "перемещение",
-                  navigateUpKeyAriaLabel: "стрелка вверх",
-                  navigateDownKeyAriaLabel: "стрелка вниз",
-                  closeText: "закрыть"
-                }
-              }
-            }
-          }
-        }
+        locales: searchLocales
       }
     },
     socialLinks: [
       { icon: "telegram", link: `https://t.me/${TELEGRAM_CHANNEL}`, ariaLabel: "Telegram" }
     ],
-    nav: [
-      { text: "Статьи по датам", link: "/articles-by-date" },
-      { text: "Статьи по тегам", link: "/articles-by-tag" }
-    ],
-    langMenuLabel: "Изменить язык",
-    skipToContentLabel: "Перейти к содержанию",
-    returnToTopLabel: "Вернуться к началу",
-    darkModeSwitchLabel: "Оформление",
-    lightModeSwitchTitle: "Переключить на светлую тему",
-    darkModeSwitchTitle: "Переключить на тёмную тему",
-    docFooter: { prev: false, next: false },
-    footer: { copyright: COPYRIGHT },
-    notFound: {
-      title: "СТРАНИЦА НЕ НАЙДЕНА",
-      quote: "Возможно, вы перешли по неправильной ссылке. А может, мы опять что-то сломали ¯\\_(ツ)_/¯",
-      linkLabel: "Вернуться на главную",
-      linkText: "На главную"
-    }
+    docFooter: { prev: false, next: false }
   }
 });
