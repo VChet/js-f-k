@@ -10,7 +10,7 @@ tags: ["npm", "typescript"]
 
 [ts-reset](https://www.totaltypescript.com/ts-reset) — утилита, которая расширяет стандартную типизацию в TypeScript, устраняя устаревшие и нестрогие участки в базовых API. Подключается на уровне проекта и повышает строгость типизации в ряде API.
 
-Установка:
+## Установка
 
 ```bash
 npm install --save-dev ts-reset
@@ -31,10 +31,10 @@ import "@total-typescript/ts-reset/json-parse";
 import "@total-typescript/ts-reset/fetch";
 ```
 
-Основные изменения:
+## Основные изменения
 
 - `JSON.parse`, `.json()`, `localStorage`, `sessionStorage` теперь возвращают `unknown`, а не `any`
-- `.filter(Boolean)` корректно удаляет `falsy-значения`
+- `.filter(Boolean)` корректно удаляет `falsy`-значения
 - `.includes()`, `.indexOf()`, `Set.has()`, `Map.has()` не требуют точного сравнения (чего и пытаемся добиться, вызывая их)
 - `Array.isArray()` больше не считает `any[]` безопасным
 

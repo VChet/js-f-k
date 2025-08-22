@@ -14,7 +14,8 @@
     "lint:css": "stylelint {.vitepress/**/*.{scss,vue},articles/*.md}",
     "lint:css:fix": "npm run lint:css -- --fix",
     "lint:all": "npm run lint:ts && npm run lint:js && npm run lint:css",
-    "test": "vitest --run"
+    "test": "vitest --run",
+    "i18n": "node scripts/translations.ts"
   },
   "dependencies": {
     "dayjs": "^1.11.13",
