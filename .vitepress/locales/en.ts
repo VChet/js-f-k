@@ -11,6 +11,7 @@ export default {
   label: "English",
   lang: "en",
   link: "/en",
+  title: "JS F/k",
   description: "HTML/TS/Vue — with examples, to the point, no fluff",
   themeConfig: {
     nav: [
