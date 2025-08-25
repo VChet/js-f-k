@@ -2,7 +2,7 @@
 title: "Типизированные customEvents"
 description: "Как реализовать типизированный CustomEvent-сервис на Vue с автодополнением, строгими типами и поддержкой useEventListener из VueUse."
 date: 2025-06-23
-author: "vchet"
+author: ["vchet", "rudnovd"]
 tags: ["typescript", "vue", "vue-use"]
 ---
 
@@ -14,9 +14,9 @@ tags: ["typescript", "vue", "vue-use"]
 
 - обеспечить строгую типизацию названий событий и их `payload`
 - иметь автодополнение при вызове событий
-- заранее знать структуру `event.detail` без явных проверок и `any`
+- заранее знать тип `event.detail` без явных проверок и `any`
 
-Как использовать:
+## Как использовать
 
 ```ts
 dispatchCustomDashboardEvent("user-created", user.id);
@@ -26,7 +26,7 @@ useDashboardEventListener("user-created", ({ detail }) => {
 });
 ```
 
-Реализация:
+## Реализация
 
 ```ts
 import { useEventListener, type Arrayable } from "@vueuse/core";
