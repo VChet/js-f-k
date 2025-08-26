@@ -18,7 +18,7 @@ const RSS: RSSOptions = {
   baseUrl: composeHref(),
   language: "ru-RU"
 };
-const TELEGRAM_CHANNEL = "js_fck";
+const TELEGRAM_CHANNEL = "js_f_k";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
