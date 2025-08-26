@@ -18,8 +18,7 @@ export default {
   description: locales.ru.description,
   themeConfig: {
     nav: [
-      { text: "Статьи по датам", link: "/articles-by-date" },
-      { text: "Статьи по тегам", link: "/articles-by-tag" }
+      { text: "Статьи", link: "/articles" }
     ],
     socialLinks: [
       { icon: "telegram", link: `https://t.me/${TELEGRAM_CHANNEL}`, ariaLabel: "Telegram" },

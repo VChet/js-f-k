@@ -10,7 +10,7 @@ layout: home
     Without long introductions, we break down real tasks, share working solutions and libraries.
   </p>
 
-  <a href="/en/articles-by-date" title="View the list of articles in chronological order">Go to articles...</a>
+  <a href="/en/articles" title="Open the list of articles">Go to articles...</a>
 </div>
 
 <style lang="scss">

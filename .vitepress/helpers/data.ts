@@ -6,7 +6,8 @@ export function formatArticleEntry(article: Article): Article {
     url: article.url,
     lang: article.lang,
     title: article.title,
-    date: dayjs(article.date).format("DD.MM.YYYY"),
+    description: article.description,
+    date: dayjs(article.date).format("DD MMMM, YYYY"),
     tags: article.tags
   };
 }

@@ -18,8 +18,7 @@ export default {
   description: locales.en.description,
   themeConfig: {
     nav: [
-      { text: "Articles by date", link: "/en/articles-by-date" },
-      { text: "Articles by tag", link: "/en/articles-by-tag" }
+      { text: "Articles", link: "/en/articles" }
     ],
     socialLinks: [
       { icon: "rss", link: "/en/rss.xml", ariaLabel: "RSS" }
