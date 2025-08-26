@@ -16,7 +16,7 @@ const locales = useLocales();
 const { page, lang } = useData();
 const frontmatter = useFrontmatter();
 
-const DATE_FORMAT = "DD MMMM YYYY";
+const DATE_FORMAT = "DD MMMM, YYYY";
 const dateString = computed<string>(() => {
   const { date } = frontmatter.value;
   const { lastUpdated } = page.value;
