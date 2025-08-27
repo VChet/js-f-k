@@ -16,7 +16,7 @@
 import { computed } from "vue";
 import { useFrontmatter } from "../../composables/useFrontmatter";
 import { useLocales } from "../../composables/useLocales";
-import { authorsData, type AuthorData } from "../../data/authors";
+import { authorsData, type AuthorData } from "../../constants/authors";
 
 const locales = useLocales();
 const frontmatter = useFrontmatter();
