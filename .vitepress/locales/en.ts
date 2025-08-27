@@ -1,3 +1,6 @@
+import { SITE_NAME } from "../constants/common";
+import locales from "./i18n";
+
 const COPYRIGHT = `
   <a
     href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -11,12 +14,15 @@ export default {
   label: "English",
   lang: "en",
   link: "/en",
-  title: "JS F/k",
-  description: "HTML/TS/Vue — with examples, to the point, no fluff",
+  title: SITE_NAME,
+  description: locales.en.description,
   themeConfig: {
     nav: [
       { text: "Articles by date", link: "/en/articles-by-date" },
       { text: "Articles by tag", link: "/en/articles-by-tag" }
+    ],
+    socialLinks: [
+      { icon: "rss", link: "/en/rss.xml", ariaLabel: "RSS" }
     ]
   },
   footer: { copyright: COPYRIGHT }

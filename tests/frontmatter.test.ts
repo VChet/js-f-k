@@ -3,7 +3,7 @@ import { basename, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { describe, expect, it } from "vitest";
-import { authorsData } from "../.vitepress/data/authors";
+import { authorsData } from "../.vitepress/constants/authors";
 import type { Frontmatter } from "../.vitepress/composables/useFrontmatter";
 
 describe("frontmatter validator", () => {

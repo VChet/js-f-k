@@ -1,24 +1,16 @@
 import { normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 import dayjs from "dayjs";
-import { defineConfig } from "vitepress";
-import { RssPlugin, type RSSOptions } from "vitepress-plugin-rss";
+import { createContentLoader, defineConfig } from "vitepress";
+import { SITE_NAME, SITE_URL } from "./constants/common";
+import { generateRSS } from "./helpers/rss";
 import locales from "./locales";
 import searchLocales from "./locales/search";
 import type { Frontmatter } from "./composables/useFrontmatter";
 
 function composeHref(path = "") {
-  return new URL(normalize(path), "https://js-f-k.netlify.app").href;
+  return new URL(normalize(path), SITE_URL).href;
 }
-
-const RSS: RSSOptions = {
-  title: "JS F/k",
-  description: "HTML/TS/Vue — с примерами, по делу, без воды",
-  copyright: "CC-BY-NC-SA 4.0 © 2025 JS F/k Team",
-  baseUrl: composeHref(),
-  language: "ru-RU"
-};
-const TELEGRAM_CHANNEL = "js_f_k";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -26,10 +18,12 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/images/favicon.ico", sizes: "32x32" }],
     ["link", { rel: "apple-touch-icon", href: "/images/apple-touch-icon.png" }],
-    ["meta", { name: "og:site_name", content: "JS F/k" }],
+    ["meta", { name: "og:site_name", content: SITE_NAME }],
     ["meta", { name: "og:type", content: "website" }],
     ["meta", { name: "og:logo", content: "/images/icon-512x512.png" }],
-    ["meta", { name: "twitter:card", content: "summary_large_image" }]
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["link", { rel: "alternate", type: "application/xml", href: "/en/rss.xml", title: "RSS (EN)" }],
+    ["link", { rel: "alternate", type: "application/xml", href: "/rss.xml", title: "RSS (RU)" }]
   ],
   transformPageData(pageData, { siteConfig }) {
     pageData.frontmatter.head ??= [];
@@ -68,14 +62,8 @@ export default defineConfig({
         "@components": fileURLToPath(new URL("theme/components", import.meta.url))
       }
     },
-    plugins: [RssPlugin(RSS)],
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: "modern-compiler"
-        }
-      }
-    }
+    css: { preprocessorOptions: { scss: { api: "modern-compiler" } } },
+    server: { port: 7200 }
   },
   markdown: { theme: { light: "github-light", dark: "github-dark" } },
   lastUpdated: true,
@@ -89,9 +77,12 @@ export default defineConfig({
         locales: searchLocales
       }
     },
-    socialLinks: [
-      { icon: "telegram", link: `https://t.me/${TELEGRAM_CHANNEL}`, ariaLabel: "Telegram" }
-    ],
     docFooter: { prev: false, next: false }
+  },
+  buildEnd: async () => {
+    const ruPages = await createContentLoader("/articles/*.md", { render: true }).load();
+    const enPages = await createContentLoader("/en/articles/*.md", { render: true }).load();
+    generateRSS(enPages, "en");
+    generateRSS(ruPages, "ru");
   }
 });
