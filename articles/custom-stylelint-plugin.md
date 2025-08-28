@@ -297,6 +297,8 @@ div {
 
 ```js
 // vite.config.js
+import copy from "rollup-plugin-copy";
+
 plugins: [
   copy({
     targets: [{ src: "src/stylelint-config/*", dest: "dist/stylelint-config" }]

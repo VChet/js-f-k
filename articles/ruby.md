@@ -12,7 +12,7 @@ tags: ["html"]
 
 Элементы `<ruby>`, `<rt>` и `<rp>` входят в **Baseline**: поддерживаются всеми современными браузерами.
 
-Пример:
+## Пример
 
 ```html
 we usually say <ruby>привет<rp>(</rp><rt>hi</rt><rp>)</rp></ruby> as a greeting
