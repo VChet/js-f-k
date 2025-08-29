@@ -5,6 +5,7 @@ hero: "/hero/npm-check-updates.png"
 date: 2025-05-28
 author: ["vchet", "rudnovd"]
 tags: ["npm"]
+discussionId: 5
 ---
 
 # Автообновление npm зависимостей

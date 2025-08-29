@@ -6,6 +6,7 @@ export interface Frontmatter {
   description: string
   author: string | string[]
   tags: string[]
+  discussionId?: number
   date?: string
   publish?: false
   hero?: string

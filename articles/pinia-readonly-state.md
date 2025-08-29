@@ -4,6 +4,7 @@ description: "Как запретить неявную мутацию состо
 date: 2025-06-16
 author: ["vchet", "rudnovd"]
 tags: ["pinia", "typescript"]
+discussionId: 14
 ---
 
 # Pinia: запрет неявной мутации state

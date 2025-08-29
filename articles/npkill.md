@@ -5,6 +5,7 @@ hero: "/hero/npkill.gif"
 date: 2025-06-25
 author: "vchet"
 tags: ["npm"]
+discussionId: 18
 ---
 
 # Быстрая очистка node_modules

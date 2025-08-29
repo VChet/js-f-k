@@ -4,6 +4,7 @@ description: "Разбираемся, стоит ли использовать s
 date: 2025-06-11
 author: "vchet"
 tags: ["pinia"]
+discussionId: 12
 ---
 
 # Pinia: стоит ли использовать setup store

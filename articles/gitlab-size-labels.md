@@ -4,6 +4,7 @@ description: "Как автоматически выставлять метки 
 date: 2025-07-22
 author: "vchet"
 tags: ["ci/cd", "git"]
+discussionId: 27
 ---
 
 # Автоматические size-метки для Merge Request в GitLab CI

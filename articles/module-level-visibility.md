@@ -4,6 +4,7 @@ description: "Экспорты из модулей видны глобально
 date: 2025-08-26
 author: "vchet"
 tags: ["build", "unresolved"]
+discussionId: 36
 ---
 
 # Модульность и видимость экспортов

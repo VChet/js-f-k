@@ -9,21 +9,30 @@
       <article-tags />
       <client-only>
         <related-articles />
+        <article-telegram-discussion
+          v-if="frontmatter.discussionId"
+          :key="`${frontmatter.discussionId}-${dark}`"
+          :discussion-id="frontmatter.discussionId"
+          :dark
+        />
       </client-only>
     </template>
   </layout>
 </template>
 <script setup lang="ts">
+import { useData } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import { useFrontmatter } from "../composables/useFrontmatter";
 import ArticleAuthor from "@components/article-author.vue";
 import ArticleDate from "@components/article-date.vue";
 import ArticleTags from "@components/article-tags.vue";
+import ArticleTelegramDiscussion from "@components/article-telegram-discussion.vue";
 import RelatedArticles from "@components/related-articles.vue";
 
 const { Layout } = DefaultTheme;
 
 const frontmatter = useFrontmatter();
+const { isDark: dark } = useData();
 </script>
 <style lang="scss">
 .layout-hero {

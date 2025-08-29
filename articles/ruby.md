@@ -4,6 +4,7 @@ description: "Как добавить надстрочные пояснения 
 date: 2025-06-06
 author: "vchet"
 tags: ["html"]
+discussionId: 9
 ---
 
 # Аннотации над текстом с тегом `ruby`

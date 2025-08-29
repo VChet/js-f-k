@@ -1,4 +1,4 @@
-import { SITE_NAME } from "../constants/common";
+import { SITE_NAME, TELEGRAM_CHANNEL } from "../constants/common";
 import locales from "./i18n";
 
 const COPYRIGHT = `
@@ -9,7 +9,6 @@ const COPYRIGHT = `
     title="Открыть текст лицензии CC-BY-NC-SA 4.0"
   >CC-BY-NC-SA 4.0</a> © 2025 JS F/k Team
 `.trim();
-const TELEGRAM_CHANNEL = "js_f_k";
 
 export default {
   label: "Русский",

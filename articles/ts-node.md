@@ -4,6 +4,7 @@ description: "Как запускать TypeScript-файлы напрямую, 
 date: 2025-08-21
 author: "vchet"
 tags: ["build", "typescript"]
+discussionId: 35
 ---
 
 # Запуск TypeScript напрямую в Node.js

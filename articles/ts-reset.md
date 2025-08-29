@@ -4,6 +4,7 @@ description: "Утилита ts-reset улучшает стандартную т
 date: 2025-06-02
 author: "vchet"
 tags: ["npm", "typescript"]
+discussionId: 6
 ---
 
 # Улучшение дефолтного поведения TypeScript
