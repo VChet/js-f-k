@@ -37,6 +37,7 @@ const relatedArticles = computed(() => {
 </script>
 <style lang="scss">
 .related-articles {
+  margin-block: 1rem 0.75rem;
   h3 {
     margin-block: 1rem .75rem;
     font-size: 1.25rem;

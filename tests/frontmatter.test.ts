@@ -35,6 +35,7 @@ describe("frontmatter validator", () => {
         expect(frontmatter.tags).toSatisfy(Array.isArray).and.not.toHaveLength(0);
 
         if ("hero" in frontmatter) { expect(frontmatter.hero).toMatch(/^\/hero\/.+\.(png|jpe?g|webp|svg|gif)$/); }
+        if ("discussionId" in frontmatter) { expect(frontmatter.discussionId).toBeTypeOf("number"); }
         if ("publish" in frontmatter) {
           expect(frontmatter.publish).toBe(false);
           expect(frontmatter.date).toBeUndefined();

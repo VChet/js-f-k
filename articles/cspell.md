@@ -4,6 +4,7 @@ description: "Как настроить проверку орфографии в
 date: 2025-06-20
 author: "vchet"
 tags: ["linters", "npm"]
+discussionId: 16
 ---
 
 # Spellcheck для любого текста

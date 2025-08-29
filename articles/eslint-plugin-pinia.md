@@ -4,6 +4,7 @@ description: "Плагин для ESLint, который помогает сле
 date: 2025-07-31
 author: "vchet"
 tags: ["linters", "npm", "pinia"]
+discussionId: 30
 ---
 
 # ESLint плагины: pinia

@@ -4,6 +4,7 @@ description: "Плагин для ESLint, который проверяет Mark
 date: 2025-07-29
 author: "vchet"
 tags: ["linters", "npm"]
+discussionId: 29
 ---
 
 # ESLint плагины: markdownlint

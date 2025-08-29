@@ -5,6 +5,7 @@ hero: "/hero/yaak.png"
 date: 2025-07-08
 author: "vchet"
 tags: ["app"]
+discussionId: 23
 ---
 
 # Альтернатива Postman и Insomnia

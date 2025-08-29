@@ -5,6 +5,7 @@ hero: "/hero/eslint-plugin-compat.gif"
 date: 2025-07-24
 author: "vchet"
 tags: ["linters", "npm"]
+discussionId: 28
 ---
 
 # ESLint плагины: compat

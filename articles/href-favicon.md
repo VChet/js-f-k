@@ -4,6 +4,7 @@ description: "Как с помощью CSS автоматически добав
 date: 2025-06-27
 author: "vchet"
 tags: ["css"]
+discussionId: 19
 ---
 
 # Добавление иконки перед ссылкой

@@ -4,6 +4,7 @@ description: "Как реализовать типизированный CustomE
 date: 2025-06-23
 author: ["vchet", "rudnovd"]
 tags: ["typescript", "vue", "vue-use"]
+discussionId: 17
 ---
 
 # Типизированные customEvents

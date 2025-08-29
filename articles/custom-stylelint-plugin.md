@@ -4,6 +4,7 @@ description: "Как создать собственный Stylelint-плаги�
 date: 2025-07-15
 author: "vchet"
 tags: ["linters"]
+discussionId: 25
 ---
 
 # Как я написал свой Stylelint-плагин

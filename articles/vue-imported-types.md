@@ -4,6 +4,7 @@ description: "Почему Vue-компоненты в defineProps работа�
 date: 2025-07-10
 author: ["vchet", "rudnovd"]
 tags: ["typescript", "vue", "unresolved"]
+discussionId: 24
 ---
 
 # Vue, TypeScript и импортированные типы: что может пойти не так?

@@ -4,6 +4,7 @@ description: "Улучшенная типизация querySelector и querySele
 date: 2025-06-04
 author: "vchet"
 tags: ["npm", "typescript"]
+discussionId: 8
 ---
 
 # Типизация `querySelector`

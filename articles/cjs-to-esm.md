@@ -4,6 +4,7 @@ description: "Почему стоит перейти с CommonJS на ESM, ка�
 date: 2025-06-09
 author: "vchet"
 tags: ["build"]
+discussionId: 11
 ---
 
 # Переход с CommonJS на ESM

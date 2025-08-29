@@ -4,6 +4,7 @@ description: "Скачать APK из RuStore без регистрации че
 date: 2025-07-03
 author: "vchet"
 tags: ["service"]
+discussionId: 22
 ---
 
 # Скачиваем приложение с RuStore без регистрации

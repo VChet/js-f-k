@@ -4,6 +4,7 @@ description: "Как быстро создать Telegram Mini App — прос�
 author: "vchet"
 date: 2025-08-19
 tags: ["service"]
+discussionId: 34
 ---
 
 # Telegram Mini Apps: быстрый старт
