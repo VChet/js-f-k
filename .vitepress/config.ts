@@ -79,9 +79,9 @@ export default defineConfig({
     docFooter: { prev: false, next: false }
   },
   buildEnd: async () => {
-    const ruPages = await createContentLoader("/articles/*.md", { render: true }).load();
-    const enPages = await createContentLoader("/en/articles/*.md", { render: true }).load();
-    generateRSS(enPages, "en");
+    const ruPages = await createContentLoader("articles/*.md", { render: true }).load();
+    const enPages = await createContentLoader("en/articles/*.md", { render: true }).load();
     generateRSS(ruPages, "ru");
+    generateRSS(enPages, "en");
   }
 });
