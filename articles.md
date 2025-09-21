@@ -1,6 +1,7 @@
 ---
 title: Статьи
 lastUpdated: false
+layout: articles
 ---
 
 # Статьи

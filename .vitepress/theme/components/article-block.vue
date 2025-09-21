@@ -43,16 +43,13 @@ defineProps<Props>();
   }
   &__header {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
     font-size: 1.5rem;
     font-weight: bold;
-    &-title {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
     .tag-group {
       flex-wrap: nowrap;
     }
