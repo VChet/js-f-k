@@ -5,10 +5,10 @@
       <article-date v-if="frontmatter.date" />
       <img v-if="frontmatter.hero" :src="frontmatter.hero" class="layout-hero">
     </template>
-    <template v-if="frontmatter.tags" #doc-after>
-      <article-tags />
+    <template #doc-after>
+      <article-tags v-if="frontmatter.tags" />
       <client-only>
-        <related-articles />
+        <related-articles v-if="frontmatter.tags" />
         <article-telegram-discussion
           v-if="frontmatter.discussionId"
           :key="`${frontmatter.discussionId}-${dark}`"
@@ -39,6 +39,9 @@ const { isDark: dark } = useData();
   margin-bottom: 2.5rem;
 }
 .VPDocFooter {
-  display: none;
+  margin-top: 2rem !important;
+  .last-updated {
+    display: none;
+  }
 }
 </style>

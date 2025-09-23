@@ -1,4 +1,4 @@
-import { SITE_NAME } from "../constants/common";
+import { REPOSITORY_URL, SITE_NAME } from "../constants/common";
 import locales from "./i18n";
 
 const COPYRIGHT = `
@@ -21,8 +21,10 @@ export default {
       { text: "Articles", link: "/en/articles" }
     ],
     socialLinks: [
+      { icon: "github", link: REPOSITORY_URL, ariaLabel: "GitHub" },
       { icon: "rss", link: "/en/rss.xml", ariaLabel: "RSS" }
-    ]
+    ],
+    editLink: { text: "Edit this page on GitHub" }
   },
   footer: { copyright: COPYRIGHT }
 };

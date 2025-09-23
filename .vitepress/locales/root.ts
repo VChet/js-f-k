@@ -1,4 +1,4 @@
-import { SITE_NAME, TELEGRAM_CHANNEL } from "../constants/common";
+import { REPOSITORY_URL, SITE_NAME, TELEGRAM_CHANNEL } from "../constants/common";
 import locales from "./i18n";
 
 const COPYRIGHT = `
@@ -22,8 +22,10 @@ export default {
     ],
     socialLinks: [
       { icon: "telegram", link: `https://t.me/${TELEGRAM_CHANNEL}`, ariaLabel: "Telegram" },
+      { icon: "github", link: REPOSITORY_URL, ariaLabel: "GitHub" },
       { icon: "rss", link: "/rss.xml", ariaLabel: "RSS" }
     ],
+    editLink: { text: "Изменить эту страницу на GitHub" },
     langMenuLabel: "Изменить язык",
     skipToContentLabel: "Перейти к содержанию",
     returnToTopLabel: "Вернуться к началу",
