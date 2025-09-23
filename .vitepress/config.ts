@@ -2,7 +2,7 @@ import { normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 import dayjs from "dayjs";
 import { createContentLoader, defineConfig } from "vitepress";
-import { SITE_NAME, SITE_URL } from "./constants/common";
+import { REPOSITORY_URL, SITE_NAME, SITE_URL } from "./constants/common";
 import { generateRSS } from "./helpers/rss";
 import locales from "./locales";
 import searchLocales from "./locales/search";
@@ -76,6 +76,7 @@ export default defineConfig({
         locales: searchLocales
       }
     },
+    editLink: { pattern: `${REPOSITORY_URL}/edit/master/:path` },
     docFooter: { prev: false, next: false }
   },
   buildEnd: async () => {
