@@ -5,6 +5,8 @@ import "./global.scss";
 import Layout from "./Layout.vue";
 import LayoutArticles from "./LayoutArticles.vue";
 
+import("dayjs/locale/ru");
+
 export default {
   extends: DefaultTheme,
   Layout,

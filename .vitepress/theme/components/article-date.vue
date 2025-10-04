@@ -10,8 +10,6 @@ import { useData } from "vitepress";
 import { useFrontmatter } from "../../composables/useFrontmatter";
 import { useLocales } from "../../composables/useLocales";
 
-import("dayjs/locale/ru");
-
 const locales = useLocales();
 const { page, lang } = useData();
 const frontmatter = useFrontmatter();
