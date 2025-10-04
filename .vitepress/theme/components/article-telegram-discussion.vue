@@ -15,6 +15,10 @@ const props = defineProps<Props>();
 const script = ref<HTMLScriptElement | null>(null);
 const telegramWidgetRef = useTemplateRef("telegram-widget-element");
 
+function getBrandColor(): string {
+  return window.getComputedStyle(document.body).getPropertyValue("--vp-c-brand-1");
+}
+
 function mountWidget(): void {
   if (!telegramWidgetRef.value) { return console.warn("telegram-widget is undefined"); }
 
@@ -24,7 +28,7 @@ function mountWidget(): void {
   script.value.setAttribute("data-telegram-discussion", `${TELEGRAM_CHANNEL}/${props.discussionId}`);
   script.value.setAttribute("data-comments-limit", "5");
   script.value.setAttribute("data-colorful", "1");
-  script.value.setAttribute("data-color", props.dark ? "a8b1ff" : "3451b2");
+  script.value.setAttribute("data-color", getBrandColor());
   script.value.setAttribute("data-dark", props.dark ? "1" : "0");
   telegramWidgetRef.value.appendChild(script.value);
 }

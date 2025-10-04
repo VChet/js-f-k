@@ -20,9 +20,11 @@ export default {
   rules: {
     "@stylistic/color-hex-case": "lower",
     "at-rule-empty-line-before": "never",
+    "comment-empty-line-before": "never",
     "declaration-empty-line-before": "never",
     "rem-over-px/rem-over-px": [true, { ignore: ["0.5px", "1px", "font-size 16px", "font-size 20px"] }],
     "rule-empty-line-before": "never",
+    "scss/double-slash-comment-empty-line-before": "never",
     "selector-class-pattern": "[a-z]([a-z-]+)?(__([a-z]+-?)+)?(--([a-z]+-?)+){0,2}"
   }
 };
