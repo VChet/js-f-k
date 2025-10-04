@@ -1,0 +1,46 @@
+// https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+:root {
+  --amber: #ffa133;
+  --pumpkin: #e47b1a;
+  --flux: #c8be50;
+  --foam: #bccabb;
+  --enamel: #eee;
+  --aluminum: #ccc;
+  --cement: #c0c0c0;
+  --ash: #8e8e8e;
+  --mud: #8a8a6f;
+  --clay: #6c6c58;
+  --smoke: #666;
+  --dark: #444;
+  --soot: #333;
+  --carbon: #222;
+  --black: #141414;
+  // Accent
+  --vp-c-brand-1: var(--pumpkin);
+  --vp-c-brand-2: var(--amber);
+  --vp-c-brand-3: var(--pumpkin);
+  // Text
+  --vp-c-text-1: var(--dark);
+  --vp-c-text-2: var(--smoke);
+  // Code
+  --vp-code-color: var(--clay);
+}
+html.dark {
+  // Accent
+  --vp-c-brand-1: var(--amber);
+  --vp-c-brand-2: var(--pumpkin);
+  --vp-c-brand-3: var(--amber);
+  // Background
+  --vp-c-bg: var(--black);
+  --vp-c-bg-alt: var(--carbon);
+  --vp-c-bg-elv: var(--carbon);
+  --vp-c-bg-soft: var(--carbon);
+  // Border
+  --vp-c-gutter: var(--carbon);
+  --vp-c-divider: var(--soot);
+  // Text
+  --vp-c-text-1: var(--aluminum);
+  --vp-c-text-2: var(--ash);
+  // Code
+  --vp-code-color: var(--amber);
+}
