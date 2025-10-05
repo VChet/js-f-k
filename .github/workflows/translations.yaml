@@ -1,0 +1,47 @@
+name: check-translations
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "**/*.md"
+
+jobs:
+  build-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
+        with:
+          version: 9
+          run_install: true
+
+      - name: Install Node.js
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: "22"
+          cache: pnpm
+
+      - name: Generate badge
+        run: node ci/translations.ts --json
+
+      - name: Setup Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Set push URL
+        run: git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+
+      - name: Commit and push changes
+        run: |
+          git add -A
+          if git commit -m "chore(translations): update badge"; then
+            git push
+          else
+            echo "No changes to commit"
+          fi
