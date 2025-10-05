@@ -13,3 +13,9 @@ export function formatArticleEntry(article: Article): Article {
     tags: article.tags
   };
 }
+
+/** Returns `true` if article is in correct locale and is published */
+export function isApplicableArticle(article: Article): boolean {
+  const { lang } = useData();
+  return article.lang === lang.value && dayjs(article.date).isBefore(dayjs());
+}

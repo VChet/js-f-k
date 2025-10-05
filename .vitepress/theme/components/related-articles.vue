@@ -12,23 +12,22 @@
 </template>
 <script setup lang="ts">
 import { computed } from "vue";
-import dayjs from "dayjs";
-import { useData } from "vitepress";
 import { useFrontmatter } from "../../composables/useFrontmatter";
 import { useLocales } from "../../composables/useLocales";
-import { data } from "../../data/articles.data";
+import { data, type Article } from "../../data/articles.data";
+import { isApplicableArticle } from "../../helpers/data";
 
 const locales = useLocales();
 const frontmatter = useFrontmatter();
-const { lang } = useData();
+
 const ARTICLES_LIMIT = 4;
 const relatedArticles = computed(() => {
-  const { title, tags } = frontmatter.value;
+  const { tags, title } = frontmatter.value;
   if (!tags) { return []; }
 
-  const result = [];
+  const result: Article[] = [];
   for (const article of data) {
-    if (article.lang !== lang.value || dayjs(article.date).isAfter(dayjs()) || article.title === title) { continue; }
+    if (!isApplicableArticle(article) || article.title === title) { continue; }
     if (article.tags.some((tag) => tags.includes(tag))) { result.push(article); }
     if (result.length === ARTICLES_LIMIT) break;
   }

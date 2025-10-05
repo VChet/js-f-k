@@ -50,8 +50,8 @@ export default defineConfig({
       const authors = Array.isArray(author) ? author : [author];
       pageData.frontmatter.head.push(["meta", { name: "author", content: authors.join(", ") }]);
     }
-    const isFuture = dayjs(date).isAfter(dayjs());
-    if (isFuture) { pageData.frontmatter.head.push(["meta", { name: "robots", content: "noindex" }]); }
+    const isUnpublished = dayjs(date).isAfter(dayjs());
+    if (isUnpublished) { pageData.frontmatter.head.push(["meta", { name: "robots", content: "noindex" }]); }
   },
   sitemap: { hostname: composeHref() },
   cleanUrls: true,
