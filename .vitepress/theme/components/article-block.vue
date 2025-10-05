@@ -26,7 +26,7 @@ defineProps<Props>();
 </script>
 <style lang="scss">
 .vp-doc a.article-block {
-  font-weight: unset ;
+  font-weight: unset;
   color: var(--vp-c-text-1) ;
   text-decoration: none;
   transition: transform 300ms;
