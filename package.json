@@ -15,7 +15,7 @@
     "lint:css:fix": "npm run lint:css -- --fix",
     "lint:all": "npm run lint:ts && npm run lint:js && npm run lint:css",
     "test": "vitest --run",
-    "i18n": "node scripts/translations.ts"
+    "i18n": "node ci/translations.ts"
   },
   "dependencies": {
     "dayjs": "^1.11.18",
