@@ -28,7 +28,7 @@ if (process.argv.includes("--json")) {
     schemaVersion: 1,
     label: "translations",
     message: count ? `${count} missing` : "OK",
-    color: count === 0 ? "green" : count <= 5 ? "yellow" : "red",
+    color: count === 0 ? "brightgreen" : count <= 5 ? "yellow" : "red",
     style: "flat-square"
   };
   const badgeJson = JSON.stringify(badge, null, 2);
