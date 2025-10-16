@@ -1,6 +1,7 @@
 ---
 title: Articles
 lastUpdated: false
+layout: articles
 ---
 
 # Articles
