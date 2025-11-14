@@ -18,6 +18,8 @@ For demonstration purposes, we will use the following element:
 
 ## [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap)
 
+![Baseline Status: overflow-wrap](https://baseline.js.org/features/overflow-wrap/static-adaptive.svg)
+
 Allows the browser to break long, unbroken tokens to prevent container overflow.
 
 ⚠️ Old guides may reference the deprecated property `word-wrap: break-word`. If you encounter it in code, replacing it with `overflow-wrap: break-word` preserves the same behavior.
@@ -50,6 +52,8 @@ Permits breaking a word at any point to avoid overflow. When used with `width: m
 </div>
 
 ## [`text-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap)
+
+![Baseline Status: text-wrap](https://baseline.js.org/features/text-wrap/static-adaptive.svg)
 
 ### `nowrap`
 
@@ -90,6 +94,8 @@ Automatically adjusts line breaks to better balance text across lines.
 
 ## [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break)
 
+![Baseline Status: word-break](https://baseline.js.org/features/word-break/static-adaptive.svg)
+
 Breaks text between any characters.
 
 ⚠️ In most cases, this makes reading harder and it is better to use `overflow-wrap: anywhere`.
@@ -103,6 +109,9 @@ Breaks text between any characters.
 </p>
 
 ## [`white-space`](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space) and [`text-overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
+
+![Baseline Status: white-space](https://baseline.js.org/features/white-space/static-adaptive.svg)
+![Baseline Status: text-overflow](https://baseline.js.org/features/text-overflow/static-adaptive.svg)
 
 ### Single-line truncation with ellipsis
 

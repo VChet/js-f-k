@@ -19,6 +19,8 @@ discussionId: 44
 
 ## [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap)
 
+![Baseline Status: overflow-wrap](https://baseline.js.org/features/overflow-wrap/static-adaptive.svg)
+
 Позволяет браузеру разрывать длинные непрерывные токены, чтобы избежать переполнения контейнера.
 
 ⚠️ В старых статьях можно встретить устаревшее свойство `word-wrap: break-word`. Если у вас такое встретилось в коде – замена на `overflow-wrap: break-word` сохранит аналогичное поведение.
@@ -51,6 +53,8 @@ discussionId: 44
 </div>
 
 ## [`text-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap)
+
+![Baseline Status: text-wrap](https://baseline.js.org/features/text-wrap/static-adaptive.svg)
 
 ### `nowrap`
 
@@ -91,6 +95,8 @@ discussionId: 44
 
 ## [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break)
 
+![Baseline Status: word-break](https://baseline.js.org/features/word-break/static-adaptive.svg)
+
 Разбивает текст всегда между любыми символами.
 
 ⚠️ В большинстве случаев сильно затрудняет восприятие и лучше использовать `overflow-wrap: anywhere`.
@@ -104,6 +110,9 @@ discussionId: 44
 </p>
 
 ## [`white-space`](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space) и [`text-overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
+
+![Baseline Status: white-space](https://baseline.js.org/features/white-space/static-adaptive.svg)
+![Baseline Status: text-overflow](https://baseline.js.org/features/text-overflow/static-adaptive.svg)
 
 ### Однострочная обрезка с троеточием
 
