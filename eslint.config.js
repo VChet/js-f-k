@@ -59,7 +59,7 @@ export default antfu({
         value: SORT_IMPORT_CUSTOM_GROUP,
         type: SORT_IMPORT_CUSTOM_GROUP
       },
-      newlinesBetween: "ignore",
+      newlinesBetween: 0,
       order: "asc",
       type: "natural"
     }],
