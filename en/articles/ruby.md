@@ -12,6 +12,8 @@ tags: ["html"]
 
 The `<ruby>`, `<rt>`, and `<rp>` elements are part of the **Baseline**: they are supported by all modern browsers.
 
+<baseline-status featureId="ruby" />
+
 ## Example
 
 ```html
@@ -23,3 +25,7 @@ we usually say <ruby>привет<rp>(</rp><rt>hi</rt><rp>)</rp></ruby> as a gre
 ## What is `<rp>` for?
 
 `<rp>` (ruby parentheses) is displayed only in browsers that do not support `<ruby>`. It usually contains parentheses around `<rt>` to keep the text readable: `привет (hi)`
+
+<script setup>
+import BaselineStatus from "@components/baseline/baseline-status.vue";
+</script>

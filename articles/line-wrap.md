@@ -17,9 +17,7 @@ discussionId: 44
 </p>
 ```
 
-## [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap)
-
-![Baseline Status: overflow-wrap](https://baseline.js.org/features/overflow-wrap/static-adaptive.svg)
+## [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap) <baseline-status featureId="overflow-wrap" />
 
 Позволяет браузеру разрывать длинные непрерывные токены, чтобы избежать переполнения контейнера.
 
@@ -52,9 +50,7 @@ discussionId: 44
   </div>
 </div>
 
-## [`text-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap)
-
-![Baseline Status: text-wrap](https://baseline.js.org/features/text-wrap/static-adaptive.svg)
+## [`text-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap) <baseline-status featureId="text-wrap" />
 
 ### `nowrap`
 
@@ -93,9 +89,7 @@ discussionId: 44
   </div>
 </div>
 
-## [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break)
-
-![Baseline Status: word-break](https://baseline.js.org/features/word-break/static-adaptive.svg)
+## [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break) <baseline-status featureId="word-break" />
 
 Разбивает текст всегда между любыми символами.
 
@@ -111,8 +105,8 @@ discussionId: 44
 
 ## [`white-space`](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space) и [`text-overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
 
-![Baseline Status: white-space](https://baseline.js.org/features/white-space/static-adaptive.svg)
-![Baseline Status: text-overflow](https://baseline.js.org/features/text-overflow/static-adaptive.svg)
+- `white-space` <baseline-status featureId="white-space" />
+- `text-overflow` <baseline-status featureId="text-overflow" />
 
 ### Однострочная обрезка с троеточием
 
@@ -195,6 +189,9 @@ discussionId: 44
 - Для обрезания текста с троеточием — `white-space: nowrap` + `overflow: hidden` + `text-overflow: ellipsis`.
 - Балансирование текста на строке — `text-wrap: balance`, но только для коротких текстов.
 
+<script setup>
+import BaselineStatus from "@components/baseline/baseline-status.vue";
+</script>
 <style lang="scss" scoped>
 .element {
   width: 10rem;

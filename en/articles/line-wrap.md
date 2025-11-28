@@ -16,9 +16,7 @@ For demonstration purposes, we will use the following element:
 </p>
 ```
 
-## [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap)
-
-![Baseline Status: overflow-wrap](https://baseline.js.org/features/overflow-wrap/static-adaptive.svg)
+## [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap) <baseline-status featureId="overflow-wrap" />
 
 Allows the browser to break long, unbroken tokens to prevent container overflow.
 
@@ -51,9 +49,7 @@ Permits breaking a word at any point to avoid overflow. When used with `width: m
   </div>
 </div>
 
-## [`text-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap)
-
-![Baseline Status: text-wrap](https://baseline.js.org/features/text-wrap/static-adaptive.svg)
+## [`text-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap) <baseline-status featureId="text-wrap" />
 
 ### `nowrap`
 
@@ -92,9 +88,7 @@ Automatically adjusts line breaks to better balance text across lines.
   </div>
 </div>
 
-## [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break)
-
-![Baseline Status: word-break](https://baseline.js.org/features/word-break/static-adaptive.svg)
+## [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break) <baseline-status featureId="word-break" />
 
 Breaks text between any characters.
 
@@ -110,8 +104,8 @@ Breaks text between any characters.
 
 ## [`white-space`](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space) and [`text-overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
 
-![Baseline Status: white-space](https://baseline.js.org/features/white-space/static-adaptive.svg)
-![Baseline Status: text-overflow](https://baseline.js.org/features/text-overflow/static-adaptive.svg)
+- `white-space` <baseline-status featureId="white-space" />
+- `text-overflow` <baseline-status featureId="text-overflow" />
 
 ### Single-line truncation with ellipsis
 
@@ -194,6 +188,9 @@ Collapses multiple spaces into one. Lines will wrap automatically if they don't 
 - For truncating text with ellipsis — use `white-space: nowrap` + `overflow: hidden` + `text-overflow: ellipsis`.
 - Text line balancing — use `text-wrap: balance`, but only for short texts.
 
+<script setup>
+import BaselineStatus from "@components/baseline/baseline-status.vue";
+</script>
 <style lang="scss" scoped>
 .element {
   width: 10rem;

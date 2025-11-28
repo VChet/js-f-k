@@ -13,6 +13,8 @@ discussionId: 9
 
 Элементы `<ruby>`, `<rt>` и `<rp>` входят в **Baseline**: поддерживаются всеми современными браузерами.
 
+<baseline-status featureId="ruby" />
+
 ## Пример
 
 ```html
@@ -24,3 +26,7 @@ we usually say <ruby>привет<rp>(</rp><rt>hi</rt><rp>)</rp></ruby> as a gre
 ## Зачем `<rp>`?
 
 `<rp>` (ruby parentheses) отображается только в браузерах без поддержки `<ruby>`. Обычно содержит скобки вокруг `<rt>`, чтобы сохранить читаемость: `привет (hi)`
+
+<script setup>
+import BaselineStatus from "@components/baseline/baseline-status.vue";
+</script>
