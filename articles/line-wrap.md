@@ -17,7 +17,7 @@ discussionId: 44
 </p>
 ```
 
-## [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap)
+## [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap) <baseline-status featureId="overflow-wrap" />
 
 Позволяет браузеру разрывать длинные непрерывные токены, чтобы избежать переполнения контейнера.
 
@@ -50,7 +50,7 @@ discussionId: 44
   </div>
 </div>
 
-## [`text-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap)
+## [`text-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap) <baseline-status featureId="text-wrap" />
 
 ### `nowrap`
 
@@ -89,7 +89,7 @@ discussionId: 44
   </div>
 </div>
 
-## [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break)
+## [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break) <baseline-status featureId="word-break" />
 
 Разбивает текст всегда между любыми символами.
 
@@ -104,6 +104,9 @@ discussionId: 44
 </p>
 
 ## [`white-space`](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space) и [`text-overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
+
+- `white-space` <baseline-status featureId="white-space" />
+- `text-overflow` <baseline-status featureId="text-overflow" />
 
 ### Однострочная обрезка с троеточием
 
@@ -186,6 +189,9 @@ discussionId: 44
 - Для обрезания текста с троеточием — `white-space: nowrap` + `overflow: hidden` + `text-overflow: ellipsis`.
 - Балансирование текста на строке — `text-wrap: balance`, но только для коротких текстов.
 
+<script setup>
+import BaselineStatus from "@components/baseline/baseline-status.vue";
+</script>
 <style lang="scss" scoped>
 .element {
   width: 10rem;

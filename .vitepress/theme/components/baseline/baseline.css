@@ -1,0 +1,15 @@
+:where(.baseline-status) {
+  --baseline-icon-limited-front: light-dark(#f09409, #f09409);
+  --baseline-icon-limited-back: light-dark(#c6c6c6, #565656);
+  --baseline-icon-widely-front: light-dark(#1ea446, #1ea446);
+  --baseline-icon-widely-back: light-dark(#c4eed0, #125225);
+  --baseline-icon-newly-front: light-dark(#1b6ef3, #4185ff);
+  --baseline-icon-newly-back: light-dark(#a8c7fa, #2d509e);
+  --baseline-icon-no_data: light-dark(#909090, #666); /* stylelint-disable-line custom-property-pattern */
+  --baseline-status-color-limited: light-dark(#ea8600, #f09418);
+  --baseline-status-color-newly: light-dark(#1a73e8, #4185ff);
+  --baseline-status-color-widely: light-dark(#1e8e3e, #24a446);
+  --baseline-status-color-no_data: light-dark(#707070, #868686); /* stylelint-disable-line custom-property-pattern */
+  --baseline-status-color-outline: light-dark(#d9d9d9, #d9d9d9);
+  --baseline-status-color-link: light-dark(#1a73e8, #5aa1ff);
+}
