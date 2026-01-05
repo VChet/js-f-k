@@ -65,13 +65,13 @@ Disables automatic line breaks but respects explicit `\n` line breaks.
 
 ### `balance`
 
-Automatically adjusts line breaks to better balance text across lines.
+Text is automatically wrapped to keep the number of characters on each line as balanced as possible.
 
 ```css
 .element { text-wrap: balance; }
 ```
 
-⚠️ Character counting and line balancing is resource-intensive and works only for texts shorter than 6 lines. The example text has been shortened.
+⚠️ Character counting and line balancing is a resource-intensive process, so it is only supported for short texts (up to 6 lines in Chromium and up to 10 lines in Firefox).
 
 <div style="display: flex">
   <div>
