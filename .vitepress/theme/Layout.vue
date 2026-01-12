@@ -38,6 +38,9 @@ const { isDark: dark } = useData();
 .layout-hero {
   margin-bottom: 2.5rem;
 }
+.VPDoc .content-container {
+  overflow-x: hidden;
+}
 .VPDocFooter {
   margin-top: 2rem !important;
   .last-updated {
