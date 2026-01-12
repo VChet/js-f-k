@@ -1,4 +1,4 @@
-import type { PickLiteral } from ".";
+import type { ExtractStrict } from ".";
 
 export type BaselineState = "widely" | "newly" | "limited" | "no_data";
 interface FeatureBaseline {
@@ -15,7 +15,7 @@ type Browser = |
   "firefox_android" |
   "safari" |
   "safari_ios";
-export type CoreBrowser = PickLiteral<Browser, "chrome" | "edge" | "firefox" | "safari">;
+export type CoreBrowser = ExtractStrict<Browser, "chrome" | "edge" | "firefox" | "safari">;
 interface FeatureSpec {
   links: { link: string }[]
 }
