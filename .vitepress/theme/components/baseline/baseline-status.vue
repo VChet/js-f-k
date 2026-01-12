@@ -1,9 +1,15 @@
 <template>
   <client-only>
-    <div class="baseline-status">
+    <a
+      class="baseline-status"
+      href="https://web-platform-dx.github.io/web-features"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <span class="baseline-status__icon" v-html="BASELINE_ICONS[status]" />
-      <b>Baseline</b>
-      <span :title="BASELINE_DEFS[status].defaultDescription">{{ BASELINE_DEFS[status].title }}</span>
+      <span class="baseline-status__title" :title="BASELINE_DEFS[status].defaultDescription">
+        {{ BASELINE_DEFS[status].title }}
+      </span>
       <div class="baseline-status__browsers">
         <browser-status
           v-for="[browser, browserStatus] of getTypedEntries(browserSupport)"
@@ -12,7 +18,7 @@
           :status="browserStatus"
         />
       </div>
-    </div>
+    </a>
   </client-only>
 </template>
 <script setup lang="ts">
@@ -47,7 +53,7 @@ onBeforeMount(fetchStatus);
 @use "./baseline";
 .baseline-status {
   display: inline-flex;
-  gap: 0.25rem;
+  gap: 0.375rem;
   align-items: center;
   font-size: 1rem;
   font-weight: normal;
@@ -55,6 +61,9 @@ onBeforeMount(fetchStatus);
     display: inline-block;
     width: 2rem;
     height: 1rem;
+  }
+  &__title {
+    white-space: nowrap;
   }
   &__browsers {
     display: inline-flex;
