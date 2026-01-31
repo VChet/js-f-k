@@ -5,8 +5,8 @@ export default {
   ],
   plugins: [
     "@stylistic/stylelint-plugin",
-    "stylelint-order",
     "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-order",
     "stylelint-rem-over-px"
   ],
   customSyntax: "postcss-scss",
@@ -22,6 +22,7 @@ export default {
     "at-rule-empty-line-before": "never",
     "comment-empty-line-before": "never",
     "declaration-empty-line-before": "never",
+    "plugin/declaration-block-no-ignored-properties": true,
     "rem-over-px/rem-over-px": [true, { ignore: ["0.5px", "1px", "font-size 16px", "font-size 20px"] }],
     "rule-empty-line-before": "never",
     "scss/double-slash-comment-empty-line-before": "never",
