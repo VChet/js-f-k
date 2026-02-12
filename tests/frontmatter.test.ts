@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync } from "node:fs";
-import { basename, join } from "node:path";
+import { join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { describe, expect, it } from "vitest";
@@ -29,7 +29,8 @@ describe("frontmatter validator", () => {
       const result = matter(raw);
       const frontmatter = result.data as Frontmatter;
 
-      it(basename(filePath), () => {
+      const testName = relative(process.cwd(), filePath);
+      it(testName, () => {
         expect(frontmatter.title).toBeTypeOf("string");
         expect(frontmatter.description).toBeTypeOf("string");
         expect(isValidAuthor(frontmatter.author)).toBeTruthy();
