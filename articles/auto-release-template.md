@@ -4,7 +4,7 @@ description: "Шаблон репозитория для автоматизац�
 date: 2025-02-17
 author: "vchet"
 tags: ["ci/cd", "git", "github", "npm"]
-discussionId: 53
+discussionId: 54
 ---
 
 # Автоматизация релизов на GitHub
