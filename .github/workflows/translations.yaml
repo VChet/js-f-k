@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - "**/*.md"
+      - "**/articles/*.md"
 
 jobs:
   build-badge:

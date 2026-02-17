@@ -1,11 +1,11 @@
-import { readdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readdirSync, writeFileSync } from "node:fs";
 import { basename, join } from "node:path";
 import process from "node:process";
 
 const projectRoot = process.cwd();
 const SOURCE_DIR = join(projectRoot, "articles");
-const TRANSLATED_DIR = join(projectRoot, "en", "articles");
-const BADGE_DIR = join(projectRoot, "ci", "badge.json");
+const BADGES_DIR = join(projectRoot, "ci", "badges");
+const LANGUAGES = ["en"] as const;
 
 function getMarkdownFiles(dirPath: string): string[] {
   try {
@@ -13,34 +13,49 @@ function getMarkdownFiles(dirPath: string): string[] {
       .filter((file) => file.endsWith(".md"))
       .map((file) => basename(file));
   } catch {
-    console.error(`Failed to read ${dirPath}`);
-    process.exit(1);
+    return [];
   }
 }
 
-const sourceFiles = getMarkdownFiles(SOURCE_DIR);
-const translatedFiles = getMarkdownFiles(TRANSLATED_DIR);
-const missingTranslations = sourceFiles.filter((file) => !translatedFiles.includes(file));
-const count = missingTranslations.length;
-
-if (process.argv.includes("--json")) {
-  const badge = {
-    schemaVersion: 1,
-    label: "translations",
-    message: count ? `${count} missing` : "OK",
-    color: count === 0 ? "brightgreen" : count <= 5 ? "yellow" : "red",
-    style: "flat-square"
-  };
-  const badgeJson = JSON.stringify(badge, null, 2);
-
-  writeFileSync(BADGE_DIR, `${badgeJson}\n`);
-  console.info(badgeJson);
-  process.exit(0);
+function getColor(percent: number): string {
+  if (percent === 100) return "brightgreen";
+  if (percent >= 80) return "green";
+  if (percent >= 60) return "yellow";
+  if (percent >= 40) return "orange";
+  return "red";
 }
 
-if (count) {
-  console.info(`${count} articles are missing EN translations:`);
-  missingTranslations.forEach((file) => console.info(" -", file));
-} else {
-  console.info("All articles are translated.");
+const sourceFiles = getMarkdownFiles(SOURCE_DIR);
+const total = sourceFiles.length;
+
+if (!total) {
+  console.error("No source articles found");
+  process.exit(1);
+}
+
+mkdirSync(BADGES_DIR, { recursive: true });
+
+for (const lang of LANGUAGES) {
+  const translatedDir = join(projectRoot, lang, "articles");
+  const translatedFiles = getMarkdownFiles(translatedDir);
+  const translatedSet = new Set(translatedFiles);
+  const translatedCount = sourceFiles.filter((file) => translatedSet.has(file)).length;
+
+  const percent = Math.round((translatedCount / total) * 100);
+  const badge = {
+    schemaVersion: 1,
+    label: lang,
+    message: `${percent}%`,
+    color: getColor(percent),
+    style: "flat-square"
+  };
+
+  const badgePath = join(BADGES_DIR, `${lang}.json`);
+  const badgeJson = JSON.stringify(badge, null, 2);
+  if (process.argv.includes("--json")) {
+    writeFileSync(badgePath, `${badgeJson}\n`);
+    console.info(badgeJson);
+  } else {
+    console.info(`${lang}: ${percent}%`);
+  }
 }
