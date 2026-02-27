@@ -3,7 +3,9 @@
     <template #doc-before>
       <article-author v-if="frontmatter.author" />
       <article-date v-if="frontmatter.date" />
-      <img v-if="frontmatter.hero" :src="frontmatter.hero" class="layout-hero">
+      <figure v-if="frontmatter.hero" class="layout-hero">
+        <img :src="frontmatter.hero">
+      </figure>
     </template>
     <template #doc-after>
       <article-tags v-if="frontmatter.tags" />
