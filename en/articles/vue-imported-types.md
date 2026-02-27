@@ -3,7 +3,7 @@ title: "Vue, TypeScript, and imported types: what could go wrong?"
 description: "Why do Vue components in defineProps not work correctly with imported types? How does props compilation work, and why does local type declaration help."
 date: 2025-07-10
 author: ["vchet", "rudnovd"]
-tags: ["typescript", "vue", "unresolved"]
+tags: ["typescript", "unresolved", "vue"]
 ---
 
 # Vue, TypeScript, and imported types: what could go wrong?
