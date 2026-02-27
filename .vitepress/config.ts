@@ -41,6 +41,7 @@ export default defineConfig({
     pageData.frontmatter.head.push(["meta", { name: "twitter:title", content: pageTitle }]);
     pageData.frontmatter.head.push(["meta", { name: "twitter:description", content: pageDescription }]);
     pageData.frontmatter.head.push(["meta", { name: "twitter:url", content: pageHref }]);
+    pageData.frontmatter.head.push(["meta", { name: "article:published_time", content: dayjs(date).toISOString() }]);
     // Optional
     if (hero) {
       pageData.frontmatter.head.push(["meta", { name: "og:image", content: composeHref(hero) }]);
