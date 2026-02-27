@@ -2,7 +2,7 @@ import { normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 import dayjs from "dayjs";
 import { createContentLoader, defineConfig } from "vitepress";
-import { REPOSITORY_URL, SITE_NAME, SITE_URL } from "./constants/common";
+import { REPOSITORY_URL, SITE_NAME, SITE_URL, TELEGRAM_CHANNEL } from "./constants/common";
 import { generateRSS } from "./helpers/rss";
 import locales from "./locales";
 import searchLocales from "./locales/search";
@@ -22,6 +22,9 @@ export default defineConfig({
     ["meta", { name: "og:type", content: "website" }],
     ["meta", { name: "og:logo", content: "/images/icon-512x512.png" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["meta", { name: "telegram:channel", content: `@${TELEGRAM_CHANNEL}` }],
+    // site_verification property must be present, but @content could be empty (no IVBot-side verification for now?)
+    ["meta", { name: "tg:site_verification", content: "" }],
     ["link", { rel: "alternate", type: "application/xml", href: "/en/rss.xml", title: "RSS (EN)" }],
     ["link", { rel: "alternate", type: "application/xml", href: "/rss.xml", title: "RSS (RU)" }]
   ],
