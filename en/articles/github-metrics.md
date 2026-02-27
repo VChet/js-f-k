@@ -3,7 +3,7 @@ title: "Tracking metrics and dependencies of JS projects in GitHub"
 description: "A web service for tracking metrics and dependencies of GitHub repositories: stars, forks, issues, dependencies. Quick setup, local storage, no deployment — a simple and intuitive dashboard for your pet projects."
 date: 2025-08-05
 author: "vchet"
-tags: ["git", "service"]
+tags: ["git", "github", "service"]
 ---
 
 # Tracking metrics and dependencies of JS projects in GitHub
