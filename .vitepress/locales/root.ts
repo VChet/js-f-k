@@ -3,11 +3,11 @@ import locales from "./i18n";
 
 const COPYRIGHT = `
   <a
-    href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru"
     target="_blank"
     rel="noopener noreferrer"
-    title="Открыть текст лицензии CC-BY-NC-SA 4.0"
-  >CC-BY-NC-SA 4.0</a> © 2025 JS F/k Team
+    title="Открыть текст лицензии CC-BY-SA 4.0"
+  >CC-BY-SA 4.0</a> © 2025 JS F/k Team
 `.trim();
 
 export default {

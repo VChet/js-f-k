@@ -1,8 +1,8 @@
 {
   "name": "js-f-k-blog",
   "type": "module",
-  "version": "0.0.0",
-  "license": "CC-BY-NC-SA 4.0",
+  "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "vitepress dev",

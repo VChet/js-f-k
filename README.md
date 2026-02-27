@@ -35,6 +35,11 @@ Everything else will be configured separately.
 
 To edit an article, click the **Edit this page** link at the bottom of the article — changes are submitted via GitHub.
 
+## License
+
+- Code is licensed under MIT
+- Articles and content are licensed under CC-BY-SA 4.0
+
 <!-- Badges -->
 [netlify-status-img]: https://img.shields.io/netlify/88839670-d62b-4c07-9932-30d67a00fd65?style=flat-square
 [netlify-status-href]: https://app.netlify.com/sites/js-f-k
