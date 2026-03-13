@@ -31,19 +31,19 @@ describe("frontmatter validator", () => {
 
       const testName = relative(process.cwd(), filePath);
       it(testName, () => {
-        expect(frontmatter.title).toBeTypeOf("string");
-        expect(frontmatter.description).toBeTypeOf("string");
-        expect(isValidAuthor(frontmatter.author)).toBeTruthy();
-        expect(frontmatter.tags).toSatisfy(Array.isArray).and.not.toHaveLength(0);
+        expect(frontmatter.title, "Title should be a string").toBeTypeOf("string");
+        expect(frontmatter.description, "Description should be a string").toBeTypeOf("string");
+        expect(isValidAuthor(frontmatter.author), "Invalid author").toBeTruthy();
+        expect(frontmatter.tags, "Tags should be an array").toSatisfy(Array.isArray).and.not.toHaveLength(0);
 
-        if (isNonRoot) { expect(frontmatter.discussionId).toBeUndefined(); }
-        if ("hero" in frontmatter) { expect(frontmatter.hero).toMatch(/^\/hero\/.+\.(png|jpe?g|webp|svg|gif)$/); }
-        if ("discussionId" in frontmatter) { expect(frontmatter.discussionId).toBeTypeOf("number"); }
+        if (isNonRoot) { expect(frontmatter.discussionId, "Extra discussionId").toBeUndefined(); }
+        if ("hero" in frontmatter) { expect(frontmatter.hero, "Invalid hero image").toMatch(/^\/hero\/.+\.(png|jpe?g|webp|svg|gif)$/); }
+        if ("discussionId" in frontmatter) { expect(frontmatter.discussionId, "Invalid discussionId").toBeTypeOf("number"); }
         if ("publish" in frontmatter) {
-          expect(frontmatter.publish).toBe(false);
-          expect(frontmatter.date).toBeUndefined();
+          expect(frontmatter.publish, "Only false publish flag is allowed").toBe(false);
+          expect(frontmatter.date, "Date should be empty for drafts").toBeUndefined();
         } else {
-          expect(frontmatter.date).toBeInstanceOf(Date);
+          expect(frontmatter.date, "Invalid date").toBeInstanceOf(Date);
         }
       });
     }
