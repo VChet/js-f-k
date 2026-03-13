@@ -14,11 +14,10 @@ export default {
     { files: ["**/*.vue"], customSyntax: "postcss-html" },
     { files: ["**/*.md"], customSyntax: "postcss-markdown" }
   ],
-  ignoreFiles: [
-    "dist/**/*css"
-  ],
+  ignoreFiles: ["dist"],
   rules: {
     "@stylistic/color-hex-case": "lower",
+    "@stylistic/number-leading-zero": "always",
     "at-rule-empty-line-before": "never",
     "comment-empty-line-before": "never",
     "declaration-empty-line-before": "never",

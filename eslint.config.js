@@ -22,7 +22,8 @@ const SORT_IMPORT_CUSTOM_GROUPS = [{
 }];
 
 export default antfu({
-  isInEditor: false,
+  isInEditor: false
+}, {
   rules: {
     "antfu/consistent-list-newline": "off",
     "antfu/if-newline": "off",

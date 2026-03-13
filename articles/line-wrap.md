@@ -195,7 +195,7 @@ import BaselineStatus from "@components/baseline/baseline-status.vue";
 <style lang="scss" scoped>
 .element {
   width: 10rem;
-  padding: .5rem;
+  padding: 0.5rem;
   font-family: sans-serif;
   font-style: italic;
   border: 0.25rem solid var(--vp-c-brand-3);

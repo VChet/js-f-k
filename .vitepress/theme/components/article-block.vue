@@ -34,7 +34,7 @@ defineProps<Props>();
 .article-block {
   display: grid;
   grid-template-rows: auto auto 1fr;
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   background: var(--vp-c-bg-soft);
   border-radius: 0.375rem;
   &:hover,
@@ -55,11 +55,11 @@ defineProps<Props>();
     }
   }
   &__date {
-    font-size: .9rem;
+    font-size: 0.9rem;
     color: var(--vp-c-text-2);
   }
   &__description {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 }
 </style>

@@ -15,7 +15,7 @@ defineSlots<Slots>();
 .tag-group {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: .5rem;
-  margin-block: .5em;
+  gap: 0.5rem;
+  margin-block: 0.5em;
 }
 </style>

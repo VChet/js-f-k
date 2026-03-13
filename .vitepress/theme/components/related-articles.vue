@@ -38,11 +38,11 @@ const relatedArticles = computed(() => {
 .related-articles {
   margin-block: 1rem 0.75rem;
   h3 {
-    margin-block: 1rem .75rem;
+    margin-block: 1rem 0.75rem;
     font-size: 1.25rem;
   }
   a {
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: var(--vp-c-brand-1);
     text-decoration: none;

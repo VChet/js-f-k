@@ -147,7 +147,7 @@ onMounted(attachMiddleEllipsis)
 <style lang="scss" scoped>
 .resizable-container {
   max-width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
   margin-top: 1rem;
   resize: horizontal;
   border: 0.25rem solid var(--vp-c-brand-3);
