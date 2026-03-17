@@ -63,6 +63,9 @@ export default defineConfig({
         "@components": fileURLToPath(new URL("theme/components", import.meta.url))
       }
     },
+    define: {
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: true // TODO: remove after fix
+    },
     server: { port: 7200 }
   },
   markdown: { theme: { light: "github-light", dark: "github-dark" } },
