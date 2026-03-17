@@ -4,27 +4,32 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed } from "vue";
 import dayjs from "dayjs";
-import { useData } from "vitepress";
+import { inBrowser, useData } from "vitepress";
 import { useFrontmatter } from "../../composables/useFrontmatter";
 import { useLocales } from "../../composables/useLocales";
 
+if (inBrowser) {
+  const { lang } = useData();
+  console.log(lang.value);
+  dayjs.locale(lang.value);
+}
+
 const locales = useLocales();
-const { page, lang } = useData();
+const { page } = useData();
 const frontmatter = useFrontmatter();
 
 const DATE_FORMAT = "DD MMMM, YYYY";
-const dateString = computed<string>(() => {
+const dateString: string = (() => {
   const { date } = frontmatter.value;
   const { lastUpdated } = page.value;
-  let string = dayjs(date).locale(lang.value).format(DATE_FORMAT);
+  let string = dayjs(date).format(DATE_FORMAT);
   if (lastUpdated && dayjs(date).isBefore(dayjs(lastUpdated))) {
-    const localizedDate = dayjs(lastUpdated).locale(lang.value).format(DATE_FORMAT);
+    const localizedDate = dayjs(lastUpdated).format(DATE_FORMAT);
     string += ` | ${locales.value.lastUpdated.replace("{}", localizedDate)}`;
   }
   return string;
-});
+})();
 </script>
 <style lang="scss">
 .article-date {
