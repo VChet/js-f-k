@@ -3,7 +3,7 @@
     <header :title="article.title">
       {{ article.title }}
     </header>
-    <div class="date">{{ article.date }}</div>
+    <div class="date">{{ date.format("DD MMMM, YYYY") }}</div>
     <tag-group>
       <tag-block v-for="tag in article.tags" :key="tag" :color-key="tag">
         {{ tag }}
@@ -13,6 +13,9 @@
   </a>
 </template>
 <script setup lang="ts">
+import { onMounted, ref } from "vue";
+import dayjs from "dayjs";
+import { useData } from "vitepress";
 import type { Article } from "../../data/articles.data";
 import TagBlock from "./tag-block.vue";
 import TagGroup from "./tag-group.vue";
@@ -20,7 +23,14 @@ import TagGroup from "./tag-group.vue";
 interface Props {
   article: Article
 }
-defineProps<Props>();
+const props = defineProps<Props>();
+
+const { lang } = useData();
+const date = ref(dayjs(props.article.date));
+onMounted(() => {
+  date.value = dayjs(props.article.date).locale(lang.value);
+  console.log(lang.value);
+});
 </script>
 <style>
 .vp-doc a.article-block {
