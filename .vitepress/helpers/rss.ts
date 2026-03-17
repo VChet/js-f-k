@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { cwd } from "node:process";
+import { styleText } from "node:util";
 import { Feed } from "feed";
 import type { ContentData } from "vitepress";
 import { SITE_URL } from "../constants/common";
@@ -35,5 +36,5 @@ export function generateRSS(articles: ContentData[], locale: "ru" | "en") {
 
   const outputPath = join(outDir, "rss.xml");
   writeFileSync(outputPath, content);
-  console.info(`Generated RSS for ${locale} locale`);
+  console.info(`${styleText("green", "✓")} generated RSS for ${locale} locale`);
 }
