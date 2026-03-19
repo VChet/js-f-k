@@ -12,7 +12,7 @@
     "lint:ts": "vue-tsc --noEmit",
     "lint:js": "eslint .",
     "lint:js:fix": "npm run lint:js -- --fix",
-    "lint:css": "stylelint {.vitepress/**/*.{scss,vue},articles/*.md}",
+    "lint:css": "stylelint {.vitepress/**/*.{scss,vue},**/articles/*.md}",
     "lint:css:fix": "npm run lint:css -- --fix",
     "lint:all": "npm run lint:ts && npm run lint:js && npm run lint:css",
     "test": "vitest --run",
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^7.7.3",
-    "@stylistic/stylelint-plugin": "^5.0.1",
+    "@stylistic/stylelint-config": "^4.0.0",
     "@types/node": "^25.5.0",
     "eslint": "^10.0.3",
     "gray-matter": "^4.0.3",

@@ -1,10 +1,10 @@
 export default {
   extends: [
     "stylelint-config-standard-scss",
+    "@stylistic/stylelint-config",
     "stylelint-config-recess-order"
   ],
   plugins: [
-    "@stylistic/stylelint-plugin",
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-order",
     "stylelint-rem-over-px"
@@ -12,12 +12,12 @@ export default {
   customSyntax: "postcss-scss",
   overrides: [
     { files: ["**/*.vue"], customSyntax: "postcss-html" },
-    { files: ["**/*.md"], customSyntax: "postcss-markdown" }
+    { files: ["**/*.md"], customSyntax: "postcss-markdown", rules: {
+      "@stylistic/declaration-block-trailing-semicolon": null
+    } }
   ],
   ignoreFiles: ["dist"],
   rules: {
-    "@stylistic/color-hex-case": "lower",
-    "@stylistic/number-leading-zero": "always",
     "at-rule-empty-line-before": "never",
     "comment-empty-line-before": "never",
     "declaration-empty-line-before": "never",

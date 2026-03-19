@@ -17,7 +17,7 @@ a[href*="github.com"]::before {
   height: 1em;
   margin-right: 0.3em;
   content: "";
-  background-image: url('/assets/icons/github.svg');
+  background-image: url("/assets/icons/github.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -27,7 +27,7 @@ a[href*="t.me"]::before {
   height: 1em;
   margin-right: 0.3em;
   content: "";
-  background-image: url('/assets/icons/telegram.svg');
+  background-image: url("/assets/icons/telegram.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -41,9 +41,9 @@ Works for all links that contain the desired domain in `href`.
 
 ```css
 a[href^="https://github.com"] {
-  --icon: url('/assets/icons/github-icon.svg');
+  --icon: url("/assets/icons/github-icon.svg");
   &[href*="/pulls"] {
-    --icon: url('/assets/icons/github-pull-icon.svg');
+    --icon: url("/assets/icons/github-pull-icon.svg");
   }
   &::before {
     display: inline-block;
@@ -87,12 +87,12 @@ Therefore, it is recommended to store icons on the server or embed them in `base
   display: grid;
   gap: 0.5rem;
   a[href^="https://github.com"] {
-  --icon: url('./images/github-icon.svg');
+    --icon: url("./images/github-icon.svg");
     display: inline-flex;
     gap: 0.125rem;
     align-items: center;
     &[href*="/pulls"] {
-      --icon: url('./images/github-pull-icon.svg');
+      --icon: url("./images/github-pull-icon.svg");
     }
     &::before {
       display: inline-block;
