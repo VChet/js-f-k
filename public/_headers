@@ -1,3 +1,12 @@
 /assets/*
-  cache-control: max-age=31536000
-  cache-control: immutable
+  Cache-Control: max-age=31536000, immutable
+
+/rss.xml
+  Content-Type: application/xml; charset=utf-8
+  X-Content-Type-Options: nosniff
+  Cache-Control: no-cache
+
+/en/rss.xml
+  Content-Type: application/xml; charset=utf-8
+  X-Content-Type-Options: nosniff
+  Cache-Control: no-cache
