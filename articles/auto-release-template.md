@@ -1,7 +1,7 @@
 ---
 title: "Автоматизация релизов на GitHub"
 description: "Шаблон репозитория для автоматизации публикации версий, генерации changelog и создания GitHub Releases с помощью GitHub Actions."
-date: 2025-02-17
+date: 2026-02-17
 author: "vchet"
 tags: ["ci/cd", "git", "github", "npm"]
 discussionId: 54

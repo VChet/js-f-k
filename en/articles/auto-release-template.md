@@ -1,7 +1,7 @@
 ---
 title: "GitHub Release Automation"
 description: "A repository template for automating version publishing, generating changelogs, and creating GitHub Releases using GitHub Actions."
-date: 2025-02-17
+date: 2026-02-17
 author: "vchet"
 tags: ["ci/cd", "git", "github", "npm"]
 ---
