@@ -17,7 +17,7 @@ Let's see how it works in practice, and what pitfalls appear when comparing plai
 ### Explicit type annotation
 
 ```ts
-type Fruit = { name: string };
+interface Fruit { name: string }
 
 const Apple: Fruit = { name: "Apple" }; // create an Apple object and annotate it as Fruit
 Apple.name = "Orange"; // ⚠️ no error

@@ -8,6 +8,8 @@ import { SITE_URL } from "../constants/common";
 import en from "../locales/rss/en";
 import ru from "../locales/rss/ru";
 
+const XML_TAG_REGEX = /^<\?xml.*?\?>\s*/i;
+
 export function generateRSS(articles: ContentData[], locale: "ru" | "en") {
   const feed = new Feed(locale === "ru" ? ru : en);
 
@@ -27,7 +29,7 @@ export function generateRSS(articles: ContentData[], locale: "ru" | "en") {
     resolve(cwd(), ".vitepress/dist", locale);
   mkdirSync(outDir, { recursive: true });
 
-  const rawRss = feed.rss2().replace(/^<\?xml.*?\?>\s*/i, "");
+  const rawRss = feed.rss2().replace(XML_TAG_REGEX, "");
   const content = [
     "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
     "<?xml-stylesheet href=\"/pretty-feed-v3.xsl\" type=\"text/xsl\"?>",

@@ -18,7 +18,7 @@ discussionId: 40
 ### Прямое указание типа
 
 ```ts
-type Fruit = { name: string };
+interface Fruit { name: string }
 
 const Apple: Fruit = { name: "Apple" }; // создаём объект Apple и указываем, что он имеет тип Fruit
 Apple.name = "Orange"; // ⚠️ нет ошибки
