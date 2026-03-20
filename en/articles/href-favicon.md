@@ -82,7 +82,7 @@ But there are some drawbacks:
 
 Therefore, it is recommended to store icons on the server or embed them in `base64` format.
 
-<style lang="scss" scoped>
+<style scoped>
 .links-demo {
   display: grid;
   gap: 0.5rem;

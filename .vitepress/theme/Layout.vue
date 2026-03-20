@@ -36,7 +36,7 @@ const { Layout } = DefaultTheme;
 const frontmatter = useFrontmatter();
 const { isDark: dark } = useData();
 </script>
-<style lang="scss">
+<style>
 .layout-hero {
   margin-bottom: 2.5rem;
 }

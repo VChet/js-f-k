@@ -1,6 +1,6 @@
 export default {
   extends: [
-    "stylelint-config-standard-scss",
+    "stylelint-config-standard",
     "@stylistic/stylelint-config",
     "stylelint-config-recess-order"
   ],
@@ -9,14 +9,13 @@ export default {
     "stylelint-order",
     "stylelint-rem-over-px"
   ],
-  customSyntax: "postcss-scss",
   overrides: [
     { files: ["**/*.vue"], customSyntax: "postcss-html" },
     { files: ["**/*.md"], customSyntax: "postcss-markdown", rules: {
       "@stylistic/declaration-block-trailing-semicolon": null
     } }
   ],
-  ignoreFiles: ["dist"],
+  ignoreFiles: [".vitepress/dist/**"],
   rules: {
     "at-rule-empty-line-before": "never",
     "comment-empty-line-before": "never",
@@ -24,7 +23,6 @@ export default {
     "plugin/declaration-block-no-ignored-properties": true,
     "rem-over-px/rem-over-px": [true, { ignore: ["0.5px", "1px", "font-size 16px", "font-size 20px"] }],
     "rule-empty-line-before": "never",
-    "scss/double-slash-comment-empty-line-before": "never",
     "selector-class-pattern": "[a-z]([a-z-]+)?(__([a-z]+-?)+)?(--([a-z]+-?)+){0,2}",
     "selector-pseudo-class-no-unknown": [true, { ignorePseudoClasses: ["deep"] }]
   }

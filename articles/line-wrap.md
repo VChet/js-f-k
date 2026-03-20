@@ -192,7 +192,7 @@ discussionId: 44
 <script setup>
 import BaselineStatus from "@components/baseline/baseline-status.vue";
 </script>
-<style lang="scss" scoped>
+<style scoped>
 .element {
   width: 10rem;
   padding: 0.5rem;

@@ -1,6 +1,6 @@
 <template>
   <a :href="article.url" class="article-block">
-    <div class="article-block__header">
+    <header>
       <div class="article-block__header-title" :title="article.title">
         {{ article.title }}
       </div>
@@ -9,9 +9,9 @@
           {{ tag }}
         </tag-block>
       </tag-group>
-    </div>
-    <div class="article-block__date">{{ article.date }}</div>
-    <div class="article-block__description">{{ article.description }}</div>
+    </header>
+    <div class="date">{{ article.date }}</div>
+    <div class="description">{{ article.description }}</div>
   </a>
 </template>
 <script setup lang="ts">
@@ -24,7 +24,7 @@ interface Props {
 }
 defineProps<Props>();
 </script>
-<style lang="scss">
+<style>
 .vp-doc a.article-block {
   font-weight: unset;
   color: var(--vp-c-text-1);
@@ -41,7 +41,7 @@ defineProps<Props>();
   &:focus-visible {
     transform: translateY(-0.25rem);
   }
-  &__header {
+  header {
     display: flex;
     flex-wrap: wrap;
     gap: 0 1rem;
@@ -54,11 +54,11 @@ defineProps<Props>();
       flex-wrap: nowrap;
     }
   }
-  &__date {
+  .date {
     font-size: 0.9rem;
     color: var(--vp-c-text-2);
   }
-  &__description {
+  .description {
     margin-top: 0.5rem;
   }
 }

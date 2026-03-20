@@ -3,7 +3,7 @@
     <Content />
   </main>
 </template>
-<style lang="scss" scoped>
+<style scoped>
 .vp-doc {
   max-width: 65rem;
   padding: 3rem 2rem;

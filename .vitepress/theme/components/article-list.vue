@@ -5,7 +5,7 @@
         {{ tag }}
       </tag-block>
     </tag-group>
-    <div class="article-list__articles">
+    <div class="articles">
       <article-block v-for="article in filteredArticles" :key="article.url" :article />
     </div>
   </section>
@@ -45,10 +45,10 @@ const filteredArticles = computed<Article[]>(() => {
   return articles.filter((article) => article.tags?.includes(selectedTag.value));
 });
 </script>
-<style lang="scss">
+<style>
 .article-list {
   margin-top: 1.5rem;
-  &__articles {
+  .articles {
     display: flex;
     flex-direction: column;
     gap: 1rem;

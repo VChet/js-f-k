@@ -6,11 +6,11 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span class="baseline-status__icon" v-html="BASELINE_ICONS[status]" />
-      <span class="baseline-status__title" :title="BASELINE_DEFS[status].defaultDescription">
+      <span class="icon" v-html="BASELINE_ICONS[status]" />
+      <span class="title" :title="BASELINE_DEFS[status].defaultDescription">
         {{ BASELINE_DEFS[status].title }}
       </span>
-      <div class="baseline-status__browsers">
+      <div class="browsers">
         <browser-status
           v-for="[browser, browserStatus] of getTypedEntries(browserSupport)"
           :key="browser"
@@ -49,23 +49,23 @@ async function fetchStatus(): Promise<void> {
 }
 onBeforeMount(fetchStatus);
 </script>
-<style lang="scss">
-@use "./baseline";
+<style>
+@import url("./baseline.css");
 .baseline-status {
   display: inline-flex;
   gap: 0.375rem;
   align-items: center;
   font-size: 1rem;
   font-weight: normal;
-  &__icon {
+  .icon {
     display: inline-block;
     width: 2rem;
     height: 1rem;
   }
-  &__title {
+  .title {
     white-space: nowrap;
   }
-  &__browsers {
+  .browsers {
     display: inline-flex;
     align-items: center;
     padding: 0;
