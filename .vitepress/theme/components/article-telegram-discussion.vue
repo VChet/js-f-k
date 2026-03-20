@@ -1,5 +1,5 @@
 <template>
-  <div ref="telegram-widget-element" class="telegram-discussion" />
+  <div ref="telegram-widget-element" class="article-telegram-discussion" />
 </template>
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, useTemplateRef } from "vue";
@@ -41,8 +41,3 @@ function unmountWidget(): void {
 onMounted(mountWidget);
 onBeforeUnmount(unmountWidget);
 </script>
-<style lang="scss">
-.article-telegram-discussion {
-  margin-block: 1rem 0.75rem;
-}
-</style>

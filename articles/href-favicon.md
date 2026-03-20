@@ -83,7 +83,7 @@ a[href*="github.com"]::before {
 
 Поэтому рекомендуется хранить иконки на сервере, либо вставлять их в формате `base64`.
 
-<style lang="scss" scoped>
+<style scoped>
 .links-demo {
   display: grid;
   gap: 0.5rem;

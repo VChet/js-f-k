@@ -3,7 +3,7 @@ layout: home
 ---
 
 <div class="home">
-  <img src="/images/icon-512x512.png" alt="Логотип" class="home__logo">
+  <img src="/images/icon-512x512.png" alt="Логотип">
   <h1>Блог о фронтенде — с примерами, по делу, без воды</h1>
   <p>
     Привет! Мы пишем о HTML, TypeScript и Vue: только конкретные проблемы, их решения и интересные находки.
@@ -13,10 +13,10 @@ layout: home
   <a href="/articles" title="Открыть список статей">К статьям…</a>
 </div>
 
-<style lang="scss">
+<style>
 .home {
   text-wrap: balance;
-  &__logo {
+  img {
     max-width: 16rem;
     margin: 0 auto 2rem;
   }

@@ -1,14 +1,8 @@
 <template>
   <div v-if="authors.length" class="article-author">
-    <a
-      v-for="{ url, avatar, name } in authors"
-      :key="url"
-      :href="url"
-      target="_blank"
-      class="article-author__entry"
-    >
-      <img :src="avatar" :alt="locales.avatarAlt.replace('{}', name)" class="article-author__entry-avatar">
-      <div>{{ name }}</div>
+    <a v-for="{ url, avatar, name } in authors" :key="url" :href="url" target="_blank">
+      <img :src="avatar" :alt="locales.avatarAlt.replace('{}', name)">
+      {{ name }}
     </a>
   </div>
 </template>
@@ -30,13 +24,13 @@ const authors = computed<AuthorData[]>(() => {
   }, []);
 });
 </script>
-<style lang="scss">
+<style>
 .article-author {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 1rem;
-  &__entry {
+  a {
     display: inline-flex;
     gap: 0.75rem;
     align-items: center;
@@ -48,7 +42,7 @@ const authors = computed<AuthorData[]>(() => {
     &:focus-visible {
       text-decoration: underline;
     }
-    &-avatar {
+    img {
       width: 2rem;
       height: 2rem;
       object-fit: cover;

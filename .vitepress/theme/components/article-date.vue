@@ -26,7 +26,7 @@ const dateString = computed<string>(() => {
   return string;
 });
 </script>
-<style lang="scss">
+<style>
 .article-date {
   margin-bottom: 1.5rem;
   font-size: 0.875rem;

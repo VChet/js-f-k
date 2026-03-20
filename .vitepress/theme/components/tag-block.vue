@@ -42,7 +42,7 @@ const buttonProps = computed<ButtonProps>(() => {
   return attrs;
 });
 </script>
-<style lang="scss">
+<style>
 .tag-block {
   display: inline-block;
   padding: 0.2rem 0.75rem;

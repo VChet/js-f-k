@@ -143,7 +143,7 @@ function attachMiddleEllipsis(): void {
 
 onMounted(attachMiddleEllipsis)
 </script>
-<style lang="scss" scoped>
+<style scoped>
 .resizable-container {
   max-width: 100%;
   padding: 0.5rem;

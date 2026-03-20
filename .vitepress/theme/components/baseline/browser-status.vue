@@ -10,7 +10,7 @@ import type { CoreBrowser, SupportState } from "../../../types/baseline";
 
 defineProps<{ browser: CoreBrowser, status: SupportState | null }>();
 </script>
-<style lang="scss">
+<style>
 .browser-status {
   display: inline-flex;
   align-items: center;

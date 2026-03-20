@@ -1,4 +1,4 @@
-// https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+/* https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css */
 :root {
   --amber: #ffa133;
   --pumpkin: #e47b1a;
@@ -15,33 +15,33 @@
   --soot: #333;
   --carbon: #222;
   --black: #141414;
-  // Accent
+  /* Accent */
   --vp-c-brand-1: var(--pumpkin);
   --vp-c-brand-2: var(--amber);
   --vp-c-brand-3: var(--pumpkin);
-  // Text
+  /* Text */
   --vp-c-text-1: var(--dark);
   --vp-c-text-2: var(--smoke);
-  // Code
+  /* Code */
   --vp-code-color: var(--clay);
 }
 html.dark {
-  // Accent
+  /* Accent */
   --vp-c-brand-1: var(--amber);
   --vp-c-brand-2: var(--pumpkin);
   --vp-c-brand-3: var(--amber);
-  // Background
+  /* Background */
   --vp-c-bg: var(--black);
   --vp-c-bg-alt: var(--carbon);
   --vp-c-bg-elv: var(--carbon);
   --vp-c-bg-soft: var(--carbon);
   --docsearch-search-button-background: var(--carbon);
-  // Border
+  /* Border */
   --vp-c-gutter: var(--carbon);
   --vp-c-divider: var(--soot);
-  // Text
+  /* Text */
   --vp-c-text-1: var(--aluminum);
   --vp-c-text-2: var(--ash);
-  // Code
+  /* Code */
   --vp-code-color: var(--amber);
 }

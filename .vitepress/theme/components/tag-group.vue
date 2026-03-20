@@ -11,7 +11,7 @@ interface Slots {
 }
 defineSlots<Slots>();
 </script>
-<style lang="scss">
+<style>
 .tag-group {
   display: inline-flex;
   flex-wrap: wrap;

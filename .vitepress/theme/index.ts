@@ -1,8 +1,8 @@
 // https://vitepress.dev/guide/custom-theme
 import DefaultTheme from "vitepress/theme";
 import type { Theme } from "vitepress";
-import "./departure-theme.scss";
-import "./global.scss";
+import "./departure-theme.css";
+import "./global.css";
 import Layout from "./Layout.vue";
 import LayoutArticles from "./LayoutArticles.vue";
 
