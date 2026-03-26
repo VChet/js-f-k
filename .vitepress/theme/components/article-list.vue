@@ -12,15 +12,18 @@
 </template>
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
+import { useData } from "vitepress";
 import { data, type Article } from "../../data/articles.data";
 import { formatArticleEntry, isApplicableArticle } from "../../helpers/data";
 import ArticleBlock from "./article-block.vue";
 import TagBlock from "./tag-block.vue";
 import TagGroup from "./tag-group.vue";
 
+const { lang } = useData();
+
 const tags = (() => {
   const result = data.reduce((acc: Set<Article["tags"][number]>, article: Article) => {
-    if (!isApplicableArticle(article)) { return acc; }
+    if (!isApplicableArticle(article, lang)) { return acc; }
     for (const tag of article.tags) { acc.add(tag); }
     return acc;
   }, new Set());
@@ -38,7 +41,7 @@ onMounted(() => {
 });
 
 const articles = data.reduce((acc: Article[], article: Article) => {
-  if (!isApplicableArticle(article)) { return acc; }
+  if (!isApplicableArticle(article, lang)) { return acc; }
   return [...acc, formatArticleEntry(article)];
 }, []);
 const filteredArticles = computed<Article[]>(() => {

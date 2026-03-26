@@ -12,6 +12,7 @@
 </template>
 <script setup lang="ts">
 import { computed } from "vue";
+import { useData } from "vitepress";
 import { useFrontmatter } from "../../composables/useFrontmatter";
 import { useLocales } from "../../composables/useLocales";
 import { data, type Article } from "../../data/articles.data";
@@ -19,6 +20,7 @@ import { isApplicableArticle } from "../../helpers/data";
 
 const locales = useLocales();
 const frontmatter = useFrontmatter();
+const { lang } = useData();
 
 const ARTICLES_LIMIT = 4;
 const relatedArticles = computed(() => {
@@ -27,7 +29,7 @@ const relatedArticles = computed(() => {
 
   const result: Article[] = [];
   for (const article of data) {
-    if (!isApplicableArticle(article) || article.title === title) { continue; }
+    if (!isApplicableArticle(article, lang) || article.title === title) { continue; }
     if (article.tags.some((tag) => tags.includes(tag))) { result.push(article); }
     if (result.length === ARTICLES_LIMIT) break;
   }
