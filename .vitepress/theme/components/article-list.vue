@@ -30,6 +30,7 @@ const tags = (() => {
 const selectedTag = ref("");
 function selectTag(tag: string) {
   selectedTag.value = tag === selectedTag.value ? "" : tag;
+  window.location.hash = selectedTag.value ? `#${selectedTag.value}` : "";
 }
 onMounted(() => {
   const hash = window.location.hash.slice(1);
