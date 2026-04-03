@@ -17,6 +17,7 @@ export default {
   ],
   ignoreFiles: [".vitepress/dist/**"],
   rules: {
+    "@stylistic/selector-list-comma-newline-after": "always-multi-line",
     "at-rule-empty-line-before": "never",
     "comment-empty-line-before": "never",
     "declaration-empty-line-before": "never",

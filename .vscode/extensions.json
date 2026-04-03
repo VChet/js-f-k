@@ -2,6 +2,7 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "jacobcassidy.css-nesting-syntax-highlighting",
+    "npmx-dev.vscode-npmx",
     "stylelint.vscode-stylelint",
     "vue.volar"
   ]
