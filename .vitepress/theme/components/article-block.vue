@@ -5,7 +5,7 @@
     </header>
     <div class="date">{{ article.date }}</div>
     <tag-group>
-      <tag-block v-for="tag in article.tags" :key="tag" :color-key="tag">
+      <tag-block v-for="tag in article.tags" :key="tag">
         {{ tag }}
       </tag-block>
     </tag-group>
@@ -47,7 +47,7 @@ defineProps<Props>();
     font-size: 0.9rem;
     color: var(--vp-c-text-2);
   }
-  .tag-block {
+  .tag-block:not(:hover, :focus-visible) {
     background-color: var(--vp-c-bg-soft);
   }
   .description {
