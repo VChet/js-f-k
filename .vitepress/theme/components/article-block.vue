@@ -1,16 +1,14 @@
 <template>
   <a :href="article.url" class="article-block">
-    <header>
-      <div class="article-block__header-title" :title="article.title">
-        {{ article.title }}
-      </div>
-      <tag-group>
-        <tag-block v-for="tag in article.tags" :key="tag">
-          {{ tag }}
-        </tag-block>
-      </tag-group>
+    <header :title="article.title">
+      {{ article.title }}
     </header>
     <div class="date">{{ article.date }}</div>
+    <tag-group>
+      <tag-block v-for="tag in article.tags" :key="tag" :color-key="tag">
+        {{ tag }}
+      </tag-block>
+    </tag-group>
     <div class="description">{{ article.description }}</div>
   </a>
 </template>
@@ -35,28 +33,22 @@ defineProps<Props>();
   display: grid;
   grid-template-rows: auto auto 1fr;
   padding: 0.75rem 1rem;
-  background: var(--vp-c-bg-soft);
+  background: var(--vp-c-bg-alt);
   border-radius: 0.375rem;
   &:hover,
   &:focus-visible {
     transform: translateY(-0.25rem);
   }
   header {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 1rem;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
     font-size: 1.5rem;
     font-weight: bold;
-    .tag-group {
-      flex-wrap: nowrap;
-    }
   }
   .date {
     font-size: 0.9rem;
     color: var(--vp-c-text-2);
+  }
+  .tag-block {
+    background-color: var(--vp-c-bg-soft);
   }
   .description {
     margin-top: 0.5rem;

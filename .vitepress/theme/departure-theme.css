@@ -19,6 +19,8 @@
   --vp-c-brand-1: var(--pumpkin);
   --vp-c-brand-2: var(--amber);
   --vp-c-brand-3: var(--pumpkin);
+  /* Background */
+  --vp-c-bg-soft: var(--enamel);
   /* Text */
   --vp-c-text-1: var(--dark);
   --vp-c-text-2: var(--smoke);
@@ -34,7 +36,7 @@ html.dark {
   --vp-c-bg: var(--black);
   --vp-c-bg-alt: var(--carbon);
   --vp-c-bg-elv: var(--carbon);
-  --vp-c-bg-soft: var(--carbon);
+  --vp-c-bg-soft: var(--soot);
   --docsearch-search-button-background: var(--carbon);
   /* Border */
   --vp-c-gutter: var(--carbon);
