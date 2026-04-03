@@ -1,5 +1,8 @@
 <template>
   <layout>
+    <template #not-found>
+      <not-found />
+    </template>
     <template #doc-before>
       <article-author v-if="frontmatter.author" />
       <article-date v-if="frontmatter.date" />
@@ -25,6 +28,7 @@
 import { useData } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import { useFrontmatter } from "../composables/useFrontmatter";
+import NotFound from "./NotFound.vue";
 import ArticleAuthor from "@components/article-author.vue";
 import ArticleDate from "@components/article-date.vue";
 import ArticleTags from "@components/article-tags.vue";
