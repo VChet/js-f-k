@@ -8,6 +8,7 @@ function getArticleLang(url: ContentData["url"]): string {
 }
 export const ARTICLES_LOADER_OPTIONS: ContentOptions<Article[]> = {
   transform: (raw) => raw
+    .filter((data) => data.frontmatter.publish !== false)
     .sort((a, b) => dayjs(b.frontmatter.date).diff(a.frontmatter.date))
     .map((page) => ({
       url: page.url,
