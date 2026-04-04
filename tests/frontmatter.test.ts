@@ -4,7 +4,6 @@ import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { describe, expect, it } from "vitest";
 import { authorsData } from "../.vitepress/constants/authors";
-import type { Frontmatter } from "../.vitepress/composables/useFrontmatter";
 
 describe("frontmatter validator", () => {
   function getMarkdownFiles(dir: string): string[] {
@@ -27,7 +26,7 @@ describe("frontmatter validator", () => {
     for (const filePath of getMarkdownFiles(dir)) {
       const raw = readFileSync(filePath, "utf8");
       const result = matter(raw);
-      const frontmatter = result.data as Frontmatter;
+      const frontmatter = result.data;
 
       const testName = relative(process.cwd(), filePath);
       it(testName, () => {

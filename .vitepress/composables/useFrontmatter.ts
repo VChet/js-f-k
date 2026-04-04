@@ -1,16 +1,6 @@
 import type { Ref } from "vue";
 import { useData } from "vitepress";
-
-export interface Frontmatter {
-  title: string
-  description: string
-  author: string | string[]
-  tags: string[]
-  discussionId?: number
-  date?: string
-  publish?: false
-  hero?: string
-}
+import type { Frontmatter } from "../types/frontmatter";
 
 export function useFrontmatter(): Ref<Frontmatter> {
   return useData().frontmatter as Ref<Frontmatter>;
