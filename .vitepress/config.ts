@@ -57,7 +57,7 @@ export default defineConfig({
   },
   sitemap: { hostname: composeHref() },
   cleanUrls: true,
-  srcExclude: ["README.md", "LICENSE.md"],
+  srcExclude: ["README.md", "LICENSE.md", "LICENSE.CONTENT.md"],
   vite: {
     resolve: {
       alias: {
