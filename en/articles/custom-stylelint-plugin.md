@@ -271,7 +271,7 @@ div {
   width: $s12;
   height: calc($s6 * 2);
   color: $a5;
-  border: $r4;
+  border-radius: $r4;
   @include font($XL);
 }
 ```
@@ -286,7 +286,7 @@ div {
   width: $space_20;
   height: calc($space_10 * 2);
   color: $text_main;
-  border: $radius_8;
+  border-radius: $radius_8;
   @include font($font_header);
 }
 ```
