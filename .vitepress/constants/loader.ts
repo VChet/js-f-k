@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import type { ContentData, ContentOptions } from "vitepress";
+import { calculateReadingTime } from "../helpers/reading-time";
 import type { Article } from "../data/articles.data";
 
 function getArticleLang(url: ContentData["url"]): string {
@@ -7,12 +8,14 @@ function getArticleLang(url: ContentData["url"]): string {
   return splat === "articles" ? "ru" : splat;
 }
 export const ARTICLES_LOADER_OPTIONS: ContentOptions<Article[]> = {
+  includeSrc: true,
   transform: (raw) => raw
     .filter((data) => data.frontmatter.publish !== false)
     .sort((a, b) => dayjs(b.frontmatter.date).diff(a.frontmatter.date))
     .map((page) => ({
       url: page.url,
       lang: getArticleLang(page.url),
+      duration: calculateReadingTime(page.src),
       title: page.frontmatter.title,
       description: page.frontmatter.description,
       date: page.frontmatter.date,

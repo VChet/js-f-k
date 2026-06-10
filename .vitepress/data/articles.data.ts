@@ -5,6 +5,7 @@ import type { Frontmatter } from "../composables/useFrontmatter";
 export interface Article {
   url: string
   lang: string
+  duration: number
   title: Frontmatter["title"]
   description: Frontmatter["description"]
   date: Frontmatter["date"]

@@ -5,7 +5,11 @@
     </template>
     <template #doc-before>
       <article-author v-if="frontmatter.author" />
-      <article-date v-if="frontmatter.date" />
+      <div class="layout-subheader">
+        <article-date v-if="frontmatter.date" />
+        <span v-if="frontmatter.date"> · </span>
+        <article-duration />
+      </div>
       <figure v-if="frontmatter.hero" class="layout-hero">
         <img :src="frontmatter.hero">
       </figure>
@@ -31,6 +35,7 @@ import { useFrontmatter } from "../composables/useFrontmatter";
 import NotFound from "./NotFound.vue";
 import ArticleAuthor from "@components/article-author.vue";
 import ArticleDate from "@components/article-date.vue";
+import ArticleDuration from "@components/article-duration.vue";
 import ArticleTags from "@components/article-tags.vue";
 import ArticleTelegramDiscussion from "@components/article-telegram-discussion.vue";
 import RelatedArticles from "@components/related-articles.vue";
@@ -41,6 +46,11 @@ const frontmatter = useFrontmatter();
 const { isDark: dark } = useData();
 </script>
 <style>
+.layout-subheader {
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--vp-c-text-2);
+}
 .layout-hero {
   margin-bottom: 2.5rem;
 }

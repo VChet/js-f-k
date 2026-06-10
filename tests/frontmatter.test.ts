@@ -26,8 +26,7 @@ describe("frontmatter validator", () => {
     const isNonRoot: boolean = dir !== ARTICLES_DIRS[0];
     for (const filePath of getMarkdownFiles(dir)) {
       const raw = readFileSync(filePath, "utf8");
-      const result = matter(raw);
-      const frontmatter = result.data as Frontmatter;
+      const frontmatter = matter(raw).data as Frontmatter;
 
       const testName = relative(process.cwd(), filePath);
       it(testName, () => {
