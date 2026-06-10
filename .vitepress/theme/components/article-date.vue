@@ -1,7 +1,5 @@
 <template>
-  <div class="article-date">
-    {{ dateString }}
-  </div>
+  <span class="article-date">{{ dateString }}</span>
 </template>
 <script setup lang="ts">
 import { computed } from "vue";
@@ -21,15 +19,8 @@ const dateString = computed<string>(() => {
   let string = dayjs(date).locale(lang.value).format(DATE_FORMAT);
   if (lastUpdated && dayjs(date).isBefore(dayjs(lastUpdated))) {
     const localizedDate = dayjs(lastUpdated).locale(lang.value).format(DATE_FORMAT);
-    string += ` | ${locales.value.lastUpdated.replace("{}", localizedDate)}`;
+    string += ` · ${locales.value.lastUpdated.replace("{}", localizedDate)}`;
   }
   return string;
 });
 </script>
-<style>
-.article-date {
-  margin-bottom: 1.5rem;
-  font-size: 0.875rem;
-  color: var(--vp-c-text-2);
-}
-</style>

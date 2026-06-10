@@ -10,7 +10,8 @@ export function formatArticleEntry(article: Article): Article {
     title: article.title,
     description: article.description,
     date: dayjs(article.date).locale(lang.value).format("DD MMMM, YYYY"),
-    tags: article.tags
+    tags: article.tags,
+    duration: article.duration
   };
 }
 
