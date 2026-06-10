@@ -1,6 +1,8 @@
 import { normalize } from "node:path";
+import process from "node:process";
 import { fileURLToPath } from "node:url";
 import dayjs from "dayjs";
+import namedPort from "named-port";
 import { createContentLoader, defineConfig } from "vitepress";
 import { REPOSITORY_URL, SITE_NAME, SITE_URL } from "./constants/common";
 import { RSS_LOADER_OPTIONS } from "./constants/loader";
@@ -64,7 +66,7 @@ export default defineConfig({
         "@components": fileURLToPath(new URL("theme/components", import.meta.url))
       }
     },
-    server: { port: 7200 }
+    server: { port: namedPort(process.env.npm_package_name!, { min: 7000, max: 10000 }) }
   },
   markdown: { theme: { light: "github-light", dark: "github-dark" } },
   lastUpdated: true,
