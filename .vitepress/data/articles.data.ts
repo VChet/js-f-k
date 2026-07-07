@@ -1,6 +1,6 @@
 import { createContentLoader } from "vitepress";
 import { ARTICLES_LOADER_OPTIONS } from "../constants/loader";
-import type { Frontmatter } from "../composables/useFrontmatter";
+import type { Frontmatter } from "../types/frontmatter";
 
 export interface Article {
   url: string

@@ -4,7 +4,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, useTemplateRef } from "vue";
 import { TELEGRAM_CHANNEL } from "../../constants/common";
-import type { Frontmatter } from "../../composables/useFrontmatter";
+import type { Frontmatter } from "../../types/frontmatter";
 
 interface Props {
   discussionId: NonNullable<Frontmatter["discussionId"]>
