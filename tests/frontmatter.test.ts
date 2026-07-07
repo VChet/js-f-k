@@ -3,7 +3,7 @@ import { join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { describe, expect, it } from "vitest";
-import { authorsData } from "../.vitepress/constants/authors";
+import { AUTHORS } from "../.vitepress/constants/authors";
 import type { Frontmatter } from "../.vitepress/composables/useFrontmatter";
 
 describe("frontmatter validator", () => {
@@ -17,8 +17,8 @@ describe("frontmatter validator", () => {
     fileURLToPath(new URL("../en/articles", import.meta.url))
   ];
 
-  function isValidAuthor(value: unknown): boolean {
-    const isAuthorExists = (payload: unknown): boolean => typeof payload === "string" && authorsData.has(payload);
+  function isValidAuthor(value: Frontmatter["author"]): boolean {
+    const isAuthorExists = (payload: string): boolean => AUTHORS.has(payload);
     return Array.isArray(value) ? value.every(isAuthorExists) : isAuthorExists(value);
   }
 

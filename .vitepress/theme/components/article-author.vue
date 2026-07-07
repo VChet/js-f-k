@@ -10,7 +10,7 @@
 import { computed } from "vue";
 import { useFrontmatter } from "../../composables/useFrontmatter";
 import { useLocales } from "../../composables/useLocales";
-import { authorsData, type AuthorData } from "../../constants/authors";
+import { AUTHORS, type AuthorData } from "../../constants/authors";
 
 const locales = useLocales();
 const frontmatter = useFrontmatter();
@@ -19,7 +19,7 @@ const authors = computed<AuthorData[]>(() => {
   if (!author) { return []; }
   const authorKeys: string[] = Array.isArray(author) ? author : [author];
   return authorKeys.reduce((acc: AuthorData[], key) => {
-    const data = authorsData.get(key);
+    const data = AUTHORS.get(key);
     return data ? [...acc, data] : acc;
   }, []);
 });
