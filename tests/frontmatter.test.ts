@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
-import matter from "gray-matter";
+import matter from "@11ty/gray-matter";
 import { describe, expect, it } from "vitest";
 import { AUTHORS } from "../.vitepress/constants/authors";
 import type { Frontmatter } from "../.vitepress/composables/useFrontmatter";

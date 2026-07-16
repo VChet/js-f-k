@@ -1,4 +1,4 @@
-import matter from "gray-matter";
+import matter from "@11ty/gray-matter";
 
 const WORD_REGEX = /[\p{Script=Latin}\p{Script=Cyrillic}]+/gu;
 
