@@ -15,7 +15,11 @@ export function formatArticleEntry(article: Article): Article {
   };
 }
 
+export function isArticlePublished(publishDate: Article["date"]): boolean {
+  return !!publishDate && dayjs().isAfter(dayjs(publishDate));
+}
+
 /** Returns `true` if article is in correct locale and is published */
 export function isApplicableArticle(article: Article, lang: VitePressData["lang"]): boolean {
-  return article.lang === lang.value && dayjs(article.date).isBefore(dayjs());
+  return article.lang === lang.value && isArticlePublished(article.date);
 }

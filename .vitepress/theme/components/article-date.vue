@@ -17,7 +17,7 @@ const dateString = computed<string>(() => {
   const { date } = frontmatter.value;
   const { lastUpdated } = page.value;
   let string = dayjs(date).locale(lang.value).format(DATE_FORMAT);
-  if (lastUpdated && dayjs(date).isBefore(dayjs(lastUpdated))) {
+  if (lastUpdated && dayjs(lastUpdated).isAfter(dayjs(date))) {
     const localizedDate = dayjs(lastUpdated).locale(lang.value).format(DATE_FORMAT);
     string += ` · ${locales.value.lastUpdated.replace("{}", localizedDate)}`;
   }

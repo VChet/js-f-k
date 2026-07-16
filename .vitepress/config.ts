@@ -6,6 +6,7 @@ import namedPort from "named-port";
 import { createContentLoader, defineConfig } from "vitepress";
 import { REPOSITORY_URL, SITE_NAME, SITE_URL } from "./constants/common";
 import { RSS_LOADER_OPTIONS } from "./constants/loader";
+import { isArticlePublished } from "./helpers/data";
 import { generateRSS } from "./helpers/rss";
 import locales from "./locales";
 import searchLocales from "./locales/search";
@@ -54,8 +55,7 @@ export default defineConfig({
       const authors = Array.isArray(author) ? author : [author];
       pageData.frontmatter.head.push(["meta", { name: "author", content: authors.join(", ") }]);
     }
-    const isUnpublished = dayjs(date).isAfter(dayjs());
-    if (isUnpublished) { pageData.frontmatter.head.push(["meta", { name: "robots", content: "noindex" }]); }
+    if (!isArticlePublished(date)) { pageData.frontmatter.head.push(["meta", { name: "robots", content: "noindex" }]); }
   },
   sitemap: { hostname: composeHref() },
   cleanUrls: true,
