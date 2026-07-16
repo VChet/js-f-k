@@ -11,7 +11,7 @@ const frontmatter = useFrontmatter();
 const locales = useLocales();
 
 const duration = computed<string>(() => {
-  const value = data.find(({ title }) => title === frontmatter.value.title)?.duration ?? 0;
+  const value = data.find(({ title }) => title === frontmatter.value.title)?.duration ?? 1;
   return locales.value.duration.replace("{}", value.toString());
 });
 </script>
