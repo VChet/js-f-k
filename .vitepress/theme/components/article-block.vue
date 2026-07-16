@@ -3,7 +3,7 @@
     <header :title="article.title">
       {{ article.title }}
     </header>
-    <div class="date">{{ article.date }}</div>
+    <div class="date">{{ formatDate(article.date, lang) }}</div>
     <tag-group>
       <tag-block v-for="tag in article.tags" :key="tag">
         {{ tag }}
@@ -13,6 +13,8 @@
   </a>
 </template>
 <script setup lang="ts">
+import { useData } from "vitepress";
+import { formatDate } from "../../helpers/data";
 import type { Article } from "../../data/articles.data";
 import TagBlock from "./tag-block.vue";
 import TagGroup from "./tag-group.vue";
@@ -21,6 +23,8 @@ interface Props {
   article: Article
 }
 defineProps<Props>();
+
+const { lang } = useData();
 </script>
 <style>
 .vp-doc a.article-block {

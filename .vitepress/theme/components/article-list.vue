@@ -14,7 +14,7 @@
 import { computed, onMounted, ref } from "vue";
 import { useData } from "vitepress";
 import { data, type Article } from "../../data/articles.data";
-import { formatArticleEntry, isApplicableArticle } from "../../helpers/data";
+import { isApplicableArticle } from "../../helpers/data";
 import ArticleBlock from "./article-block.vue";
 import TagBlock from "./tag-block.vue";
 import TagGroup from "./tag-group.vue";
@@ -40,10 +40,7 @@ onMounted(() => {
   if (hash && tags.includes(hash)) selectTag(hash);
 });
 
-const articles = data.reduce((acc: Article[], article: Article) => {
-  if (!isApplicableArticle(article, lang)) { return acc; }
-  return [...acc, formatArticleEntry(article)];
-}, []);
+const articles = data.filter((article) => isApplicableArticle(article, lang));
 const filteredArticles = computed<Article[]>(() => {
   if (!selectedTag.value) { return articles; }
   return articles.filter((article) => article.tags?.includes(selectedTag.value));
