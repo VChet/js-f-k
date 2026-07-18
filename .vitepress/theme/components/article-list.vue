@@ -22,7 +22,7 @@ import TagGroup from "./tag-group.vue";
 const { lang } = useData();
 
 const tags = (() => {
-  const result = data.reduce((acc: Set<Article["tags"][number]>, article: Article) => {
+  const result = data.reduce<Set<Article["tags"][number]>>((acc, article) => {
     if (!isApplicableArticle(article, lang)) { return acc; }
     for (const tag of article.tags) { acc.add(tag); }
     return acc;

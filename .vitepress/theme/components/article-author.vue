@@ -18,7 +18,7 @@ const authors = computed<AuthorData[]>(() => {
   const { author } = frontmatter.value;
   if (!author) { return []; }
   const authorKeys: string[] = Array.isArray(author) ? author : [author];
-  return authorKeys.reduce((acc: AuthorData[], key) => {
+  return authorKeys.reduce<AuthorData[]>((acc, key) => {
     const data = AUTHORS.get(key);
     return data ? [...acc, data] : acc;
   }, []);
