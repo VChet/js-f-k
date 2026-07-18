@@ -4,7 +4,7 @@
       v-for="tag in tags"
       :key="tag"
       :href="`/articles#${tag}`"
-      :title="locales.tagTitle.replace('{}', tag)"
+      :title="t('tagTitle', tag)"
     >
       {{ tag }}
     </tag-block>
@@ -17,7 +17,7 @@ import { useLocales } from "../../composables/useLocales";
 import TagBlock from "./tag-block.vue";
 import TagGroup from "./tag-group.vue";
 
-const locales = useLocales();
+const { t } = useLocales();
 const frontmatter = useFrontmatter();
 const tags = computed(() => frontmatter.value.tags ?? []);
 </script>

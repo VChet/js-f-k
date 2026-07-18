@@ -6,17 +6,17 @@
         {{ theme.notFound?.code ?? '404' }}
       </p>
       <h1 class="title">
-        {{ locales.missingTranslation }}
+        {{ t('missingTranslation') }}
       </h1>
       <div class="divider" />
       <div class="translation-details">
-        {{ locales.missingTranslationHint }}
+        {{ t('missingTranslationHint') }}
         <a href="https://github.com/VChet/js-f-k#translations" target="_blank" rel="noopener noreferrer">github.com</a>
       </div>
 
       <div class="action">
         <a class="link" :href="withBase(originalArticle.url)">
-          {{ locales.goToArticle }}: {{ originalArticle.title }}
+          {{ t('goToArticle') }}: {{ originalArticle.title }}
         </a>
         <a
           class="link"
@@ -61,7 +61,7 @@ import { useLocales } from "../composables/useLocales";
 import { data, type Article } from "../data/articles.data";
 
 const { theme, page } = useData();
-const locales = useLocales();
+const { t } = useLocales();
 const originalArticle = ref<Article | null>(null);
 
 onBeforeMount(() => {

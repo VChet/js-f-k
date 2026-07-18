@@ -1,7 +1,7 @@
 <template>
   <div v-if="authors.length" class="article-author">
     <a v-for="{ url, avatar, name } in authors" :key="url" :href="url" target="_blank">
-      <img :src="avatar" :alt="locales.avatarAlt.replace('{}', name)">
+      <img :src="avatar" :alt="t('avatarAlt', name)">
       {{ name }}
     </a>
   </div>
@@ -12,7 +12,7 @@ import { useFrontmatter } from "../../composables/useFrontmatter";
 import { useLocales } from "../../composables/useLocales";
 import { AUTHORS, type AuthorData } from "../../constants/authors";
 
-const locales = useLocales();
+const { t } = useLocales();
 const frontmatter = useFrontmatter();
 const authors = computed<AuthorData[]>(() => {
   const { author } = frontmatter.value;

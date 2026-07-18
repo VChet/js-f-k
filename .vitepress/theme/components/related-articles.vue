@@ -1,6 +1,6 @@
 <template>
   <div v-if="relatedArticles.length" class="related-articles">
-    <h3>{{ locales.relatedArticles }}</h3>
+    <h3>{{ t('relatedArticles') }}</h3>
     <ul>
       <li v-for="article in relatedArticles" :key="article.url">
         <a :href="article.url">
@@ -18,7 +18,7 @@ import { useLocales } from "../../composables/useLocales";
 import { data, type Article } from "../../data/articles.data";
 import { isApplicableArticle } from "../../helpers/data";
 
-const locales = useLocales();
+const { t } = useLocales();
 const frontmatter = useFrontmatter();
 const { lang } = useData();
 
