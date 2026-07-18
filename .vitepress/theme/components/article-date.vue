@@ -9,7 +9,7 @@ import { useFrontmatter } from "../../composables/useFrontmatter";
 import { useLocales } from "../../composables/useLocales";
 import { formatDate } from "../../helpers/data";
 
-const locales = useLocales();
+const { t } = useLocales();
 const { page, lang } = useData();
 const frontmatter = useFrontmatter();
 
@@ -18,8 +18,7 @@ const articleDate = computed<string>(() => {
   const { lastUpdated } = page.value;
   let string = formatDate(date, lang.value);
   if (lastUpdated && dayjs(lastUpdated).isAfter(dayjs(date))) {
-    const localizedDate = formatDate(lastUpdated, lang.value);
-    string += ` · ${locales.value.lastUpdated.replace("{}", localizedDate)}`;
+    string += ` · ${t("lastUpdated", formatDate(lastUpdated, lang.value))}`;
   }
   return string;
 });
