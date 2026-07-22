@@ -23,7 +23,7 @@ describe("frontmatter validator", () => {
   }
 
   for (const dir of ARTICLES_DIRS) {
-    const isNonRoot: boolean = dir !== ARTICLES_DIRS[0];
+    const isRoot: boolean = dir === ARTICLES_DIRS[0];
     for (const filePath of getMarkdownFiles(dir)) {
       const raw = readFileSync(filePath, "utf8");
       const frontmatter = matter(raw).data as Frontmatter;
@@ -34,8 +34,8 @@ describe("frontmatter validator", () => {
         expect(frontmatter.description, "Description should be a string").toBeTypeOf("string");
         expect(isValidAuthor(frontmatter.author), "Invalid author").toBeTruthy();
         expect(frontmatter.tags, "Tags should be an array").toSatisfy(Array.isArray).and.not.toHaveLength(0);
+        expect(frontmatter.discussionId, "Invalid discussionId").toBeTypeOf(isRoot ? "number" : "undefined");
 
-        if (isNonRoot) { expect(frontmatter.discussionId, "Extra discussionId").toBeUndefined(); }
         if ("hero" in frontmatter) { expect(frontmatter.hero, "Invalid hero image").toMatch(/^\/hero\/.+\.(png|jpe?g|webp|svg|gif)$/); }
         if ("discussionId" in frontmatter) { expect(frontmatter.discussionId, "Invalid discussionId").toBeTypeOf("number"); }
         if ("publish" in frontmatter) {
