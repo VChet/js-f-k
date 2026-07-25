@@ -8,7 +8,13 @@ import { SITE_URL } from "../constants/common";
 import en from "../locales/rss/en";
 import ru from "../locales/rss/ru";
 
-const XML_TAG_REGEX = /^<\?xml.*?\?>\s*/i;
+const CHANNEL_INDENT_REGEX = /^(\s*)<channel>/m;
+const PREVIEW_SCRIPT = `<script xmlns="http://www.w3.org/1999/xhtml" src="/pretty-feed-v3.js" defer="" />`;
+export function injectScript(xml: string): string {
+  return xml.replace(CHANNEL_INDENT_REGEX, (_, indent) =>
+    `${indent}<channel>\n${indent.repeat(2)}${PREVIEW_SCRIPT}`
+  );
+}
 
 export function generateRSS(articles: ContentData[], locale: "ru" | "en") {
   const feed = new Feed(locale === "ru" ? ru : en);
@@ -29,14 +35,9 @@ export function generateRSS(articles: ContentData[], locale: "ru" | "en") {
     resolve(cwd(), ".vitepress/dist", locale);
   mkdirSync(outDir, { recursive: true });
 
-  const rawRss = feed.rss2().replace(XML_TAG_REGEX, "");
-  const content = [
-    "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-    "<?xml-stylesheet href=\"/pretty-feed-v3.xsl\" type=\"text/xsl\"?>",
-    rawRss
-  ].join("\n");
-
   const outputPath = join(outDir, "rss.xml");
+  const content = injectScript(feed.rss2());
+
   writeFileSync(outputPath, content);
   console.info(`${styleText("green", "✓")} generated RSS for ${locale} locale`);
 }
