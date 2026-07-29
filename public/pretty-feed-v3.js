@@ -77,13 +77,20 @@ import("./html.js").then(({ html }) => {
   const channelLink = data.querySelector("channel > link")?.textContent;
   const items = [...data.querySelectorAll("item")];
 
+  function formatDate(pubDate) {
+    return new Intl.DateTimeFormat(
+      navigator.language,
+      { year: "numeric", month: "long", day: "2-digit" }
+    ).format(new Date(pubDate));
+  }
+
   const itemHTML = (item) => html`
       <div class="pb-5">
         <h3 class="mb-0" style="margin-top: 0">
           <a target="_blank" href="${item.querySelector("link")?.textContent}">${item.querySelector("title")?.textContent}</a>
         </h3>
         <small class="text-gray">
-          Published: ${item.querySelector("pubDate")?.textContent}
+          ${formatDate(item.querySelector("pubDate")?.textContent)}
         </small>
       </div>
     `;
