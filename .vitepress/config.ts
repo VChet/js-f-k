@@ -25,8 +25,8 @@ export default defineConfig({
     ["meta", { name: "og:type", content: "website" }],
     ["meta", { name: "og:logo", content: "/images/icon-512x512.png" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
-    ["link", { rel: "alternate", type: "application/xml", href: "/en/rss.xml", title: "RSS (EN)" }],
-    ["link", { rel: "alternate", type: "application/xml", href: "/rss.xml", title: "RSS (RU)" }]
+    ["link", { rel: "alternate", type: "application/rss+xml", href: "/en/rss.xml", title: "RSS (EN)" }],
+    ["link", { rel: "alternate", type: "application/rss+xml", href: "/rss.xml", title: "RSS (RU)" }]
   ],
   transformPageData(pageData, { siteConfig }) {
     pageData.frontmatter.head ??= [];
