@@ -6,7 +6,7 @@
   X-Content-Type-Options: nosniff
   Cache-Control: no-cache
 
-/en/rss.xml
+/*/rss.xml
   Content-Type: application/xml; charset=utf-8
   X-Content-Type-Options: nosniff
   Cache-Control: no-cache
