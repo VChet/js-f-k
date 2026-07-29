@@ -3,13 +3,12 @@ import process from "node:process";
 import { fileURLToPath } from "node:url";
 import dayjs from "dayjs";
 import namedPort from "named-port";
-import { createContentLoader, defineConfig } from "vitepress";
+import { defineConfig } from "vitepress";
 import { REPOSITORY_URL, SITE_NAME, SITE_URL } from "./constants/common";
-import { RSS_LOADER_OPTIONS } from "./constants/loader";
 import { isArticlePublished } from "./helpers/data";
-import { generateRSS } from "./helpers/rss";
 import locales from "./locales";
 import searchLocales from "./locales/search";
+import { generateRSS } from "./rss";
 import type { Frontmatter } from "./composables/useFrontmatter";
 
 function composeHref(path = "") {
@@ -83,10 +82,5 @@ export default defineConfig({
     editLink: { pattern: `${REPOSITORY_URL}/edit/master/:path` },
     docFooter: { prev: false, next: false }
   },
-  buildEnd: async () => {
-    const ruPages = await createContentLoader("articles/*.md", RSS_LOADER_OPTIONS).load();
-    const enPages = await createContentLoader("en/articles/*.md", RSS_LOADER_OPTIONS).load();
-    generateRSS(ruPages, "ru");
-    generateRSS(enPages, "en");
-  }
+  buildEnd: generateRSS
 });
