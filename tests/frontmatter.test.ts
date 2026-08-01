@@ -42,7 +42,10 @@ describe("frontmatter validator", () => {
           expect(frontmatter.publish, "Only false publish flag is allowed").toBe(false);
           expect(frontmatter.date, "Date should be empty for drafts").toBeUndefined();
         } else {
-          expect(frontmatter.date, "Invalid date").toBeInstanceOf(Date);
+          expect(frontmatter.date, "Undefined date").toBeDefined();
+          const date = new Date(`${frontmatter.date}T00:00:00Z`);
+          expect(date.toString(), "Invalid date").not.toBe("Invalid Date");
+          expect(date.toISOString().startsWith(frontmatter.date!), "Invalid date format").toBe(true);
         }
       });
     }
