@@ -52,7 +52,7 @@ const { lang } = useData();
     color: var(--vp-c-text-2);
   }
   .tag-block:not(:hover, :focus-visible) {
-    background-color: var(--vp-c-bg-soft);
+    background-color: var(--vp-c-default-soft);
   }
   .description {
     margin-top: 0.5rem;

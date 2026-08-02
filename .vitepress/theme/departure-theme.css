@@ -36,7 +36,7 @@ html.dark {
   --vp-c-bg: var(--black);
   --vp-c-bg-alt: var(--carbon);
   --vp-c-bg-elv: var(--carbon);
-  --vp-c-bg-soft: var(--soot);
+  --vp-c-bg-soft: var(--carbon);
   --docsearch-search-button-background: var(--carbon);
   /* Border */
   --vp-c-gutter: var(--carbon);
