@@ -1,5 +1,6 @@
 import { REPOSITORY_URL, SITE_NAME, TELEGRAM_CHANNEL } from "../constants/common";
 import locales from "./i18n";
+import type { LocaleConfigItem } from "../types";
 
 const COPYRIGHT = `
   <a
@@ -40,4 +41,4 @@ export default {
       linkText: "На главную"
     }
   }
-};
+} satisfies LocaleConfigItem;

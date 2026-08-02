@@ -1,5 +1,6 @@
 import { REPOSITORY_URL, SITE_NAME } from "../constants/common";
 import locales from "./i18n";
+import type { LocaleConfigItem } from "../types";
 
 const COPYRIGHT = `
   <a
@@ -24,7 +25,7 @@ export default {
       { icon: "github", link: REPOSITORY_URL, ariaLabel: "GitHub" },
       { icon: "rss", link: "/en/rss.xml", ariaLabel: "RSS" }
     ],
-    editLink: { text: "Edit this page on GitHub" }
-  },
-  footer: { copyright: COPYRIGHT }
-};
+    editLink: { text: "Edit this page on GitHub" },
+    footer: { copyright: COPYRIGHT }
+  }
+} satisfies LocaleConfigItem;
