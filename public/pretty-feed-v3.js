@@ -80,7 +80,7 @@ import("./html.js").then(({ html }) => {
   function formatDate(pubDate) {
     return new Intl.DateTimeFormat(
       navigator.language,
-      { year: "numeric", month: "long", day: "2-digit" }
+      { year: "numeric", month: "long", day: "numeric" }
     ).format(new Date(pubDate));
   }
 

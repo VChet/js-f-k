@@ -15,8 +15,8 @@ export function formatDate(date: string | number | undefined, lang: string): str
   if (!date) return "";
 
   return new Intl.DateTimeFormat(lang, {
-    day: "2-digit",
+    year: "numeric",
     month: "long",
-    year: "numeric"
+    day: "numeric"
   }).format(dayjs(date).toDate());
 };

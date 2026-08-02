@@ -57,7 +57,7 @@ And use them, for example, like this:
 const commitDate = new Intl.DateTimeFormat(navigator.language, {
   year: "numeric",
   month: "long",
-  day: "2-digit"
+  day: "numeric"
 }).format(new Date(VITE_GIT_COMMIT_DATE));
 
 const revision = `${commitDate} [${VITE_GIT_COMMIT_SHA}]`; // July 18, 2026 [369f0b3]
