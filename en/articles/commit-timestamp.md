@@ -34,12 +34,12 @@ The `encoding` option is set to `utf8` so that the function returns a string ins
 
 Add the following values to the `define` section of `vite.config.ts`:
 
-```diff
+```ts{3,4}
 export default defineConfig({
-+ define: {
-+   "import.meta.env.VITE_GIT_COMMIT_SHA": JSON.stringify(commitSHA),
-+   "import.meta.env.VITE_GIT_COMMIT_DATE": JSON.stringify(commitDate)
-+ }
+  define: {
+    "import.meta.env.VITE_GIT_COMMIT_SHA": JSON.stringify(commitSHA),
+    "import.meta.env.VITE_GIT_COMMIT_DATE": JSON.stringify(commitDate)
+  }
 });
 ```
 

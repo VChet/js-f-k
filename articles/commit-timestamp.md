@@ -35,12 +35,12 @@ const commitDate = execFileSync("git", ["log", "-1", "--format=%cI"], { encoding
 
 Добавьте значения в `define` в `vite.config.ts`:
 
-```diff
+```ts{3,4}
 export default defineConfig({
-+ define: {
-+   "import.meta.env.VITE_GIT_COMMIT_SHA": JSON.stringify(commitSHA),
-+   "import.meta.env.VITE_GIT_COMMIT_DATE": JSON.stringify(commitDate)
-+ }
+  define: {
+    "import.meta.env.VITE_GIT_COMMIT_SHA": JSON.stringify(commitSHA),
+    "import.meta.env.VITE_GIT_COMMIT_DATE": JSON.stringify(commitDate)
+  }
 });
 ```
 
