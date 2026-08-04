@@ -3,9 +3,7 @@
 [![vitepress-version][vitepress-img]][vitepress-url]
 [![netlify-status][netlify-status-img]][netlify-status-href]
 
-JS F/k is a modern static blog on VitePress about frontend development. It supports multiple languages, automatic content checking, and RSS feed generation. It uses a custom theme and CI/CD on Netlify for fast publishing.
-
-## Links
+JS F/k is a modern static blog on VitePress about frontend development. It supports multiple languages, automatic content checking, and RSS feed generation.
 
 [![website][website-img]][website-href]
 [![mirror][mirror-img]][mirror-href]
@@ -53,7 +51,7 @@ To edit an article, click the **Edit this page** link at the bottom of the artic
 [i18n-en-img]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VChet/js-f-k/master/ci/badges/en.json
 [website-img]: https://img.shields.io/badge/Website-181a1c?style=for-the-badge&logo=netlify
 [website-href]: https://js-f-k.netlify.app
-[mirror-img]: https://img.shields.io/badge/Mirror-181a1c?style=for-the-badge&logo=cloudflare
-[mirror-href]: https://js-f-k.pages.dev
+[mirror-img]: https://img.shields.io/badge/Mirror-181a1c?style=for-the-badge&logo=vercel
+[mirror-href]: https://js-f-k.vercel.app
 [telegram-img]: https://img.shields.io/badge/Telegram-181a1c?style=for-the-badge&logo=telegram
 [telegram-href]: https://t.me/js_f_k
