@@ -51,13 +51,13 @@ npm install --save-dev named-port
 
 ```ts
 // vite.config.ts
-import process from "node:process";
 import namedPort from "named-port";
 import { defineConfig } from "vite";
+import pkg from "./package.json" with { type: "json" };
 
 export default defineConfig({
   server: {
-    port: namedPort(process.env.npm_package_name)
+    port: namedPort(pkg.name)
   }
 });
 ```
