@@ -16,7 +16,7 @@ discussionId: 30
 ## Установка
 
 ```bash
-npm install --save-dev eslint-plugin-pinia
+npm install --save-dev eslint-plugin-pinia // [!=npm auto]
 ```
 
 ```js

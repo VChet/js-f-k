@@ -46,7 +46,7 @@ export default defineConfig({
 ## Использование
 
 ```bash
-npm install --save-dev named-port
+npm install --save-dev named-port // [!=npm auto]
 ```
 
 ```ts

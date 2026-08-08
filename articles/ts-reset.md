@@ -14,7 +14,7 @@ discussionId: 6
 ## Установка
 
 ```bash
-npm install --save-dev ts-reset
+npm install --save-dev ts-reset // [!=npm auto]
 ```
 
 ```ts

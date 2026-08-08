@@ -16,7 +16,7 @@ To write code without worrying about this, you can use the [eslint-plugin-compat
 ## Installation
 
 ```bash
-npm install --save-dev eslint-plugin-compat
+npm install --save-dev eslint-plugin-compat // [!=npm auto]
 ```
 
 ```js

@@ -16,7 +16,7 @@ discussionId: 16
 Пример базовой настройки:
 
 ```bash
-npm install --save-dev cspell @cspell/dict-ru_ru
+npm install --save-dev cspell @cspell/dict-ru_ru // [!=npm auto]
 ```
 
 ```json

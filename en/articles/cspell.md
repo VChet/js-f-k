@@ -15,7 +15,7 @@ Mistakes occur not only in logic, but also in words. This is especially true if 
 Example of basic configuration:
 
 ```bash
-npm install --save-dev cspell @cspell/dict-ru_ru
+npm install --save-dev cspell @cspell/dict-ru_ru // [!=npm auto]
 ```
 
 ```json

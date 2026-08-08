@@ -15,7 +15,7 @@ Stores in **Pinia** are the foundation of any Vue application architecture. Howe
 ## Installation
 
 ```bash
-npm install --save-dev eslint-plugin-pinia
+npm install --save-dev eslint-plugin-pinia // [!=npm auto]
 ```
 
 ```js

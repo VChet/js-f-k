@@ -23,7 +23,7 @@ Many people still check `package.json` dependencies manually or via `npm outdate
 ## Installation
 
 ```bash
-npm install --global npm-check-updates
+npm install --global npm-check-updates // [!=npm auto]
 ```
 
 ```bash
