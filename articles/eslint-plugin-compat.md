@@ -17,7 +17,7 @@ discussionId: 28
 ## Установка
 
 ```bash
-npm install --save-dev eslint-plugin-compat
+npm install --save-dev eslint-plugin-compat // [!=npm auto]
 ```
 
 ```js

@@ -40,6 +40,8 @@
     "stylelint-order": "^8.1.1",
     "stylelint-rem-over-px": "^2.0.0",
     "typescript": "^6.0.3",
+    "vitepress-plugin-npm-commands": "^0.10.0",
+    "vitepress-plugin-tabs": "^0.9.1",
     "vitest": "^4.1.10",
     "vue-tsc": "^3.3.9"
   }

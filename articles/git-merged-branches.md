@@ -20,7 +20,7 @@ discussionId: 21
 Установить глобально:
 
 ```bash
-npm install --global git-merged-branches
+npm install --global git-merged-branches // [!=npm auto]
 ```
 
 Или запустить через `npx`:

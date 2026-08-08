@@ -45,7 +45,7 @@ The solution is to use the [named-port](https://www.npmjs.com/package/named-port
 ## Usage
 
 ```bash
-npm install --save-dev named-port
+npm install --save-dev named-port // [!=npm auto]
 ```
 
 ```ts

@@ -15,7 +15,7 @@ tags: ["npm", "typescript"]
 ## Installation
 
 ```bash
-npm install --save-dev typed-query-selector
+npm install --save-dev typed-query-selector // [!=npm auto]
 ```
 
 ```ts

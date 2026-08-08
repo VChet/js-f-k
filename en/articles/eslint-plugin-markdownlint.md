@@ -15,7 +15,7 @@ Even if you don't write code, you still encounter **Markdown** — in documentat
 ## Installation
 
 ```bash
-npm install --save-dev eslint-plugin-markdownlint
+npm install --save-dev eslint-plugin-markdownlint // [!=npm auto]
 ```
 
 ```js

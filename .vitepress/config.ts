@@ -3,6 +3,8 @@ import { fileURLToPath } from "node:url";
 import dayjs from "dayjs";
 import namedPort from "named-port";
 import { defineConfig } from "vitepress";
+import { npmCommandsMarkdownPlugin } from "vitepress-plugin-npm-commands";
+import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
 import pkg from "../package.json";
 import { REPOSITORY_URL, SITE_NAME, SITE_URL } from "./constants/common";
 import { isArticlePublished } from "./helpers/data";
@@ -67,7 +69,13 @@ export default defineConfig({
     },
     server: { port: namedPort(pkg.name, { min: 7000, max: 10000 }) }
   },
-  markdown: { theme: { light: "github-light", dark: "github-dark" } },
+  markdown: {
+    theme: { light: "github-light", dark: "github-dark" },
+    config(md) {
+      md.use(tabsMarkdownPlugin);
+      md.use(npmCommandsMarkdownPlugin);
+    }
+  },
   lastUpdated: true,
   themeConfig: {
     outline: false,
