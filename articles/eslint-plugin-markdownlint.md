@@ -16,7 +16,7 @@ discussionId: 29
 ## Установка
 
 ```bash
-npm install --save-dev eslint-plugin-markdownlint
+npm install --save-dev eslint-plugin-markdownlint // [!=npm auto]
 ```
 
 ```js

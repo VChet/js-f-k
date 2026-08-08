@@ -13,7 +13,7 @@ tags: ["npm", "typescript"]
 ## Installation
 
 ```bash
-npm install --save-dev ts-reset
+npm install --save-dev ts-reset // [!=npm auto]
 ```
 
 ```ts

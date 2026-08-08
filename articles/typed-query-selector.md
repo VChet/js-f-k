@@ -16,7 +16,7 @@ discussionId: 8
 ## Установка
 
 ```bash
-npm install --save-dev typed-query-selector
+npm install --save-dev typed-query-selector // [!=npm auto]
 ```
 
 ```ts

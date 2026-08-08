@@ -24,7 +24,7 @@ discussionId: 5
 ## Установка
 
 ```bash
-npm install --global npm-check-updates
+npm install --global npm-check-updates // [!=npm auto]
 ```
 
 ```bash

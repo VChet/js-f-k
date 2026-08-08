@@ -19,7 +19,7 @@ The main feature is the ability to view links to tasks from the tracker directly
 Install globally:
 
 ```bash
-npm install --global git-merged-branches
+npm install --global git-merged-branches // [!=npm auto]
 ```
 
 Or run via `npx`:
