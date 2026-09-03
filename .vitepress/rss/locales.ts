@@ -1,6 +1,6 @@
 import type { FeedOptions } from "feed";
-import { SITE_COPYRIGHT, SITE_NAME, SITE_URL } from "../constants/common";
-import i18n from "../locales/i18n";
+import { SITE_COPYRIGHT, SITE_NAME, SITE_URL } from "../constants/common.ts";
+import i18n from "../locales/i18n.ts";
 
 export interface RSSLocaleConfig {
   code: string

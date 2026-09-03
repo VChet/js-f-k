@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import type { ContentData, ContentOptions } from "vitepress";
-import { calculateReadingTime } from "../helpers/reading-time";
-import type { Article } from "../data/articles.data";
+import { calculateReadingTime } from "../helpers/reading-time.ts";
+import type { Article } from "../data/articles.data.ts";
 
 function getArticleLang(url: ContentData["url"]): string {
   const [_, splat] = url.split("/");

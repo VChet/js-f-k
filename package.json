@@ -2,7 +2,7 @@
   "name": "js-f-k-blog",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "pnpm@11.25.0",
   "license": "MIT",
   "scripts": {
     "dev": "vitepress dev",
@@ -18,31 +18,31 @@
     "i18n": "node ci/translations.ts"
   },
   "dependencies": {
-    "dayjs": "^1.11.21",
+    "dayjs": "^1.11.23",
     "feed": "^6.0.0",
-    "vite": "^8.2.1",
-    "vitepress": "2.0.0-alpha.19",
-    "vue": "^3.5.41"
+    "vite": "^8.2.2",
+    "vitepress": "2.0.0-alpha.20",
+    "vue": "^3.5.42"
   },
   "devDependencies": {
     "@11ty/gray-matter": "^3.0.0",
-    "@antfu/eslint-config": "^9.3.0",
+    "@antfu/eslint-config": "^9.5.1",
     "@stylistic/stylelint-config": "^5.0.0",
-    "@types/node": "^26.1.2",
-    "eslint": "^10.8.0",
+    "@types/node": "^26.4.1",
+    "eslint": "^10.10.0",
     "named-port": "^4.0.1",
     "postcss-html": "^2.0.0",
     "postcss-markdown": "^2.0.0",
-    "stylelint": "^17.14.1",
-    "stylelint-config-recess-order": "^7.7.0",
+    "stylelint": "^17.15.0",
+    "stylelint-config-recess-order": "^7.8.0",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^3.0.0",
     "stylelint-order": "^8.1.1",
-    "stylelint-rem-over-px": "^2.0.0",
+    "stylelint-rem-over-px": "^2.0.1",
     "typescript": "^6.0.3",
     "vitepress-plugin-npm-commands": "^0.10.0",
     "vitepress-plugin-tabs": "^0.9.1",
-    "vitest": "^4.1.10",
-    "vue-tsc": "^3.3.9"
+    "vitest": "^5.0.0",
+    "vue-tsc": "^3.3.11"
   }
 }

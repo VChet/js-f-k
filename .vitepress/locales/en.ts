@@ -1,6 +1,6 @@
-import { REPOSITORY_URL, SITE_NAME } from "../constants/common";
-import locales from "./i18n";
-import type { LocaleConfigItem } from "../types";
+import { REPOSITORY_URL, SITE_NAME } from "../constants/common.ts";
+import locales from "./i18n.ts";
+import type { LocaleConfigItem } from "../types/index.ts";
 
 const COPYRIGHT = `
   <a

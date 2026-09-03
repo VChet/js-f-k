@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import type { VitePressData } from "vitepress";
-import type { Article } from "../data/articles.data";
+import type { Article } from "../data/articles.data.ts";
 
 export function isArticlePublished(publishDate: Article["date"]): boolean {
   return !!publishDate && dayjs().isAfter(dayjs(publishDate));

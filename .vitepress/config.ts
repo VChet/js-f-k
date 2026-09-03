@@ -5,13 +5,13 @@ import namedPort from "named-port";
 import { defineConfig } from "vitepress";
 import { npmCommandsMarkdownPlugin } from "vitepress-plugin-npm-commands";
 import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
-import pkg from "../package.json";
-import { REPOSITORY_URL, SITE_NAME, SITE_URL } from "./constants/common";
-import { isArticlePublished } from "./helpers/data";
-import locales from "./locales";
-import searchLocales from "./locales/search";
-import { generateRSS } from "./rss";
-import type { Frontmatter } from "./composables/useFrontmatter";
+import pkg from "../package.json" with { type: "json" };
+import { REPOSITORY_URL, SITE_NAME, SITE_URL } from "./constants/common.ts";
+import { isArticlePublished } from "./helpers/data.ts";
+import locales from "./locales/index.ts";
+import searchLocales from "./locales/search/index.ts";
+import { generateRSS } from "./rss/index.ts";
+import type { Frontmatter } from "./composables/useFrontmatter.ts";
 
 function composeHref(path = "") {
   return new URL(normalize(path), SITE_URL).href;

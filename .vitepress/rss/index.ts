@@ -4,8 +4,8 @@ import { cwd } from "node:process";
 import { styleText } from "node:util";
 import { Feed } from "feed";
 import { createContentLoader, type ContentData } from "vitepress";
-import { RSS_LOADER_OPTIONS } from "../constants/loader";
-import { RSS_LOCALES, type RSSLocaleConfig } from "./locales";
+import { RSS_LOADER_OPTIONS } from "../constants/loader.ts";
+import { RSS_LOCALES, type RSSLocaleConfig } from "./locales.ts";
 
 function injectScript(xml: string): string {
   const CHANNEL_INDENT_REGEX = /^(\s*)<channel>/m;
