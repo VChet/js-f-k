@@ -83,9 +83,12 @@ onBeforeMount(() => {
     font-weight: 500;
     color: var(--vp-c-brand-1);
     transition: color 0.25s;
-    &:hover, &:focus-visible {
+    &:hover {
       color: var(--vp-c-brand-2);
       text-decoration: underline;
+    }
+    &:focus-visible {
+      color: var(--vp-c-brand-2);
     }
   }
 }

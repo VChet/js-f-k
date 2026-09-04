@@ -40,7 +40,8 @@ const { lang } = useData();
   background: var(--vp-c-bg-alt);
   border-radius: 0.375rem;
   &:hover,
-  &:focus-visible {
+  &:focus-visible,
+  &:focus-within {
     transform: translateY(-0.25rem);
   }
   header {

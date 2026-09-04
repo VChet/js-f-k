@@ -38,8 +38,7 @@ const authors = computed<AuthorData[]>(() => {
     font-weight: 500;
     color: var(--vp-c-brand-1);
     text-decoration: none;
-    &:hover,
-    &:focus-visible {
+    &:hover {
       text-decoration: underline;
     }
     img {

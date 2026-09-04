@@ -1,7 +1,10 @@
+:focus-visible {
+  outline: 1px solid var(--vp-c-brand);
+  outline-offset: -1px;
+}
 .vp-doc a {
   text-decoration: none;
-  &:hover,
-  &:focus-visible {
+  &:hover {
     text-decoration: underline;
   }
 }
