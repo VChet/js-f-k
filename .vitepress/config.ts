@@ -23,9 +23,7 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/images/favicon.ico", sizes: "32x32" }],
     ["link", { rel: "apple-touch-icon", href: "/images/apple-touch-icon.png" }],
-    ["meta", { name: "og:site_name", content: SITE_NAME }],
-    ["meta", { name: "og:type", content: "website" }],
-    ["meta", { name: "og:logo", content: "/images/icon-512x512.png" }],
+    ["meta", { property: "og:site_name", content: SITE_NAME }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["link", { rel: "alternate", type: "application/rss+xml", href: "/en/rss.xml", title: "RSS (EN)" }],
     ["link", { rel: "alternate", type: "application/rss+xml", href: "/rss.xml", title: "RSS (RU)" }]
@@ -37,18 +35,19 @@ export default defineConfig({
     const pageTitle = title ?? siteConfig.site.title;
     const pageDescription = description ?? siteConfig.site.description;
     const pageHref = composeHref(pageData.relativePath).replace("/index.md", "").replace(".md", "");
+    const isArticle = pageData.relativePath.includes("articles/");
     // Common metadata
     pageData.frontmatter.head.push(
       ["link", { rel: "canonical", href: pageHref }],
       ["meta", { name: "description", content: pageDescription }],
-      ["meta", { name: "og:title", content: pageTitle }],
-      ["meta", { name: "og:description", content: pageDescription }],
-      ["meta", { name: "og:url", content: pageHref }],
+      ["meta", { property: "og:type", content: isArticle ? "article" : "website" }],
+      ["meta", { property: "og:title", content: pageTitle }],
+      ["meta", { property: "og:description", content: pageDescription }],
+      ["meta", { property: "og:url", content: pageHref }],
       ["meta", { name: "twitter:title", content: pageTitle }],
       ["meta", { name: "twitter:description", content: pageDescription }],
       ["meta", { name: "twitter:url", content: pageHref }]
     );
-    const isArticle = pageData.relativePath.includes("articles/");
     if (!isArticle) return;
 
     // Article metadata
@@ -57,7 +56,7 @@ export default defineConfig({
     }
     if (typeof hero === "string") {
       pageData.frontmatter.head.push(
-        ["meta", { name: "og:image", content: composeHref(hero) }],
+        ["meta", { property: "og:image", content: composeHref(hero) }],
         ["meta", { name: "twitter:image", content: composeHref(hero) }]
       );
     }
