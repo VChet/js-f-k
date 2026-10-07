@@ -1,4 +1,3 @@
-import { normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 import dayjs from "dayjs";
 import namedPort from "named-port";
@@ -14,7 +13,7 @@ import { generateRSS } from "./rss/index.ts";
 import type { Frontmatter } from "./composables/useFrontmatter.ts";
 
 function composeHref(path = "") {
-  return new URL(normalize(path), SITE_URL).href;
+  return new URL(path, SITE_URL).href;
 }
 
 // https://vitepress.dev/reference/site-config
@@ -34,7 +33,7 @@ export default defineConfig({
     const { title, description, hero, author, date } = pageData.frontmatter as Frontmatter;
     const pageTitle = title ?? siteConfig.site.title;
     const pageDescription = description ?? siteConfig.site.description;
-    const pageHref = composeHref(pageData.relativePath).replace("/index.md", "").replace(".md", "");
+    const pageHref = composeHref(pageData.relativePath).replace(/\/index\.md$/, "").replace(/\.md$/, "");
     const isArticle = pageData.relativePath.includes("articles/");
     // Common metadata
     pageData.frontmatter.head.push(
@@ -55,9 +54,10 @@ export default defineConfig({
       pageData.frontmatter.head.push(["meta", { name: "article:published_time", content: dayjs(date).toISOString() }]);
     }
     if (typeof hero === "string") {
+      const heroImage = composeHref(hero);
       pageData.frontmatter.head.push(
-        ["meta", { property: "og:image", content: composeHref(hero) }],
-        ["meta", { name: "twitter:image", content: composeHref(hero) }]
+        ["meta", { property: "og:image", content: heroImage }],
+        ["meta", { name: "twitter:image", content: heroImage }]
       );
     }
     if (author) {
