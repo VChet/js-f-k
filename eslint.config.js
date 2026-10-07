@@ -25,6 +25,7 @@ export default antfu({
   isInEditor: false,
   ignores: ["public/pretty-feed-v3.js"]
 }, {
+  name: "javascript/overrides",
   rules: {
     "antfu/consistent-list-newline": "off",
     "antfu/if-newline": "off",
@@ -109,15 +110,22 @@ export default antfu({
     "style/operator-linebreak": ["error", "after"],
     "style/quotes": ["error", "double", { avoidEscape: true, allowTemplateLiterals: "avoidEscape" }],
     "style/semi": ["error", "always"],
+    "unicorn/prefer-includes": "off",
+    "unused-imports/no-unused-vars": "off",
+    "yaml/quotes": ["error", { prefer: "double" }]
+  }
+}, {
+  name: "typescript/overrides",
+  files: ["**/*.?([cm])ts", "**/*.?([cm])tsx", "**/*.vue"],
+  rules: {
     "ts/array-type": "error",
     "ts/consistent-indexed-object-style": "error",
     "ts/consistent-type-definitions": ["error", "interface"],
     "ts/member-ordering": ["error", { default: { optionalityOrder: "required-first" } }],
-    "ts/no-shadow": "error",
-    "unicorn/prefer-includes": "off",
-    "yaml/quotes": ["error", { prefer: "double" }]
+    "ts/no-shadow": "error"
   }
 }, {
+  name: "vue/overrides",
   files: ["**/*.vue"],
   rules: {
     "vue/attribute-hyphenation": ["error", "always"],
