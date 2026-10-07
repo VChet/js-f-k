@@ -37,20 +37,29 @@ export default defineConfig({
     const pageTitle = title ?? siteConfig.site.title;
     const pageDescription = description ?? siteConfig.site.description;
     const pageHref = composeHref(pageData.relativePath).replace("/index.md", "").replace(".md", "");
+    // Common metadata
+    pageData.frontmatter.head.push(
+      ["link", { rel: "canonical", href: pageHref }],
+      ["meta", { name: "description", content: pageDescription }],
+      ["meta", { name: "og:title", content: pageTitle }],
+      ["meta", { name: "og:description", content: pageDescription }],
+      ["meta", { name: "og:url", content: pageHref }],
+      ["meta", { name: "twitter:title", content: pageTitle }],
+      ["meta", { name: "twitter:description", content: pageDescription }],
+      ["meta", { name: "twitter:url", content: pageHref }]
+    );
+    const isArticle = pageData.relativePath.includes("articles/");
+    if (!isArticle) return;
 
-    pageData.frontmatter.head.push(["link", { rel: "canonical", href: pageHref }]);
-    pageData.frontmatter.head.push(["meta", { name: "description", content: pageDescription }]);
-    pageData.frontmatter.head.push(["meta", { name: "og:title", content: pageTitle }]);
-    pageData.frontmatter.head.push(["meta", { name: "og:description", content: pageDescription }]);
-    pageData.frontmatter.head.push(["meta", { name: "og:url", content: pageHref }]);
-    pageData.frontmatter.head.push(["meta", { name: "twitter:title", content: pageTitle }]);
-    pageData.frontmatter.head.push(["meta", { name: "twitter:description", content: pageDescription }]);
-    pageData.frontmatter.head.push(["meta", { name: "twitter:url", content: pageHref }]);
-    pageData.frontmatter.head.push(["meta", { name: "article:published_time", content: dayjs(date).toISOString() }]);
-    // Optional
+    // Article metadata
+    if (date) {
+      pageData.frontmatter.head.push(["meta", { name: "article:published_time", content: dayjs(date).toISOString() }]);
+    }
     if (typeof hero === "string") {
-      pageData.frontmatter.head.push(["meta", { name: "og:image", content: composeHref(hero) }]);
-      pageData.frontmatter.head.push(["meta", { name: "twitter:image", content: composeHref(hero) }]);
+      pageData.frontmatter.head.push(
+        ["meta", { name: "og:image", content: composeHref(hero) }],
+        ["meta", { name: "twitter:image", content: composeHref(hero) }]
+      );
     }
     if (author) {
       const authors = Array.isArray(author) ? author : [author];
