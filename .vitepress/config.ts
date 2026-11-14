@@ -10,7 +10,6 @@ import { isArticlePublished } from "./helpers/data.ts";
 import locales from "./locales/index.ts";
 import searchLocales from "./locales/search/index.ts";
 import { generateRSS } from "./rss/index.ts";
-import type { Frontmatter } from "./composables/useFrontmatter.ts";
 
 function composeHref(path = "") {
   return new URL(path, SITE_URL).href;
@@ -30,7 +29,7 @@ export default defineConfig({
   transformPageData(pageData, { siteConfig }) {
     pageData.frontmatter.head ??= [];
 
-    const { title, description, hero, author, date } = pageData.frontmatter as Frontmatter;
+    const { title, description, hero, author, date } = pageData.frontmatter;
     const pageTitle = title ?? siteConfig.site.title;
     const pageDescription = description ?? siteConfig.site.description;
     const pageHref = composeHref(pageData.relativePath).replace(/\/index\.md$/, "").replace(/\.md$/, "");
