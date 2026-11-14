@@ -4,7 +4,7 @@ const WORD_REGEX = /[\p{Script=Latin}\p{Script=Cyrillic}]+/gu;
 
 const SCRIPT_BLOCK_REGEX = /<script\b[^>]+setup[^>]*>[\s\S]*?<\/script>/gi;
 const STYLE_BLOCK_REGEX = /<style\b[^>]+scoped[^>]*>[\s\S]*?<\/style>/gi;
-const COMPONENT_TAG_REGEX = /<([A-Z][\w-]*)\b[^>]*>/g; ;
+const COMPONENT_TAG_REGEX = /<[A-Z][\w-]*\b[^>]*>/g;
 const MD_LINK_REGEX = /\[([^\]]+)\]\([^)]+\)/g;
 
 function cleanMarkdown(md: string): string {
